@@ -1,0 +1,17 @@
+Lokacija:
+ - Slike
+ - Naziv
+ - Kratak opis
+ - Dugačak opis
+ - audio dugačak opis
+ - navigacijski podaci (razraditi)
+
+
+Tura:
+ - tip ture (pešačka, biciklistička)
+ - težina ture (popunjava admin)
+ - spisak lokacija koje su u turi
+ - predložena startna lokacija
+ - nivo težine
+ - broj lokacija (izračunava iz spiska)
+ - ukupna visinska razlika (ako može sam da preračuna na osnovu izabraniih lokacija)
