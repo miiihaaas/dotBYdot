@@ -21,6 +21,10 @@ def get_data():
     }
     return jsonify(data)
 
+@app.route('/')
+def index():
+    return 'Hello, World!'
+
 @app.route('/api/tours/<string:tourType>', methods=['GET'])
 def api_tours(tourType):
     tour_type = tourType
