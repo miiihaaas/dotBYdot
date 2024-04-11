@@ -80,7 +80,7 @@ def api_tours(tourType):
             "name": "Izazovna biciklistička tura",
             "type": "Biciklistička",
             "duration": 4.0,
-            "elevationGain": 500,
+            "elevationGain": 500.0,
             "startingLocation": "Biciklistička staza kod mosta",
             "difficultyLevel": "Srednja",
             "numberOfLocations": 3,
