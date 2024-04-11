@@ -13,8 +13,11 @@ void main() {
 
 Future<Map<String, dynamic>> fetchTourData(String tourType) async {
   final response =
-      await http.get(Uri.parse('http://localhost:5000/api/tours/$tourType'));
+      // await http.get(Uri.parse('http://localhost:5000/api/tours/$tourType'));
+      await http
+          .get(Uri.parse('https://popis.online/dotBYdot//api/tours/$tourType'));
   if (response.statusCode == 200) {
+    // print(json.decode(response.body));
     return json.decode(response.body);
   } else {
     throw Exception('Failed to load tour data');
@@ -66,8 +69,14 @@ Widget buildTourInfoScreen(BuildContext context, String tourType) {
       } else if (snapshot.hasError) {
         return Text('Error: ${snapshot.error}');
       } else {
-        final tourInfo = TourInfo.fromJson(snapshot.data!);
-        return TourInfoScreen(tourInfo: tourInfo);
+        try {
+          final tourInfo = TourInfo.fromJson(snapshot.data!);
+          return TourInfoScreen(tourInfo: tourInfo);
+        } catch (e) {
+          print('Error parsing data: $e');
+          print('Raw data: ${snapshot.data}');
+          return Text('Error parsing data');
+        }
       }
     },
   );

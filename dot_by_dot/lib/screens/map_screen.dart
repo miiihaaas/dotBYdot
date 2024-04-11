@@ -6,7 +6,7 @@ import 'dart:async';
 
 class MapScreen extends StatefulWidget {
   final TourInfo tourInfo;
-  const MapScreen({Key? key, required this.tourInfo}) : super(key: key);
+  const MapScreen({super.key, required this.tourInfo});
 
   @override
   _MapScreenState createState() => _MapScreenState();
@@ -22,6 +22,7 @@ class _MapScreenState extends State<MapScreen> {
 
   @override
   Widget build(BuildContext context) {
+    print(widget.tourInfo);
     return Scaffold(
         appBar: AppBar(
           title: Text(widget.tourInfo.name),
@@ -50,7 +51,7 @@ class _MapScreenState extends State<MapScreen> {
               ),
             ),
           )..add(Marker(
-              markerId: MarkerId('currentPosition'),
+              markerId: const MarkerId('currentPosition'),
               icon: BitmapDescriptor.defaultMarkerWithHue(
                   BitmapDescriptor.hueBlue),
               position: _currentPosition.target)),

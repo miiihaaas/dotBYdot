@@ -33,7 +33,7 @@ def api_tours(tourType):
             "name": "Panoramska pešačka tura",
             "type": "Pešačka",
             "duration": 2.5,
-            "elevationGain": 150,
+            "elevationGain": 150.5,
             "startingLocation": "Šetalište kraj reke",
             "difficultyLevel": "Laka",
             "numberOfLocations": 5,
