@@ -40,15 +40,15 @@ def api_tours(tourType):
             "locations": [
             {
                 "name": "GMMČK",
-                "description": "Ovo mesto služi za testiranje rada aplikacije i lokacije. Prvo mesto za koje sa kojeg smo započeli testiranja ovog tipa",
-                "short_description": "Prvo mesto sa koje smo započeli testiranje",
+                "description": "Ovo mesto služi za testiranje rada aplikacije i lokacije. Drugo mesto za koje sa kojeg smo započeli testiranja ovog tipa",
+                "short_description": "Drugo mesto sa koje smo započeli testiranje",
                 "latlng": [44.034661, 20.433998],
                 "distance_radius": 10.5
             },
             {
                 "name": "GMHCP",
-                "description": "Ovo mesto služi za testiranje rada aplikacije i lokacije. Drugo mesto za koje sa kojeg smo započeli testiranja ovog tipa",
-                "short_description": "Drugo mesto sa koje smo započeli testiranje",
+                "description": "Ovo mesto služi za testiranje rada aplikacije i lokacije. Prvo mesto za koje sa kojeg smo započeli testiranja ovog tipa",
+                "short_description": "Prvo mesto sa koje smo započeli testiranje",
                 "latlng": [44.023905, 20.456093],
                 "distance_radius": 10.5
             },
