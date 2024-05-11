@@ -39,6 +39,13 @@ def api_tours(tourType):
             "numberOfLocations": 5,
             "locations": [
             {
+                "name": "GMHCP",
+                "description": "Ovo mesto služi za testiranje rada aplikacije i lokacije. Prvo mesto za koje sa kojeg smo započeli testiranja ovog tipa",
+                "short_description": "Prvo mesto sa koje smo započeli testiranje",
+                "latlng": [44.023905, 20.456093],
+                "distance_radius": 10.5
+            },
+            {
                 "name": "Видиковец",
                 "description": "Видиковецот е ново туристичко место во Кратово. Од него се отвора прекрасен панорамски поглед кон Кратово. Се гледа централното градско подрачје на Кратово со најзначајните културни споменици на градот како што се: кулите, мостовите, турскиот затвор, еврејската куќа, црквата Св. Јован Крстител, старите борови итн. Ова претставува место за уживање, релаксација и фотографирање.",
                 "short_description": "Видиковецот во Кратово нуди прекрасен поглед на градот и неговите историски споменици, претставувајќи идеално место за релаксација и уживање во природата.",
