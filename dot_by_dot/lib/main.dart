@@ -1,4 +1,6 @@
+import 'package:dot_by_dot/localization/locales.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_localization/flutter_localization.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 // import 'screens/home_screen.dart';
@@ -24,8 +26,21 @@ Future<Map<String, dynamic>> fetchTourData(String tourType) async {
   }
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  //! pokušaj dodavanja koda za menjanje jezika u aplikaciji
+  final FlutterLocalization localization = FlutterLocalization.instance;
+  @override
+  void initState() {
+    configureLocalization();
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -35,11 +50,16 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF07710A)),
           useMaterial3: true,
         ),
+        supportedLocales: localization.supportedLocales,
+        localizationsDelegates: localization.localizationsDelegates,
         home: Builder(
           builder: (context) => Scaffold(
             key: scaffoldKey,
             appBar: AppBar(
-              title: const Text('Turistički vodič'),
+              title: Text(
+                // "Naslov aplikacije",
+                LocaleData.main_title.getString(context),
+              ),
             ),
             endDrawer: const SidebarMenu(),
             body: const HomeScreen(),
@@ -51,6 +71,15 @@ class MyApp extends StatelessWidget {
           '/cyclingTourInfo': (context) =>
               buildTourInfoScreen(context, 'cycling'),
         });
+  }
+
+  void configureLocalization() {
+    localization.init(mapLocales: LOCALES, initLanguageCode: "sr");
+    localization.onTranslatedLanguage = onTranslatedLanguage;
+  }
+
+  void onTranslatedLanguage(Locale? locale) {
+    setState(() {});
   }
 }
 
@@ -75,7 +104,7 @@ Widget buildTourInfoScreen(BuildContext context, String tourType) {
         } catch (e) {
           print('Error parsing data: $e');
           print('Raw data: ${snapshot.data}');
-          return Text('Error parsing data');
+          return const Text('Error parsing data');
         }
       }
     },

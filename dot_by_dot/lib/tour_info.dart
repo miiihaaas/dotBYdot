@@ -49,6 +49,7 @@ class Location {
   final String description;
   final String short_description;
   final List<dynamic> latlng;
+  final double distance_radius;
   bool visited; // Track if user visited this location
 
   Location({
@@ -56,6 +57,7 @@ class Location {
     required this.description,
     required this.short_description,
     required this.latlng,
+    required this.distance_radius,
     this.visited = false,
   });
 
@@ -65,6 +67,7 @@ class Location {
       description: json['description'],
       short_description: json['short_description'],
       latlng: json['latlng'],
+      distance_radius: json['distance_radius'],
       visited: json['visited'] ?? false,
     );
   }

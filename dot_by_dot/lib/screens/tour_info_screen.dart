@@ -107,22 +107,21 @@ class TourInfoScreen extends StatelessWidget {
               ),
 
               const SizedBox(height: 20),
-
-              // Start tour button
-              ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => MapScreen(tourInfo: tourInfo)),
-                  );
-                },
-                child: const Text('POKRENI TURU'),
-              ),
             ],
           ),
         ),
       ),
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => MapScreen(tourInfo: tourInfo)),
+          );
+        },
+        label: const Text('POKRENI TURU'),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
 }

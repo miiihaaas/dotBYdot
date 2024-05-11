@@ -54,18 +54,22 @@ class SidebarMenu extends StatelessWidget {
           ListTile(
             leading: const Icon(Icons.language),
             title: const Text('IZBOR JEZIKA: '),
-            trailing: DropdownButton<String>(
-              value: selectedLanguage,
+            trailing: DropdownButton(
+              value: 'sr',
+              items: const [
+                DropdownMenuItem(
+                  value: 'sr',
+                  child: Text('Srpski'),
+                ),
+                DropdownMenuItem(
+                  value: 'en',
+                  child: Text('English'),
+                )
+              ],
               onChanged: (String? newValue) {
                 // Ažurirajte izabrani jezik kada korisnik izabere novi jezik
                 selectedLanguage = newValue!;
               },
-              items: languages.map<DropdownMenuItem<String>>((String value) {
-                return DropdownMenuItem<String>(
-                  value: value,
-                  child: Text(value),
-                );
-              }).toList(),
             ),
           ),
         ],
