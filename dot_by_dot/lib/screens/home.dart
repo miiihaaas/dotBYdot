@@ -29,8 +29,15 @@ class HomeScreen extends StatelessWidget {
               const SizedBox(height: 20), // Dodaje razmak
 
               // Slika grada
-              Image.asset(
-                  'assets/images/city.jpg'), // Zamenite sa putanjom do vaše slike
+              Container(
+                height: 200, // Postavite odgovarajuću visinu za slike
+                child: PageView(
+                  children: [
+                    Image.asset('assets/images/city.jpg', fit: BoxFit.cover),
+                    Image.asset('assets/images/city_2.jpg', fit: BoxFit.cover),
+                  ],
+                ),
+              ),
 
               const SizedBox(height: 20), // Dodaje razmak
 

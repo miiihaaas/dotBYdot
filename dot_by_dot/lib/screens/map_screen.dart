@@ -161,39 +161,35 @@ class _MapScreenState extends State<MapScreen> {
           ),
         ]),
         // footer na dnu stranice
-        bottomNavigationBar: BottomAppBar(
-            child: _selectedMarkers.isNotEmpty
-                // ?
-                // _showFullBottomNavBar
-                // ? Row(
-                //     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                //     children: [
-                //         const Icon(Icons.play_arrow),
-                //         FloatingActionButton.extended(
-                //           onPressed: () => _showExpandedText(context),
-                //           label: const Text('Opis'),
-                //           icon: const Icon(Icons.text_snippet),
-                //         ),
-                //         Text(
-                //             '$_selectedMarkerIdex : ${_distanceInMeters.toStringAsFixed(0)} m')
-                //       ])
-                // : Row(
-                //     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                //     children: [
-                //         Text(
-                //             '$_selectedMarkerIdex : Udaljenost od mesta: ${_distanceInMeters.toStringAsFixed(0)} m')
-                // ])));
-                ? Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: _selectedMarkers.map((index) {
-                      return FloatingActionButton.extended(
-                        onPressed: () => _showExpandedText(context, index),
-                        label: Text(widget.tourInfo.locations[index].name),
-                        icon: const Icon(Icons.location_on),
-                      );
-                    }).toList(),
-                  )
-                : null));
+        // bottomNavigationBar: BottomAppBar(
+        //     color: Colors.red,
+        //     child: _selectedMarkers.isNotEmpty
+        //         ? Row(
+        //             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        //             children: _selectedMarkers.map((index) {
+        //               return FloatingActionButton.extended(
+        //                 onPressed: () => _showExpandedText(context, index),
+        //                 label: Text(widget.tourInfo.locations[index].name),
+        //                 icon: const Icon(Icons.location_on),
+        //               );
+        //             }).toList(),
+        //           )
+        //         : null));
+        bottomNavigationBar: Visibility(
+          visible: _selectedMarkers.isNotEmpty,
+          child: BottomAppBar(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: _selectedMarkers.map((index) {
+                return FloatingActionButton.extended(
+                  onPressed: () => _showExpandedText(context, index),
+                  label: Text(widget.tourInfo.locations[index].name),
+                  icon: const Icon(Icons.location_on),
+                );
+              }).toList(),
+            ),
+          ),
+        ));
   }
 
   //!
