@@ -2,11 +2,17 @@ import 'package:flutter/material.dart';
 
 final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
 
-List<String> languages = ['Srpski', 'Engleski'];
-String selectedLanguage = 'Srpski'; // Inicijalno izabrani jezik
+// List<String> languages = ['Srpski', 'Engleski'];
+// String selectedLanguage = 'Srpski'; // Inicijalno izabrani jezik
 
 class SidebarMenu extends StatelessWidget {
-  const SidebarMenu({super.key});
+  final String selectedLanguage;
+  final Function(String?)?
+      onLanguageSelected; // Define the onLanguageSelected parameter
+
+  const SidebarMenu(
+      {Key? key, this.selectedLanguage = 'en', this.onLanguageSelected})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +24,7 @@ class SidebarMenu extends StatelessWidget {
             decoration: BoxDecoration(
               // color: Colors.blue,
               image: DecorationImage(
-                image: AssetImage('images/city.jpg'),
+                image: AssetImage('assets/images/city.jpg'),
                 fit: BoxFit.cover,
               ),
             ),
@@ -55,7 +61,7 @@ class SidebarMenu extends StatelessWidget {
             leading: const Icon(Icons.language),
             title: const Text('IZBOR JEZIKA: '),
             trailing: DropdownButton(
-              value: 'sr',
+              value: selectedLanguage,
               items: const [
                 DropdownMenuItem(
                   value: 'sr',
@@ -66,10 +72,7 @@ class SidebarMenu extends StatelessWidget {
                   child: Text('English'),
                 )
               ],
-              onChanged: (String? newValue) {
-                // Ažurirajte izabrani jezik kada korisnik izabere novi jezik
-                selectedLanguage = newValue!;
-              },
+              onChanged: onLanguageSelected, // Promenjeno ovde
             ),
           ),
         ],

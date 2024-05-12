@@ -39,6 +39,13 @@ def api_tours(tourType):
             "numberOfLocations": 5,
             "locations": [
             {
+                "name": "BGKKS",
+                "description": "Ovo mesto služi za testiranje rada aplikacije i lokacije. Treće mesto za koje sa kojeg smo započeli testiranja ovog tipa",
+                "short_description": "Treće mesto sa koje smo započeli testiranje",
+                "latlng": [44.817574, 20.535312],
+                "distance_radius": 22.5
+            },
+            {
                 "name": "GMMČK",
                 "description": "Ovo mesto služi za testiranje rada aplikacije i lokacije. Drugo mesto za koje sa kojeg smo započeli testiranja ovog tipa",
                 "short_description": "Drugo mesto sa koje smo započeli testiranje",

@@ -1,7 +1,9 @@
+import 'package:dot_by_dot/localization/locales.dart';
 import 'package:dot_by_dot/screens/map_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_localization/flutter_localization.dart'; // Replace with your project name
 import 'package:dot_by_dot/sidebar_menu.dart';
-import 'package:dot_by_dot/tour_info.dart'; // Replace with your project name
+import 'package:dot_by_dot/tour_info.dart';
 
 class TourInfoScreen extends StatelessWidget {
   final TourInfo tourInfo;
@@ -14,7 +16,7 @@ class TourInfoScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(tourInfo.name),
       ),
-      endDrawer: const SidebarMenu(),
+      endDrawer: SidebarMenu(),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(20.0),
@@ -28,11 +30,15 @@ class TourInfoScreen extends StatelessWidget {
                     const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 10),
+              Text(context.formatString(
+                      LocaleData.tour_info_screen_description_1,
+                      [tourInfo.duration.toStringAsFixed(1)])
+                  // 'Trajanje: ${tourInfo.duration.toStringAsFixed(1)} sati',
+                  ),
               Text(
-                'Trajanje: ${tourInfo.duration.toStringAsFixed(1)} sati',
-              ),
-              Text(
-                'Ukupna visinska razlika: ${tourInfo.elevationGain.toStringAsFixed(0)} m',
+                context.formatString(LocaleData.tour_info_screen_description_2,
+                    [tourInfo.elevationGain.toStringAsFixed(0)]),
+                // 'Ukupna visinska razlika: ${tourInfo.elevationGain.toStringAsFixed(0)} m',
               ),
               Text(
                 'Preporučeni početni lokalitet: ${tourInfo.startingLocation}',

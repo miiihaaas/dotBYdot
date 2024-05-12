@@ -97,7 +97,7 @@ class HomeScreen extends StatelessWidget {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text('Opširnije o mestu Vučje'),
+        title: Text(LocaleData.home_vucje_about_title.getString(context)),
         content: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -112,7 +112,7 @@ class HomeScreen extends StatelessWidget {
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context),
-            child: const Text('Zatvori'),
+            child: Text(LocaleData.home_vucje_about_close.getString(context)),
           ),
         ],
       ),

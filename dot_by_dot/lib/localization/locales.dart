@@ -12,7 +12,13 @@ mixin LocaleData {
   static const String main_cycling_tour = 'main_cycling_tour';
   static const String home_title = 'home_title';
   static const String home_vucje_about = 'home_vucje_about';
+  static const String home_vucje_about_title = 'home_vucje_about_title';
   static const String home_vucje_about_extended = 'home_vucje_about_extended';
+  static const String home_vucje_about_close = 'home_vucje_about_close';
+  static const String tour_info_screen_description_1 =
+      'tour_info_screen_description_1';
+  static const String tour_info_screen_description_2 =
+      'tour_info_screen_description_2';
   static const String body = 'body';
 
   static const Map<String, dynamic> EN = {
@@ -23,6 +29,7 @@ mixin LocaleData {
     home_title: 'Home',
     home_vucje_about:
         "Vučje is a town settlement in the Leskovac district with about 2,865 inhabitants according to the 2011 census. Until 1965, it was the seat of the municipality of Vučje, which consisted of many settlements. It is located about 17 km southwest of Leskovac and is the geographical center of the Porečje area, through which the river Vučjanka flows. It has a health center, police station, football club FC Vučje, primary and secondary schools. The population is predominantly Serbian.",
+    home_vucje_about_title: 'More about Vučje',
     home_vucje_about_extended:
         '''Vučje is an urban settlement in the town of Leskovac in the Jablanički district. According to the 2011 census, there were 2,865 inhabitants.
 
@@ -37,6 +44,9 @@ Demographics
 There are 2,649 adults living in the Vučje settlement, and the average age of the population is 41.3 years (40.2 for men and 42.3 for women). There are 1049 households in the settlement, and the average number of members per household is 3.11.
 
 This settlement is largely inhabited by Serbs (according to the 2002 census).''',
+    home_vucje_about_close: 'Close',
+    tour_info_screen_description_1: 'Duration: %a hour(s)',
+    tour_info_screen_description_2: 'Total height difference: %a m',
     body: 'Some random text.',
   };
 
@@ -48,6 +58,7 @@ This settlement is largely inhabited by Serbs (according to the 2002 census).'''
     home_title: 'Početna',
     home_vucje_about:
         "Vučje je gradsko naselje u okrugu Leskovca sa oko 2.865 stanovnika prema popisu iz 2011. Do 1965. bilo je sedište opštine Vučje koju su činila mnoga naseljena mesta. Nalazi se oko 17 km jugozapadno od Leskovca i geografski je centar područja Porečje, kroz koje protiče reka Vučjanka. Ima dom zdravlja, policijsku stanicu, fudbalski klub FK Vučje, osnovnu i srednju školu. Stanovništvo je pretežno srpsko.",
+    home_vucje_about_title: 'Opširnije o mestu Vučje',
     home_vucje_about_extended:
         '''Vučje je gradsko naseljeno mesto grada Leskovca u Jablaničkom okrugu. Prema popisu iz 2011. bilo je 2.865 stanovnika.
 
@@ -62,6 +73,9 @@ Demografija
 U naselju Vučje živi 2649 punoletnih stanovnika, a prosečna starost stanovništva iznosi 41,3 godina (40,2 kod muškaraca i 42,3 kod žena). U naselju ima 1049 domaćinstava, a prosečan broj članova po domaćinstvu je 3,11.
 
 Ovo naselje je velikim delom naseljeno Srbima (prema popisu iz 2002. godine).''',
+    home_vucje_about_close: 'Zatvori',
+    tour_info_screen_description_1: 'Trajanje: %a h',
+    tour_info_screen_description_2: 'Ukupna visinka razlika: %a m',
     body: 'Neki nasumični tekst.',
   };
 }

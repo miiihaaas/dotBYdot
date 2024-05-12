@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localization/flutter_localization.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
-// import 'screens/home_screen.dart';
 import 'screens/home.dart';
 import 'screens/tour_info_screen.dart';
 import 'tour_info.dart';
@@ -14,12 +13,9 @@ void main() {
 }
 
 Future<Map<String, dynamic>> fetchTourData(String tourType) async {
-  final response =
-      // await http.get(Uri.parse('http://localhost:5000/api/tours/$tourType'));
-      await http
-          .get(Uri.parse('https://popis.online/dotBYdot//api/tours/$tourType'));
+  final response = await http
+      .get(Uri.parse('https://popis.online/dotBYdot/api/tours/$tourType'));
   if (response.statusCode == 200) {
-    // print(json.decode(response.body));
     return json.decode(response.body);
   } else {
     throw Exception('Failed to load tour data');
@@ -27,15 +23,16 @@ Future<Map<String, dynamic>> fetchTourData(String tourType) async {
 }
 
 class MyApp extends StatefulWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   State<MyApp> createState() => _MyAppState();
 }
 
 class _MyAppState extends State<MyApp> {
-  //! pokušaj dodavanja koda za menjanje jezika u aplikaciji
   final FlutterLocalization localization = FlutterLocalization.instance;
+  String selectedLanguage = 'en'; // Initial language selection
+
   @override
   void initState() {
     configureLocalization();
@@ -45,41 +42,55 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF07710A)),
-          useMaterial3: true,
-        ),
-        supportedLocales: localization.supportedLocales,
-        localizationsDelegates: localization.localizationsDelegates,
-        home: Builder(
-          builder: (context) => Scaffold(
-            key: scaffoldKey,
-            appBar: AppBar(
-              title: Text(
-                // "Naslov aplikacije",
-                LocaleData.main_title.getString(context),
-              ),
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF07710A)),
+        useMaterial3: true,
+      ),
+      supportedLocales: localization.supportedLocales,
+      localizationsDelegates: localization.localizationsDelegates,
+      home: Builder(
+        builder: (context) => Scaffold(
+          appBar: AppBar(
+            title: Text(
+              LocaleData.main_title.getString(context),
             ),
-            endDrawer: const SidebarMenu(),
-            body: const HomeScreen(),
           ),
+          endDrawer: SidebarMenu(
+            selectedLanguage: selectedLanguage,
+            onLanguageSelected: _updateLanguage,
+          ),
+          body: const HomeScreen(),
         ),
-        routes: {
-          '/walkingTourInfo': (context) =>
-              buildTourInfoScreen(context, 'walking'),
-          '/cyclingTourInfo': (context) =>
-              buildTourInfoScreen(context, 'cycling'),
-        });
+      ),
+      routes: {
+        '/walkingTourInfo': (context) =>
+            buildTourInfoScreen(context, 'walking'),
+        '/cyclingTourInfo': (context) =>
+            buildTourInfoScreen(context, 'cycling'),
+      },
+    );
   }
 
   void configureLocalization() {
-    localization.init(mapLocales: LOCALES, initLanguageCode: "sr");
+    localization.init(
+      mapLocales: LOCALES,
+      initLanguageCode: selectedLanguage,
+    );
     localization.onTranslatedLanguage = onTranslatedLanguage;
   }
 
   void onTranslatedLanguage(Locale? locale) {
     setState(() {});
+  }
+
+  void _updateLanguage(String? newLanguage) {
+    setState(() {
+      selectedLanguage =
+          newLanguage ?? 'en'; // Set to 'en' if newLanguage is null
+      localization.init(
+          mapLocales: LOCALES, initLanguageCode: selectedLanguage);
+    });
   }
 }
 
@@ -94,7 +105,7 @@ Widget buildTourInfoScreen(BuildContext context, String tourType) {
             width: 50.0,
             child: CircularProgressIndicator(),
           ),
-        ); // Prikaži loader dok se podaci učitavaju
+        );
       } else if (snapshot.hasError) {
         return Text('Error: ${snapshot.error}');
       } else {
