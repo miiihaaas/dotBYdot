@@ -47,6 +47,13 @@ def api_tours(tourType):
                     "distance_radius": 22.5
                 },
                 {
+                    "name": "BGNPF",
+                    "description": "Ovo mesto služi za testiranje rada aplikacije i lokacije. Četvrto mesto za koje sa kojeg smo započeli testiranja ovog tipa",
+                    "short_description": "Četvrto mesto sa koje smo započeli testiranje",
+                    "latlng": [44.816916, 20.460592],
+                    "distance_radius": 10.5
+                },
+                {
                     "name": "GMMČK",
                     "description": "Ovo mesto služi za testiranje rada aplikacije i lokacije. Drugo mesto za koje sa kojeg smo započeli testiranja ovog tipa",
                     "short_description": "Drugo mesto sa koje smo započeli testiranje",
