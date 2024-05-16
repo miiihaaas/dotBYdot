@@ -18,35 +18,51 @@ class HomeScreen extends StatelessWidget {
         title: Text(
             LocaleData.home_title.getString(context)), //! prepravi na početna
       ),
+      
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(20.0),
+          padding: const EdgeInsets.all(0.0),
           child: Column(
             children: [
               // Logo ili ikona
           //    const Icon(Icons.location_city), // Zamenite sa svojim logom
               
-              SizedBox(
-                height: 200,
-                child: PageView(
-                  children: [
-                    Image.asset('assets/images/vucje-logo-lat.png'),
-                  ],
+              Container(
+                color: Color(0xFF0094C9), // Postavlja plavu pozadinsku boju
+                padding: const EdgeInsets.all(20.0),
+                child: SizedBox(
+                  height: 200,
+                  child: PageView(
+                    children: [
+                      Image.asset('assets/images/vucje-logobeo-cir.png'),
+                    ],
+                  ),
                 ),
               ),
+
 
               const SizedBox(height: 20), // Dodaje razmak
 
               // Slika grada
-              SizedBox(
-                height: 200, // Postavite odgovarajuću visinu za slike
-                child: PageView(
-                  children: [
-                    Image.asset('assets/images/city.jpg', fit: BoxFit.cover),
-                    Image.asset('assets/images/city_2.jpg', fit: BoxFit.cover),
-                  ],
+              Container(
+                padding: const EdgeInsets.all(20.0),
+                child:SizedBox(
+                  height: 200, // Postavite odgovarajuću visinu za slike
+                  child: PageView(
+                    children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(16.0), // Postavite stepen zaobljenosti ivica
+                        child: Image.asset('assets/images/city.jpg', fit: BoxFit.cover),
+                      ),
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(16.0), // Postavite stepen zaobljenosti ivica
+                        child: Image.asset('assets/images/city_2.jpg', fit: BoxFit.cover),
+                      ),
+                    ],
+                  ),
                 ),
-              ),
+              ), 
+
 
               const SizedBox(height: 20), // Dodaje razmak
 
