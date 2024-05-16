@@ -11,8 +11,7 @@ class SidebarMenu extends StatelessWidget {
       onLanguageSelected; // Define the onLanguageSelected parameter
 
   const SidebarMenu(
-      {Key? key, this.selectedLanguage = 'en', this.onLanguageSelected})
-      : super(key: key);
+      {super.key, this.selectedLanguage = 'en', this.onLanguageSelected});
 
   @override
   Widget build(BuildContext context) {

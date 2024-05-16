@@ -50,7 +50,7 @@ class _TestPageState extends State<TestPage> {
             Text(_apiWelcomeMessage),
             const SizedBox(height: 20),
             DataTable(
-              headingRowColor: MaterialStateColor.resolveWith(
+              headingRowColor: WidgetStateColor.resolveWith(
                 (states) => Colors.green,
               ),
               columns: const [

@@ -16,7 +16,7 @@ class TourInfoScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(tourInfo.name),
       ),
-      endDrawer: SidebarMenu(),
+      endDrawer: const SidebarMenu(),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(20.0),

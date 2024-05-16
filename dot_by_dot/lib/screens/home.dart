@@ -24,12 +24,21 @@ class HomeScreen extends StatelessWidget {
           child: Column(
             children: [
               // Logo ili ikona
-              const Icon(Icons.location_city), // Zamenite sa svojim logom
+          //    const Icon(Icons.location_city), // Zamenite sa svojim logom
+              
+              SizedBox(
+                height: 200,
+                child: PageView(
+                  children: [
+                    Image.asset('assets/images/vucje-logo-lat.png'),
+                  ],
+                ),
+              ),
 
               const SizedBox(height: 20), // Dodaje razmak
 
               // Slika grada
-              Container(
+              SizedBox(
                 height: 200, // Postavite odgovarajuću visinu za slike
                 child: PageView(
                   children: [
@@ -44,7 +53,7 @@ class HomeScreen extends StatelessWidget {
               // Naslov grada
               const Text(
                 'Vučje',
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, fontFamily: "RussoOne"),
               ),
 
               const SizedBox(height: 10), // Dodaje razmak

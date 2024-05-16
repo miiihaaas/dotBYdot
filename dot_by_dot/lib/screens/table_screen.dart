@@ -14,7 +14,7 @@ class TablePage extends StatelessWidget {
       body: SizedBox(
         width: double.infinity,
         child: DataTable(
-          headingRowColor: MaterialStateColor.resolveWith(
+          headingRowColor: WidgetStateColor.resolveWith(
             (states) => Colors.green,
           ),
           columns: const [

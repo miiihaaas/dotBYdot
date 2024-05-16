@@ -23,7 +23,7 @@ Future<Map<String, dynamic>> fetchTourData(String tourType) async {
 }
 
 class MyApp extends StatefulWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   State<MyApp> createState() => _MyAppState();
