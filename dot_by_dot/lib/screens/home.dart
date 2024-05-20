@@ -14,10 +14,10 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-            LocaleData.home_title.getString(context)), //! prepravi na početna
-      ),
+      //appBar: AppBar(
+       // title: Text(
+            // LocaleData.home_title.getString(context)), //! prepravi na početna
+      //),
       
       body: SingleChildScrollView(
         child: Padding(
@@ -27,6 +27,10 @@ class HomeScreen extends StatelessWidget {
               // Logo ili ikona
           //    const Icon(Icons.location_city), // Zamenite sa svojim logom
               
+              Container(
+                padding: const EdgeInsets.all(0.0),
+                child: Image.asset('assets/images/prelaz-top-3.png'),
+              ),
               Container(
                 color: Color(0xFF0094C9), // Postavlja plavu pozadinsku boju
                 padding: const EdgeInsets.all(20.0),
@@ -40,12 +44,31 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
 
+              Container(
+                padding: const EdgeInsets.all(0.0),
+                child: Image.asset('assets/images/prelaz.png'),
+              ),
 
-              const SizedBox(height: 20), // Dodaje razmak
+              // const SizedBox(height: 20), // Dodaje razmak
 
               // Slika grada
               Container(
-                padding: const EdgeInsets.all(20.0),
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    colors: [
+                      Color(0xFFCCEAF4),
+                      Color(0xFFFFFFFF),
+                    ],
+                  ),
+                ),
+                padding: const EdgeInsets.only(
+                  top: 40.0,  // Padding za vrh
+                  left: 20.0, // Padding za levo
+                  right: 20.0, // Padding za desno
+                  bottom: 20.0, // Padding za dno
+                ),
                 child:SizedBox(
                   height: 200, // Postavite odgovarajuću visinu za slike
                   child: PageView(
@@ -75,42 +98,83 @@ class HomeScreen extends StatelessWidget {
               const SizedBox(height: 10), // Dodaje razmak
 
               // Kratak opis
-              Text(
-                LocaleData.home_vucje_about.getString(context),
-                maxLines: 7, // Ograničava broj linija za kratki opis
-                overflow: TextOverflow.ellipsis, // Dodaje elipsu (...)
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                child: Text(
+                  LocaleData.home_vucje_about.getString(context),
+                  maxLines: 7, // Ograničava broj linija za kratki opis
+                  overflow: TextOverflow.ellipsis, // Dodaje elipsu (...)
+                ),
               ),
 
               const SizedBox(height: 20), // Dodaje razmak
 
               // Dugme za proširen tekst (floating action button)
-              FloatingActionButton.extended(
-                onPressed: () => _showExpandedText(context),
-                label: Text(LocaleData.main_more.getString(context)),
-                icon: const Icon(Icons.info_rounded),
+              Container(
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    colors: [
+                      Color(0xFFFFFFFF),
+                      Color(0xFFCCEAF4),
+                    ],
+                  ),
+                ),
+                padding: const EdgeInsets.all(20.0),
+                child: ElevatedButton.icon(
+                  onPressed: () => _showExpandedText(context),
+                  icon: const Icon(Icons.info_rounded),
+                  label: Text(LocaleData.main_more.getString(context)),
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.resolveWith<Color>(
+                      (states) {
+                        return const Color(0xFFEBF2F5); // Promenite boju dugmeta
+                      },
+                    ),
+                    foregroundColor: MaterialStateProperty.resolveWith<Color>(
+                      (states) {
+                        return const Color(0xFF0094C9); // Promenite boju teksta
+                      },
+                    ),
+                  ),
+                ),
               ),
 
-              const SizedBox(height: 20), // Dodaje razmak
+              // const SizedBox(height: 20), // Dodaje razmak
 
+              Container(
+                padding: const EdgeInsets.all(0.0),
+                child: Image.asset('assets/images/prelaz-bottom-1.png'),
+              ),
               // Dugmad za ture
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  ElevatedButton.icon(
-                    onPressed: () => _navigateToWalkingTourInfo(context),
-                    icon: const Icon(Icons.directions_walk),
-                    label:
-                        Text(LocaleData.main_walking_tour.getString(context)),
-                  ),
-                  ElevatedButton.icon(
-                    onPressed: () => _navigateToCyclingTourInfo(context),
-                    icon: const Icon(Icons.directions_bike),
-                    label:
-                        Text(LocaleData.main_cycling_tour.getString(context)),
-                  ),
-                ],
+              Container(
+                color: Color(0xFF0094C9),
+                padding: const EdgeInsets.all(20.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    ElevatedButton.icon(
+                      onPressed: () => _navigateToWalkingTourInfo(context),
+                      icon: Icon(Icons.directions_walk, color: Color(0xFF0094C9)),
+                      label: Text(
+                        LocaleData.main_walking_tour.getString(context),
+                        style: const TextStyle(color: Color(0xFF0094C9)),
+                      ),
+                    ),
+                    ElevatedButton.icon(
+                      onPressed: () => _navigateToCyclingTourInfo(context),
+                      icon: const Icon(Icons.directions_bike, color: Color(0xFF0094C9)),
+                      label: Text(
+                        LocaleData.main_cycling_tour.getString(context),
+                        style: const TextStyle(color: Color(0xFF0094C9)),
+                      ),
+                    ),
+                  ],
+                ),
               ),
-              const SizedBox(height: 20), // Dodaje razmak
+              // const SizedBox(height: 20), // Dodaje razmak
 
               // GoogleMap(
               //     onMapCreated: _onMapCreated,
