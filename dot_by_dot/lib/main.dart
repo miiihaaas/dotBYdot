@@ -44,16 +44,29 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF07710A)),
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF0094C9)),
         useMaterial3: true,
       ),
       supportedLocales: localization.supportedLocales,
       localizationsDelegates: localization.localizationsDelegates,
       home: Builder(
         builder: (context) => Scaffold(
-          appBar: AppBar(
-            title: Text(
-              LocaleData.main_title.getString(context),
+          appBar: PreferredSize(
+            preferredSize: Size.fromHeight(kToolbarHeight),
+            child: AppBar(
+              flexibleSpace: Container(
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    colors: [Color(0xFFffffff), Color(0xFFcceaf4)], // Promenite boje po potrebi
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                  ),
+                ),
+              ),
+              title: Text(
+                LocaleData.main_title.getString(context),
+              ),
+              //backgroundColor: Colors.transparent, // Set to transparent to show gradient
             ),
           ),
           endDrawer: SidebarMenu(
