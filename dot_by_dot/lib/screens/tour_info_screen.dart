@@ -104,13 +104,15 @@ class TourInfoScreen extends StatelessWidget {
                   ),
                   child: Column(
                     children: [
-                      const TabBar(
+                      TabBar(
                         tabs: [
                           // Flexible(
                           //   child: Tab(
                           Tab(
                             child: Text(
-                              'Lista lokacija',
+                              // 'Lista lokacija',
+                              LocaleData.tour_info_screen_tab_1
+                                  .getString(context),
                               textAlign: TextAlign.center,
                             ),
                           ),
@@ -119,7 +121,9 @@ class TourInfoScreen extends StatelessWidget {
                           //   child: Tab(
                           Tab(
                             child: Text(
-                              'Pre nego što krenete',
+                              // 'Pre nego što krenete',
+                              LocaleData.tour_info_screen_tab_2
+                                  .getString(context),
                               textAlign: TextAlign.center,
                             ),
                           ),
@@ -128,7 +132,9 @@ class TourInfoScreen extends StatelessWidget {
                           //   child: Tab(
                           Tab(
                             child: Text(
-                              'Mesta za predah',
+                              // 'Mesta za predah',
+                              LocaleData.tour_info_screen_tab_3
+                                  .getString(context),
                               textAlign: TextAlign.center,
                             ),
                           ),
@@ -165,7 +171,11 @@ class TourInfoScreen extends StatelessWidget {
                             ListView.builder(
                               itemCount: tourInfo.preTourInformation.length,
                               itemBuilder: (context, index) {
-                                return Text(tourInfo.preTourInformation[index]);
+                                // return Text(tourInfo.preTourInformation[index]);
+                                return ListTile(
+                                  title:
+                                      Text(tourInfo.preTourInformation[index]),
+                                );
                               },
                             ),
 
@@ -204,7 +214,8 @@ class TourInfoScreen extends StatelessWidget {
             );
           },
           label: Text(
-            'POKRENI TURU',
+            // 'POKRENI TURU',
+            LocaleData.tour_info_screen_start_tour.getString(context),
             style: TextStyle(color: Colors.white),
           ),
           backgroundColor: Color(0xFF0094C9),

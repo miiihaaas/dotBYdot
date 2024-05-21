@@ -15,10 +15,17 @@ mixin LocaleData {
   static const String home_vucje_about_title = 'home_vucje_about_title';
   static const String home_vucje_about_extended = 'home_vucje_about_extended';
   static const String home_vucje_about_close = 'home_vucje_about_close';
+  static const String home_vucje_eu_text_1 = 'home_vucje_eu_text_1';
+  static const String home_vucje_eu_text_2 = 'home_vucje_eu_text_2';
   static const String tour_info_screen_description_1 =
       'tour_info_screen_description_1';
   static const String tour_info_screen_description_2 =
       'tour_info_screen_description_2';
+  static const String tour_info_screen_tab_1 = 'tour_info_screen_tab_1';
+  static const String tour_info_screen_tab_2 = 'tour_info_screen_tab_2';
+  static const String tour_info_screen_tab_3 = 'tour_info_screen_tab_3';
+  static const String tour_info_screen_start_tour =
+      'tour_info_screen_start_tour';
   static const String body = 'body';
 
   static const Map<String, dynamic> EN = {
@@ -45,8 +52,15 @@ There are 2,649 adults living in the Vučje settlement, and the average age of t
 
 This settlement is largely inhabited by Serbs (according to the 2002 census).''',
     home_vucje_about_close: 'Close',
+    home_vucje_eu_text_1: 'This application is funded by the European Union',
+    home_vucje_eu_text_2:
+        'This application is funded by the European Union. The content is the sole responsibility of the Secondary School "Svetozar Krstić - Toza" from Vučje, SOU "Mitko Pendžukliski" from Kratov and Association "Limitless" from Belgrade, and does not necessarily reflect the views of the European Union',
     tour_info_screen_description_1: 'Duration: %a hour(s)',
     tour_info_screen_description_2: 'Total height difference: %a m',
+    tour_info_screen_tab_1: 'List of localities',
+    tour_info_screen_tab_2: 'Before you go',
+    tour_info_screen_tab_3: 'Places to rest',
+    tour_info_screen_start_tour: 'START TOUR',
     body: 'Some random text.',
   };
 
@@ -74,8 +88,15 @@ U naselju Vučje živi 2649 punoletnih stanovnika, a prosečna starost stanovni�
 
 Ovo naselje je velikim delom naseljeno Srbima (prema popisu iz 2002. godine).''',
     home_vucje_about_close: 'Zatvori',
+    home_vucje_eu_text_1: 'Ovu aplikaciju finansira Evropska unija',
+    home_vucje_eu_text_2:
+        'Ova aplikacija je finansirana od strane Evropske unije. Sadržaj je isključiva odgovornost Srednje škole „Svetozar Krstić – Toza“ iz Vučja, SOU „Mitko Pendžukliski“ iz Kratova i Udruženja "Limitless" iz Beograda, i ne odražava nužno stavove Evropske unije',
     tour_info_screen_description_1: 'Trajanje: %a h',
     tour_info_screen_description_2: 'Ukupna visinka razlika: %a m',
+    tour_info_screen_tab_1: 'Lista lokacija',
+    tour_info_screen_tab_2: 'Pre nego što krenete',
+    tour_info_screen_tab_3: 'Mesta za predah',
+    tour_info_screen_start_tour: 'POKRENI TURU',
     body: 'Neki nasumični tekst.',
   };
 }
