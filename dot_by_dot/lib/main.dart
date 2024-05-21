@@ -57,15 +57,15 @@ class _MyAppState extends State<MyApp> {
               flexibleSpace: Container(
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
-                    colors: [Color(0xFFffffff), Color(0xFFcceaf4)], // Promenite boje po potrebi
+                    colors: [Color(0xFFffffff), Color(0xFF00ace9)], // Promenite boje po potrebi
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
                   ),
                 ),
               ),
-              title: Text(
-                LocaleData.main_title.getString(context),
-              ),
+              //title: Text(
+              //  LocaleData.main_title.getString(context),
+              //),
               //backgroundColor: Colors.transparent, // Set to transparent to show gradient
             ),
           ),
