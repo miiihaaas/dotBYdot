@@ -19,19 +19,23 @@ class TourInfoScreen extends StatelessWidget {
           flexibleSpace: Container(
             decoration: BoxDecoration(
               gradient: LinearGradient(
-                colors: [Color(0xFFffffff), Color(0xFFcceaf4)], // Promenite boje po potrebi
+                colors: [
+                  Color(0xFFffffff),
+                  Color(0xFFcceaf4)
+                ], // Promenite boje po potrebi
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
               ),
             ),
           ),
-        title: Text(tourInfo.name),
+          title: Text(tourInfo.name),
         ),
       ),
       endDrawer: const SidebarMenu(),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.only(top: 0.0, bottom: 80.0, left: 0.0, right: 00),
+          padding: const EdgeInsets.only(
+              top: 0.0, bottom: 80.0, left: 0.0, right: 00),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -45,39 +49,37 @@ class TourInfoScreen extends StatelessWidget {
                   children: [
                     Text(
                       '${tourInfo.type} tura',
-                      style:
-                          const TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Color(0xFFffffff)),
+                      style: const TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xFFffffff)),
                     ),
                     const SizedBox(height: 10),
-                    Text(context.formatString(
-                        LocaleData.tour_info_screen_description_1,
-                        [tourInfo.duration.toStringAsFixed(1)]),
-                        // 'Trajanje: ${tourInfo.duration.toStringAsFixed(1)} sati',
-                        style:
-                          const TextStyle(color: Color(0xFFffffff)),
+                    Text(
+                      context.formatString(
+                          LocaleData.tour_info_screen_description_1,
+                          [tourInfo.duration.toStringAsFixed(1)]),
+                      // 'Trajanje: ${tourInfo.duration.toStringAsFixed(1)} sati',
+                      style: const TextStyle(color: Color(0xFFffffff)),
                     ),
                     Text(
                       context.formatString(
                           LocaleData.tour_info_screen_description_2,
                           [tourInfo.elevationGain.toStringAsFixed(0)]),
-                      style:
-                        const TextStyle(color: Color(0xFFffffff)),
+                      style: const TextStyle(color: Color(0xFFffffff)),
                       // 'Ukupna visinska razlika: ${tourInfo.elevationGain.toStringAsFixed(0)} m',
                     ),
                     Text(
                       'Preporučeni početni lokalitet: ${tourInfo.startingLocation}',
-                      style:
-                        const TextStyle(color: Color(0xFFffffff)),
+                      style: const TextStyle(color: Color(0xFFffffff)),
                     ),
                     Text(
                       'Nivo težine: ${tourInfo.difficultyLevel}',
-                      style:
-                        const TextStyle(color: Color(0xFFffffff)),
+                      style: const TextStyle(color: Color(0xFFffffff)),
                     ),
                     Text(
                       'Broj lokacija: ${tourInfo.numberOfLocations}',
-                      style:
-                        const TextStyle(color: Color(0xFFffffff)),
+                      style: const TextStyle(color: Color(0xFFffffff)),
                     ),
                   ],
                 ),
@@ -90,7 +92,7 @@ class TourInfoScreen extends StatelessWidget {
               DefaultTabController(
                 length: 3,
                 child: Container(
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     gradient: LinearGradient(
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter,
@@ -104,35 +106,39 @@ class TourInfoScreen extends StatelessWidget {
                     children: [
                       const TabBar(
                         tabs: [
-                          Flexible(
-                            child: Tab(
-                              child: Text(
-                                'Lista lokacija',
-                                textAlign: TextAlign.center,
-                              ),
+                          // Flexible(
+                          //   child: Tab(
+                          Tab(
+                            child: Text(
+                              'Lista lokacija',
+                              textAlign: TextAlign.center,
                             ),
                           ),
-                          Flexible(
-                            child: Tab(
-                              child: Text(
-                                'Pre nego što krenete',
-                                textAlign: TextAlign.center,
-                              ),
+                          // ),
+                          // Flexible(
+                          //   child: Tab(
+                          Tab(
+                            child: Text(
+                              'Pre nego što krenete',
+                              textAlign: TextAlign.center,
                             ),
                           ),
-                          Flexible(
-                            child: Tab(
-                              child: Text(
-                                'Mesta za predah',
-                                textAlign: TextAlign.center,
-                              ),
+                          // ),
+                          // Flexible(
+                          //   child: Tab(
+                          Tab(
+                            child: Text(
+                              'Mesta za predah',
+                              textAlign: TextAlign.center,
                             ),
                           ),
+                          // ),
                         ],
                       ),
                       const SizedBox(height: 15),
                       SizedBox(
-                        height: MediaQuery.of(context).size.height * 0.42, // 100vh
+                        height:
+                            MediaQuery.of(context).size.height * 0.42, // 100vh
                         child: TabBarView(
                           children: [
                             // List of locations
@@ -144,7 +150,9 @@ class TourInfoScreen extends StatelessWidget {
                                   title: Text(location.name),
                                   subtitle: Text(location.short_description),
                                   trailing: Icon(
-                                    location.visited ? Icons.check : Icons.place,
+                                    location.visited
+                                        ? Icons.check
+                                        : Icons.place,
                                     color: location.visited
                                         ? Colors.green
                                         : Colors.grey,
