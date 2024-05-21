@@ -15,25 +15,25 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       //appBar: AppBar(
-       // title: Text(
-            // LocaleData.home_title.getString(context)), //! prepravi na početna
+      // title: Text(
+      // LocaleData.home_title.getString(context)), //! prepravi na početna
       //),
-      
+
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(0.0),
           child: Column(
             children: [
               // Logo ili ikona
-          //    const Icon(Icons.location_city), // Zamenite sa svojim logom
-              
+              //    const Icon(Icons.location_city), // Zamenite sa svojim logom
+
               //Container(
               //  padding: const EdgeInsets.all(0.0),
               //  child: Image.asset('assets/images/prelaz-top-3.png'),
               //),
               Container(
                 //color: Color(0xFF0094C9), // Postavlja plavu pozadinsku boju
-                 decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   gradient: LinearGradient(
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
@@ -63,7 +63,7 @@ class HomeScreen extends StatelessWidget {
 
               // Slika grada
               Container(
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   gradient: LinearGradient(
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
@@ -74,28 +74,31 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 padding: const EdgeInsets.only(
-                  top: 40.0,  // Padding za vrh
+                  top: 40.0, // Padding za vrh
                   left: 20.0, // Padding za levo
                   right: 20.0, // Padding za desno
                   bottom: 20.0, // Padding za dno
                 ),
-                child:SizedBox(
+                child: SizedBox(
                   height: 200, // Postavite odgovarajuću visinu za slike
                   child: PageView(
                     children: [
                       ClipRRect(
-                        borderRadius: BorderRadius.circular(16.0), // Postavite stepen zaobljenosti ivica
-                        child: Image.asset('assets/images/city.jpg', fit: BoxFit.cover),
+                        borderRadius: BorderRadius.circular(
+                            16.0), // Postavite stepen zaobljenosti ivica
+                        child: Image.asset('assets/images/city.jpg',
+                            fit: BoxFit.cover),
                       ),
                       ClipRRect(
-                        borderRadius: BorderRadius.circular(16.0), // Postavite stepen zaobljenosti ivica
-                        child: Image.asset('assets/images/city_2.jpg', fit: BoxFit.cover),
+                        borderRadius: BorderRadius.circular(
+                            16.0), // Postavite stepen zaobljenosti ivica
+                        child: Image.asset('assets/images/city_2.jpg',
+                            fit: BoxFit.cover),
                       ),
                     ],
                   ),
                 ),
-              ), 
-
+              ),
 
               const SizedBox(height: 20), // Dodaje razmak
 
@@ -109,7 +112,7 @@ class HomeScreen extends StatelessWidget {
               const SizedBox(height: 10), // Dodaje razmak
 
               Container(
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   gradient: LinearGradient(
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
@@ -128,9 +131,13 @@ class HomeScreen extends StatelessWidget {
                     overflow: TextOverflow.ellipsis, // Dodaje elipsu (...)
                   ),
                   children: <Widget>[
-          
                     Padding(
-                      padding: const EdgeInsets.only(left: 16.0, right: 16.0, top: 0, bottom: 0), // Postavite visinu i dubinu okvira za kratki opis na 0
+                      padding: const EdgeInsets.only(
+                          left: 16.0,
+                          right: 16.0,
+                          top: 0,
+                          bottom:
+                              0), // Postavite visinu i dubinu okvira za kratki opis na 0
                       child: Text(
                         LocaleData.home_vucje_about_extended.getString(context),
                         textAlign: TextAlign.justify,
@@ -139,7 +146,7 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              
+
               // Kratak opis
               //Padding(
               //   padding: const EdgeInsets.symmetric(horizontal: 20.0),
@@ -200,7 +207,8 @@ class HomeScreen extends StatelessWidget {
                   children: [
                     ElevatedButton.icon(
                       onPressed: () => _navigateToWalkingTourInfo(context),
-                      icon: Icon(Icons.directions_walk, color: Color(0xFF0094C9)),
+                      icon:
+                          Icon(Icons.directions_walk, color: Color(0xFF0094C9)),
                       label: Text(
                         LocaleData.main_walking_tour.getString(context),
                         style: const TextStyle(color: Color(0xFF0094C9)),
@@ -208,7 +216,8 @@ class HomeScreen extends StatelessWidget {
                     ),
                     ElevatedButton.icon(
                       onPressed: () => _navigateToCyclingTourInfo(context),
-                      icon: const Icon(Icons.directions_bike, color: Color(0xFF0094C9)),
+                      icon: const Icon(Icons.directions_bike,
+                          color: Color(0xFF0094C9)),
                       label: Text(
                         LocaleData.main_cycling_tour.getString(context),
                         style: const TextStyle(color: Color(0xFF0094C9)),
@@ -219,16 +228,18 @@ class HomeScreen extends StatelessWidget {
               ),
               Container(
                 width: double.infinity,
-                color: Color(0xFF0076A6),
+                color: const Color(0xFF0076A6),
                 padding: const EdgeInsets.all(20.0),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween, // Raspoređivanje elemenata između
+                  mainAxisAlignment: MainAxisAlignment
+                      .spaceBetween, // Raspoređivanje elemenata između
                   children: [
                     Align(
                       alignment: Alignment.centerLeft,
                       child: SizedBox(
                         width: 60,
-                        child: Image.asset('assets/images/eu-flag.png', fit: BoxFit.contain),
+                        child: Image.asset('assets/images/eu-flag.png',
+                            fit: BoxFit.contain),
                       ),
                     ),
                     Align(
@@ -236,8 +247,10 @@ class HomeScreen extends StatelessWidget {
                       child: SizedBox(
                         width: 280,
                         child: Text(
-                          'Ovu aplikaciju finansira Evropska unija',
-                          style: TextStyle(fontSize: 14, color: Colors.white),
+                          // 'Ovu aplikaciju finansira Evropska unija',
+                          LocaleData.home_vucje_eu_text_1.getString(context),
+                          style: const TextStyle(
+                              fontSize: 14, color: Colors.white),
                           textAlign: TextAlign.left,
                         ),
                       ),
@@ -247,11 +260,12 @@ class HomeScreen extends StatelessWidget {
               ),
               Container(
                 width: double.infinity,
-                color: Color(0xFF00465F),
+                color: const Color(0xFF00465F),
                 padding: const EdgeInsets.all(20.0),
                 child: Text(
-                  'Ova aplikacija je finansirana od strane Evropske unije. Sadržaj je isključiva odgovornost Srednje škole „Svetozar Krstić – Toza“ iz Vučja, SOU „Mitko Pendžukliski“ iz Kratova i Udruženja "Limitless" iz Beograda, i ne odražava nužno stavove Evropske unije',
-                  style: TextStyle(fontSize: 12, color: Colors.white),
+                  // 'Ova aplikacija je finansirana od strane Evropske unije. Sadržaj je isključiva odgovornost Srednje škole „Svetozar Krstić – Toza“ iz Vučja, SOU „Mitko Pendžukliski“ iz Kratova i Udruženja "Limitless" iz Beograda, i ne odražava nužno stavove Evropske unije',
+                  LocaleData.home_vucje_eu_text_2.getString(context),
+                  style: const TextStyle(fontSize: 12, color: Colors.white),
                   textAlign: TextAlign.center,
                 ),
               ),
