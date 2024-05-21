@@ -62,7 +62,7 @@ class _MapScreenState extends State<MapScreen> {
 
   Future<void> _updateDistance(LatLng point, desiredLocation) async {
     if (_currentP != null) {
-      double distanceInMeters = Geolocator.distanceBetween(
+      double distanceInMeters = await Geolocator.distanceBetween(
         _currentP!.latitude,
         _currentP!.longitude,
         point.latitude,
