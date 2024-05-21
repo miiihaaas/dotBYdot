@@ -17,7 +17,7 @@ class SidebarMenu extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       child: Container(
-        padding: EdgeInsets.all(16.0),
+        padding: EdgeInsets.all(0.0),
         decoration: BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topCenter,
@@ -33,14 +33,14 @@ class SidebarMenu extends StatelessWidget {
           children: <Widget>[
             const DrawerHeader(
               decoration: BoxDecoration(
-                // color: Colors.blue,
+                 color: Color(0xFF0094C9),
                 image: DecorationImage(
-                  image: AssetImage('assets/images/city.jpg'),
-                  fit: BoxFit.cover,
+                  image: AssetImage('assets/images/vucje-logobeo-cir.png'),
+                  fit: BoxFit.scaleDown,
                 ),
               ),
               child: Text(
-                'MENI',
+                '',
                 style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,

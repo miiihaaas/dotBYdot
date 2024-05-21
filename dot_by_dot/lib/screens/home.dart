@@ -27,12 +27,22 @@ class HomeScreen extends StatelessWidget {
               // Logo ili ikona
           //    const Icon(Icons.location_city), // Zamenite sa svojim logom
               
+              //Container(
+              //  padding: const EdgeInsets.all(0.0),
+              //  child: Image.asset('assets/images/prelaz-top-3.png'),
+              //),
               Container(
-                padding: const EdgeInsets.all(0.0),
-                child: Image.asset('assets/images/prelaz-top-3.png'),
-              ),
-              Container(
-                color: Color(0xFF0094C9), // Postavlja plavu pozadinsku boju
+                //color: Color(0xFF0094C9), // Postavlja plavu pozadinsku boju
+                 decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    colors: [
+                      Color(0xFF00ace9),
+                      Color(0xFF0094c9),
+                    ],
+                  ),
+                ),
                 padding: const EdgeInsets.all(20.0),
                 child: SizedBox(
                   height: 200,
@@ -92,26 +102,13 @@ class HomeScreen extends StatelessWidget {
               // Naslov grada
               const Text(
                 'Vučje',
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, fontFamily: "RussoOne"),
+                //style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, fontFamily: "RussoOne"),
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
 
               const SizedBox(height: 10), // Dodaje razmak
 
-              // Kratak opis
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                child: Text(
-                  LocaleData.home_vucje_about.getString(context),
-                  maxLines: 7, // Ograničava broj linija za kratki opis
-                  overflow: TextOverflow.ellipsis, // Dodaje elipsu (...)
-                ),
-              ),
-
-              const SizedBox(height: 20), // Dodaje razmak
-
-              // Dugme za proširen tekst (floating action button)
               Container(
-                width: double.infinity,
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
                     begin: Alignment.topCenter,
@@ -123,24 +120,70 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 padding: const EdgeInsets.all(20.0),
-                child: ElevatedButton.icon(
-                  onPressed: () => _showExpandedText(context),
-                  icon: const Icon(Icons.info_rounded),
-                  label: Text(LocaleData.main_more.getString(context)),
-                  style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.resolveWith<Color>(
-                      (states) {
-                        return const Color(0xFFEBF2F5); // Promenite boju dugmeta
-                      },
-                    ),
-                    foregroundColor: MaterialStateProperty.resolveWith<Color>(
-                      (states) {
-                        return const Color(0xFF0094C9); // Promenite boju teksta
-                      },
-                    ),
+                child: ExpansionTile(
+                  expandedCrossAxisAlignment: CrossAxisAlignment.start,
+                  title: Text(
+                    LocaleData.home_vucje_about.getString(context),
+                    maxLines: 7, // Ograničava broj linija za kratki opis
+                    overflow: TextOverflow.ellipsis, // Dodaje elipsu (...)
                   ),
+                  children: <Widget>[
+          
+                    Padding(
+                      padding: const EdgeInsets.only(left: 16.0, right: 16.0, top: 0, bottom: 0), // Postavite visinu i dubinu okvira za kratki opis na 0
+                      child: Text(
+                        LocaleData.home_vucje_about_extended.getString(context),
+                        textAlign: TextAlign.justify,
+                      ),
+                    ),
+                  ],
                 ),
               ),
+              
+              // Kratak opis
+              //Padding(
+              //   padding: const EdgeInsets.symmetric(horizontal: 20.0),
+              //   child: Text(
+              //     LocaleData.home_vucje_about.getString(context),
+              //     maxLines: 7, // Ograničava broj linija za kratki opis
+              //     overflow: TextOverflow.ellipsis, // Dodaje elipsu (...)
+              //   ),
+              // ),
+
+              //const SizedBox(height: 20), // Dodaje razmak
+
+              // Dugme za proširen tekst (floating action button)
+              // Container(
+              //   width: double.infinity,
+              //   decoration: BoxDecoration(
+              //     gradient: LinearGradient(
+              //       begin: Alignment.topCenter,
+              //       end: Alignment.bottomCenter,
+              //       colors: [
+              //         Color(0xFFFFFFFF),
+              //         Color(0xFFCCEAF4),
+              //       ],
+              //     ),
+              //   ),
+              //   padding: const EdgeInsets.all(20.0),
+              //   child: ElevatedButton.icon(
+              //     onPressed: () => _showExpandedText(context),
+              //     icon: const Icon(Icons.info_rounded),
+              //     label: Text(LocaleData.main_more.getString(context)),
+              //     style: ButtonStyle(
+              //       backgroundColor: MaterialStateProperty.resolveWith<Color>(
+              //         (states) {
+              //           return const Color(0xFFEBF2F5); // Promenite boju dugmeta
+              //         },
+              //       ),
+              //       foregroundColor: MaterialStateProperty.resolveWith<Color>(
+              //         (states) {
+              //           return const Color(0xFF0094C9); // Promenite boju teksta
+              //         },
+              //       ),
+              //     ),
+              //   ),
+              // ),
 
               // const SizedBox(height: 20), // Dodaje razmak
 
@@ -172,6 +215,44 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                   ],
+                ),
+              ),
+              Container(
+                width: double.infinity,
+                color: Color(0xFF0076A6),
+                padding: const EdgeInsets.all(20.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween, // Raspoređivanje elemenata između
+                  children: [
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: SizedBox(
+                        width: 60,
+                        child: Image.asset('assets/images/eu-flag.png', fit: BoxFit.contain),
+                      ),
+                    ),
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: SizedBox(
+                        width: 280,
+                        child: Text(
+                          'Ovu aplikaciju finansira Evropska unija',
+                          style: TextStyle(fontSize: 14, color: Colors.white),
+                          textAlign: TextAlign.left,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                width: double.infinity,
+                color: Color(0xFF00465F),
+                padding: const EdgeInsets.all(20.0),
+                child: Text(
+                  'Ova aplikacija je finansirana od strane Evropske unije. Sadržaj je isključiva odgovornost Srednje škole „Svetozar Krstić – Toza“ iz Vučja, SOU „Mitko Pendžukliski“ iz Kratova i Udruženja "Limitless" iz Beograda, i ne odražava nužno stavove Evropske unije',
+                  style: TextStyle(fontSize: 12, color: Colors.white),
+                  textAlign: TextAlign.center,
                 ),
               ),
               // const SizedBox(height: 20), // Dodaje razmak
