@@ -18,7 +18,7 @@ Future<Map<String, dynamic>> fetchTourData(String tourType) async {
   if (response.statusCode == 200) {
     return json.decode(response.body);
   } else {
-    throw Exception('Failed to load tour data');
+    throw Exception('Failed to load tour data. Input: $tourType');
   }
 }
 
@@ -84,7 +84,8 @@ class _MyAppState extends State<MyApp> {
         //! walking_1 (imaće en i sr verziju stringa: walking_1_en, walking_1_sr)
         '/walkingTourInfo': (context) =>
             // buildTourInfoScreen(context, 'walking'),
-            buildTourInfoScreen(context, LocaleData.walking_1),
+            buildTourInfoScreen(
+                context, LocaleData.walking_1.getString(context)),
         '/cyclingTourInfo': (context) =>
             buildTourInfoScreen(context, 'cycling'),
       },
