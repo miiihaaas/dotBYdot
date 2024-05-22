@@ -18,6 +18,7 @@ class SidebarMenu extends StatelessWidget {
     return Drawer(
       child: Container(
         padding: EdgeInsets.all(0.0),
+        //margin: EdgeInsets.all(10.0),
         decoration: BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topCenter,
@@ -35,7 +36,7 @@ class SidebarMenu extends StatelessWidget {
               decoration: BoxDecoration(
                  color: Color(0xFF0094C9),
                 image: DecorationImage(
-                  image: AssetImage('assets/images/vucje-logobeo-cir.png'),
+                  image: AssetImage('assets/images/talasi.png'),
                   fit: BoxFit.scaleDown,
                 ),
               ),
