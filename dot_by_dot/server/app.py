@@ -15,7 +15,7 @@ def api_tours(tourType):
     walking_1 = {
         "en": {
             "name": "Walking tour",
-            "type": "Walking",
+            "type": "Walking tour",
             "routeLenght": "5.1 km",
             "duration": "1h 20min",
             "elevationGain": 238.0,
@@ -124,7 +124,7 @@ def api_tours(tourType):
         },
         "sr": {
             "name": "Pešačka tura",
-            "type": "Pešačka",
+            "type": "Pešačka tura",
             "routeLenght": "5.1 km",
             "duration": "1h 20min",
             "elevationGain": 238.0,
