@@ -2,7 +2,7 @@ class TourInfo {
   final String name;
   final String type; // 'walking' or 'cycling'
   final String routeLenght;
-  final double duration; // Time in hours
+  final String duration; // Time in hours
   final double elevationGain; // Difference in meters
   final String difficultyLevel;
   final int numberOfLocations;

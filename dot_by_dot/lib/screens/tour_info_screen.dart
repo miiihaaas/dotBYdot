@@ -17,7 +17,7 @@ class TourInfoScreen extends StatelessWidget {
         preferredSize: Size.fromHeight(kToolbarHeight),
         child: AppBar(
           flexibleSpace: Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               gradient: LinearGradient(
                 colors: [
                   Color(0xFFffffff),
@@ -58,7 +58,7 @@ class TourInfoScreen extends StatelessWidget {
                     Text(
                       context.formatString(
                           LocaleData.tour_info_screen_description_1,
-                          [tourInfo.duration.toStringAsFixed(1)]),
+                          [tourInfo.duration]),
                       // 'Trajanje: ${tourInfo.duration.toStringAsFixed(1)} sati',
                       style: const TextStyle(color: Color(0xFFffffff)),
                     ),
