@@ -10,7 +10,7 @@ CORS(app) #! ovo je dodato da bi moglo da komunicira sa flutter app
 
 @app.route('/api/tours/<string:tourType>', methods=['GET'])
 def api_tours(tourType):
-    tour_type, language = tourType.split('.')
+    tour_type, language = tourType.split('-')
     
     walking_1 = {
         "en": {
@@ -234,10 +234,13 @@ def api_tours(tourType):
     }
     
     if tour_type == 'walking_1':
-        walking = walking_1[language]
+        tour = walking_1[language]
     elif tour_type == 'walking_2':
         pass
         # walking = walking_2 #! kada se ubaci druga tura aktivirati ostale if blokove
+    
+    return jsonify(tour)
+    
     
     tours = {
         "walking": {
