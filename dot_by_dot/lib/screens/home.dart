@@ -48,7 +48,7 @@ class HomeScreen extends StatelessWidget {
                   height: 200,
                   child: PageView(
                     children: [
-                      Image.asset('assets/images/vucje-logobeo-cir.png'),
+                      Image.asset('assets/images/vucje-logo-lat.png'),
                     ],
                   ),
                 ),
@@ -75,8 +75,8 @@ class HomeScreen extends StatelessWidget {
                 ),
                 padding: const EdgeInsets.only(
                   top: 40.0, // Padding za vrh
-                  left: 20.0, // Padding za levo
-                  right: 20.0, // Padding za desno
+                  left: 0.0, // Padding za levo
+                  right: 0.0, // Padding za desno
                   bottom: 20.0, // Padding za dno
                 ),
                 child: SizedBox(
@@ -85,13 +85,13 @@ class HomeScreen extends StatelessWidget {
                     children: [
                       ClipRRect(
                         borderRadius: BorderRadius.circular(
-                            16.0), // Postavite stepen zaobljenosti ivica
+                            0.0), // Postavite stepen zaobljenosti ivica
                         child: Image.asset('assets/images/city.jpg',
                             fit: BoxFit.cover),
                       ),
                       ClipRRect(
                         borderRadius: BorderRadius.circular(
-                            16.0), // Postavite stepen zaobljenosti ivica
+                            0.0), // Postavite stepen zaobljenosti ivica
                         child: Image.asset('assets/images/city_2.jpg',
                             fit: BoxFit.cover),
                       ),
@@ -109,7 +109,7 @@ class HomeScreen extends StatelessWidget {
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
 
-              const SizedBox(height: 10), // Dodaje razmak
+              //const SizedBox(height: 10), // Dodaje razmak
 
               Container(
                 decoration: const BoxDecoration(
@@ -122,28 +122,48 @@ class HomeScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                padding: const EdgeInsets.all(20.0),
-                child: ExpansionTile(
-                  expandedCrossAxisAlignment: CrossAxisAlignment.start,
-                  title: Text(
-                    LocaleData.home_vucje_about.getString(context),
-                    maxLines: 7, // Ograničava broj linija za kratki opis
-                    overflow: TextOverflow.ellipsis, // Dodaje elipsu (...)
-                  ),
-                  children: <Widget>[
-                    Padding(
-                      padding: const EdgeInsets.only(
-                          left: 16.0,
-                          right: 16.0,
-                          top: 0,
-                          bottom:
-                              0), // Postavite visinu i dubinu okvira za kratki opis na 0
-                      child: Text(
-                        LocaleData.home_vucje_about_extended.getString(context),
-                        textAlign: TextAlign.justify,
+                padding: const EdgeInsets.only(top: 40, bottom: 40, left: 20, right: 20),
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.white, // Dodajte bilo koju dekoraciju ili stil koji želite za novi Container
+                    borderRadius: BorderRadius.circular(20.0), // Primer sa zaobljenim uglovima
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.2), // Boja senke sa prozirnošću
+                        spreadRadius: 5, // Širina senke
+                        blurRadius: 10, // Zamućenje senke
+                        offset: Offset(0, 0), // Pomeranje senke (x, y)
                       ),
+                    ],
+                  ),
+                  padding: const EdgeInsets.all(20.0),
+                  child: ExpansionTile(
+                    shape: Border.all(color: Colors.transparent),
+                    title: Text(
+                      LocaleData.home_vucje_about.getString(context),
+                      maxLines: 7,
+                      overflow: TextOverflow.ellipsis,
+                      style: const TextStyle(fontSize: 16),
+                      textAlign: TextAlign.justify,
                     ),
-                  ],
+                    children: <Widget>[
+                      Padding(
+                        padding: const EdgeInsets.only(
+                            left: 16.0,
+                            right: 16.0,
+                            top: 0,
+                            bottom: 0), 
+                        child: Padding(
+                          padding: const EdgeInsets.only(right: 50.0),
+                          child: Text(
+                            LocaleData.home_vucje_about_extended.getString(context),
+                            textAlign: TextAlign.justify,
+                            style: const TextStyle(fontSize: 16),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
 
@@ -207,6 +227,15 @@ class HomeScreen extends StatelessWidget {
                   children: [
                     ElevatedButton.icon(
                       onPressed: () => _navigateToWalkingTourInfo(context),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Color(0xFFFFFFFF), // Pozadinska boja dugmeta
+                        foregroundColor: Color(0xFF0094C9), // Boja teksta
+                        shadowColor: Colors.black, // Boja senke
+                        elevation: 5, // Visina senke
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30.0), // Zaobljeni uglovi
+                        ),
+                      ),
                       icon:
                           Icon(Icons.directions_walk, color: Color(0xFF0094C9)),
                       label: Text(
@@ -216,6 +245,15 @@ class HomeScreen extends StatelessWidget {
                     ),
                     ElevatedButton.icon(
                       onPressed: () => _navigateToCyclingTourInfo(context),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Color(0xFFFFFFFF), // Pozadinska boja dugmeta
+                        foregroundColor: Color(0xFF0094C9), // Boja teksta
+                        shadowColor: Colors.black, // Boja senke
+                        elevation: 5, // Visina senke
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30.0), // Zaobljeni uglovi
+                        ),
+                      ),
                       icon: const Icon(Icons.directions_bike,
                           color: Color(0xFF0094C9)),
                       label: Text(
