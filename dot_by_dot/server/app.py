@@ -14,12 +14,12 @@ def api_tours(tourType):
     
     walking_1 = {
         "en": {
-            "name": "Panoramic walking tour",
+            "name": "Walking tour",
             "type": "Walking",
-            "duration": 2.5,
-            "elevationGain": 150.5,
-            "startingLocation": "Fountain",
-            "difficultyLevel": "Easy",
+            "routeLength": "5.1 km",
+            "duration": "1h 20min",
+            "elevationGain": 238.0,
+            "difficultyLevel": "Medium",
             "numberOfLocations": 12,
             "locations": [
                 #! Vučje
@@ -123,13 +123,13 @@ def api_tours(tourType):
             ],
         },
         "sr": {
-            "name": "Panoramska pešačka tura",
+            "name": "Pešačka tura",
             "type": "Pešačka",
-            "duration": 2.5,
-            "elevationGain": 150.5,
-            "startingLocation": "Šetalište kraj reke",
-            "difficultyLevel": "Laka",
-            "numberOfLocations": 5,
+            "routeLength": "5.1 km",
+            "duration": "1h 20min",
+            "elevationGain": 238.0,
+            "difficultyLevel": "Srednja",
+            "numberOfLocations": 12,
             "locations": [
                 #! Vučje
                 {
@@ -233,11 +233,39 @@ def api_tours(tourType):
         },
     }
     
+    
+    walking_2 = {
+        "en": {
+            "name": "Walking cardio tour",
+            "type": "Walking",
+            "routeLength": "5.06 km",
+            "duration": "1h 25min",
+            "elevationGain": 272.0,
+            "difficultyLevel": "Heavy",
+            "numberOfLocations": 12,
+            "locations": [
+                {}
+            ]
+        },
+        "sr": {
+            "name": "Pešačka kardio tura",
+            "type": "Pešačka",
+            "routeLength": "5.06 km",
+            "duration": "1h 25min",
+            "elevationGain": 272.0,
+            "difficultyLevel": "Teška",
+            "numberOfLocations": 12,
+            "locations": [
+                {}
+            ]
+        },
+    }
+    
+    
     if tour_type == 'walking_1':
         tour = walking_1[language]
     elif tour_type == 'walking_2':
-        pass
-        # walking = walking_2 #! kada se ubaci druga tura aktivirati ostale if blokove
+        tour = walking_2 #! kada se ubaci druga tura aktivirati ostale if blokove
     
     return jsonify(tour)
     

@@ -70,7 +70,7 @@ class TourInfoScreen extends StatelessWidget {
                       // 'Ukupna visinska razlika: ${tourInfo.elevationGain.toStringAsFixed(0)} m',
                     ),
                     Text(
-                      'Preporučeni početni lokalitet: ${tourInfo.startingLocation}',
+                      'Preporučeni početni lokalitet: ${tourInfo.routeLenght}',
                       style: const TextStyle(color: Color(0xFFffffff)),
                     ),
                     Text(

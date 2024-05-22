@@ -1,9 +1,9 @@
 class TourInfo {
   final String name;
   final String type; // 'walking' or 'cycling'
+  final String routeLenght;
   final double duration; // Time in hours
   final double elevationGain; // Difference in meters
-  final String startingLocation;
   final String difficultyLevel;
   final int numberOfLocations;
 
@@ -15,9 +15,9 @@ class TourInfo {
   TourInfo({
     required this.name,
     required this.type,
+    required this.routeLenght,
     required this.duration,
     required this.elevationGain,
-    required this.startingLocation,
     required this.difficultyLevel,
     required this.numberOfLocations,
     required this.locations,
@@ -28,9 +28,9 @@ class TourInfo {
     return TourInfo(
       name: json['name'],
       type: json['type'],
+      routeLenght: json['routeLenght'],
       duration: json['duration'],
       elevationGain: json['elevationGain'],
-      startingLocation: json['startingLocation'],
       difficultyLevel: json['difficultyLevel'],
       numberOfLocations: json['numberOfLocations'],
       locations: (json['locations'] as List<dynamic>)
