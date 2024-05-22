@@ -16,7 +16,7 @@ def api_tours(tourType):
         "en": {
             "name": "Walking tour",
             "type": "Walking",
-            "routeLength": "5.1 km",
+            "routeLenght": "5.1 km",
             "duration": "1h 20min",
             "elevationGain": 238.0,
             "difficultyLevel": "Medium",
@@ -125,7 +125,7 @@ def api_tours(tourType):
         "sr": {
             "name": "Pešačka tura",
             "type": "Pešačka",
-            "routeLength": "5.1 km",
+            "routeLenght": "5.1 km",
             "duration": "1h 20min",
             "elevationGain": 238.0,
             "difficultyLevel": "Srednja",
@@ -238,7 +238,7 @@ def api_tours(tourType):
     #     "en": {
     #         "name": "Walking cardio tour",
     #         "type": "Walking",
-    #         "routeLength": "5.06 km",
+    #         "routeLenght": "5.06 km",
     #         "duration": "1h 25min",
     #         "elevationGain": 272.0,
     #         "difficultyLevel": "Heavy",
@@ -250,7 +250,7 @@ def api_tours(tourType):
     #     "sr": {
     #         "name": "Pešačka kardio tura",
     #         "type": "Pešačka",
-    #         "routeLength": "5.06 km",
+    #         "routeLenght": "5.06 km",
     #         "duration": "1h 25min",
     #         "elevationGain": 272.0,
     #         "difficultyLevel": "Teška",

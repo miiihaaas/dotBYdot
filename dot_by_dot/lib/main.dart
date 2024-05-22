@@ -134,7 +134,7 @@ Widget buildTourInfoScreen(BuildContext context, String tourType) {
           return TourInfoScreen(tourInfo: tourInfo);
         } catch (e) {
           print('Error parsing data: $e');
-          print('Raw data: ${snapshot.data}');
+          print('Raw data: ${snapshot.data!['routeLenght']}');
           return const Text('Error parsing data');
         }
       }
