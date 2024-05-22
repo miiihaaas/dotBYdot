@@ -106,8 +106,6 @@ class TourInfoScreen extends StatelessWidget {
                     children: [
                       TabBar(
                         tabs: [
-                          // Flexible(
-                          //   child: Tab(
                           Tab(
                             child: Text(
                               // 'Lista lokacija',
@@ -116,9 +114,6 @@ class TourInfoScreen extends StatelessWidget {
                               textAlign: TextAlign.center,
                             ),
                           ),
-                          // ),
-                          // Flexible(
-                          //   child: Tab(
                           Tab(
                             child: Text(
                               // 'Pre nego što krenete',
@@ -127,9 +122,6 @@ class TourInfoScreen extends StatelessWidget {
                               textAlign: TextAlign.center,
                             ),
                           ),
-                          // ),
-                          // Flexible(
-                          //   child: Tab(
                           Tab(
                             child: Text(
                               // 'Mesta za predah',
@@ -138,7 +130,6 @@ class TourInfoScreen extends StatelessWidget {
                               textAlign: TextAlign.center,
                             ),
                           ),
-                          // ),
                         ],
                       ),
                       const SizedBox(height: 15),
