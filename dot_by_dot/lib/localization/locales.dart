@@ -6,6 +6,7 @@ const List<MapLocale> LOCALES = [
 ];
 
 mixin LocaleData {
+  static const String walking_1 = 'walking_1';
   static const String main_title = 'main_title';
   static const String main_more = 'main_more';
   static const String main_walking_tour = 'main_walking_tour';
@@ -29,6 +30,8 @@ mixin LocaleData {
   static const String body = 'body';
 
   static const Map<String, dynamic> EN = {
+    walking_1:
+        'walking_1.en', //! u main.dart routes: ima string koji se šalje na API pomoću koga se definiše jezik stringova
     main_title: 'Travel guide',
     main_more: 'More',
     main_walking_tour: 'Walking tour',
@@ -65,6 +68,8 @@ This settlement is largely inhabited by Serbs (according to the 2002 census).'''
   };
 
   static const Map<String, dynamic> SR = {
+    walking_1:
+        'walking_1.sr', //! u main.dart routes: ima string koji se salje na API pomoću koga se definiše jezik stringova
     main_title: 'Turistički vodič',
     main_more: 'Opširnije',
     main_walking_tour: 'Pešačka tura',

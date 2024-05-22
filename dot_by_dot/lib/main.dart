@@ -52,12 +52,15 @@ class _MyAppState extends State<MyApp> {
       home: Builder(
         builder: (context) => Scaffold(
           appBar: PreferredSize(
-            preferredSize: Size.fromHeight(kToolbarHeight),
+            preferredSize: const Size.fromHeight(kToolbarHeight),
             child: AppBar(
               flexibleSpace: Container(
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   gradient: LinearGradient(
-                    colors: [Color(0xFFffffff), Color(0xFF00ace9)], // Promenite boje po potrebi
+                    colors: [
+                      Color(0xFFffffff),
+                      Color(0xFF00ace9)
+                    ], // Promenite boje po potrebi
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
                   ),
@@ -77,8 +80,11 @@ class _MyAppState extends State<MyApp> {
         ),
       ),
       routes: {
+        //! koristim LocaleData da odredim string ture koji se šalje na API
+        //! walking_1 (imaće en i sr verziju stringa: walking_1_en, walking_1_sr)
         '/walkingTourInfo': (context) =>
-            buildTourInfoScreen(context, 'walking'),
+            // buildTourInfoScreen(context, 'walking'),
+            buildTourInfoScreen(context, LocaleData.walking_1),
         '/cyclingTourInfo': (context) =>
             buildTourInfoScreen(context, 'cycling'),
       },
