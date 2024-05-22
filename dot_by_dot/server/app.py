@@ -10,7 +10,7 @@ CORS(app) #! ovo je dodato da bi moglo da komunicira sa flutter app
 
 @app.route('/api/tours/<string:tourType>', methods=['GET'])
 def api_tours(tourType):
-    tour_type, language = tourType.split('-')
+    tour_type, language = tourType.split('.')
     
     walking_1 = {
         "en": {
