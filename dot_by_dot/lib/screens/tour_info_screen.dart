@@ -48,7 +48,7 @@ class TourInfoScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      '${tourInfo.type} tura',
+                      '${tourInfo.type}',
                       style: const TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
@@ -56,31 +56,37 @@ class TourInfoScreen extends StatelessWidget {
                     ),
                     const SizedBox(height: 10),
                     Text(
+                      // 'Dužina rute:
                       context.formatString(
                           LocaleData.tour_info_screen_description_1,
-                          [tourInfo.duration]),
-                      // 'Trajanje: ${tourInfo.duration.toStringAsFixed(1)} sati',
+                          [tourInfo.routeLenght]),
                       style: const TextStyle(color: Color(0xFFffffff)),
                     ),
                     Text(
+                      // 'Trajanje:
                       context.formatString(
                           LocaleData.tour_info_screen_description_2,
+                          [tourInfo.duration]),
+                      style: const TextStyle(color: Color(0xFFffffff)),
+                    ),
+                    Text(
+                      // 'Visinska razlika:
+                      context.formatString(
+                          LocaleData.tour_info_screen_description_3,
                           [tourInfo.elevationGain.toStringAsFixed(0)]),
                       style: const TextStyle(color: Color(0xFFffffff)),
-                      // 'Ukupna visinska razlika: ${tourInfo.elevationGain.toStringAsFixed(0)} m',
                     ),
                     Text(
-                      'Preporučeni početni lokalitet: ${tourInfo.routeLenght}',
+                      // 'Nivo težine: ${tourInfo.difficultyLevel}',
+                      context.formatString(
+                          LocaleData.tour_info_screen_description_4,
+                          [tourInfo.difficultyLevel]),
                       style: const TextStyle(color: Color(0xFFffffff)),
                     ),
-                    Text(
-                      'Nivo težine: ${tourInfo.difficultyLevel}',
-                      style: const TextStyle(color: Color(0xFFffffff)),
-                    ),
-                    Text(
-                      'Broj lokacija: ${tourInfo.numberOfLocations}',
-                      style: const TextStyle(color: Color(0xFFffffff)),
-                    ),
+                    // Text(
+                    //   'Broj lokacija: ${tourInfo.numberOfLocations}',
+                    //   style: const TextStyle(color: Color(0xFFffffff)),
+                    // ),
                   ],
                 ),
               ),

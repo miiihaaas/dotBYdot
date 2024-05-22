@@ -22,6 +22,10 @@ mixin LocaleData {
       'tour_info_screen_description_1';
   static const String tour_info_screen_description_2 =
       'tour_info_screen_description_2';
+  static const String tour_info_screen_description_3 =
+      'tour_info_screen_description_3';
+  static const String tour_info_screen_description_4 =
+      'tour_info_screen_description_4';
   static const String tour_info_screen_tab_1 = 'tour_info_screen_tab_1';
   static const String tour_info_screen_tab_2 = 'tour_info_screen_tab_2';
   static const String tour_info_screen_tab_3 = 'tour_info_screen_tab_3';
@@ -58,8 +62,10 @@ This settlement is largely inhabited by Serbs (according to the 2002 census).'''
     home_vucje_eu_text_1: 'This application is funded by the European Union',
     home_vucje_eu_text_2:
         'This application is funded by the European Union. The content is the sole responsibility of the Secondary School "Svetozar Krstić - Toza" from Vučje, SOU "Mitko Pendžukliski" from Kratov and Association "Limitless" from Belgrade, and does not necessarily reflect the views of the European Union',
-    tour_info_screen_description_1: 'Duration: %a hour(s)',
-    tour_info_screen_description_2: 'Total height difference: %a m',
+    tour_info_screen_description_1: 'Route length: %a',
+    tour_info_screen_description_2: 'Duration: %a',
+    tour_info_screen_description_3: 'Height difference: %a m',
+    tour_info_screen_description_4: 'Weight: %a',
     tour_info_screen_tab_1: 'List of localities',
     tour_info_screen_tab_2: 'Before you go',
     tour_info_screen_tab_3: 'Places to rest',
@@ -96,8 +102,10 @@ Ovo naselje je velikim delom naseljeno Srbima (prema popisu iz 2002. godine).'''
     home_vucje_eu_text_1: 'Ovu aplikaciju finansira Evropska unija',
     home_vucje_eu_text_2:
         'Ova aplikacija je finansirana od strane Evropske unije. Sadržaj je isključiva odgovornost Srednje škole „Svetozar Krstić – Toza“ iz Vučja, SOU „Mitko Pendžukliski“ iz Kratova i Udruženja "Limitless" iz Beograda, i ne odražava nužno stavove Evropske unije',
-    tour_info_screen_description_1: 'Trajanje: %a h',
-    tour_info_screen_description_2: 'Ukupna visinka razlika: %a m',
+    tour_info_screen_description_1: 'Dužina rute: %a',
+    tour_info_screen_description_2: 'Trajanje: %a',
+    tour_info_screen_description_3: 'Visinka razlika: %a m',
+    tour_info_screen_description_4: 'Težina: %a',
     tour_info_screen_tab_1: 'Lista lokacija',
     tour_info_screen_tab_2: 'Pre nego što krenete',
     tour_info_screen_tab_3: 'Mesta za predah',
