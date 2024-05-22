@@ -234,38 +234,38 @@ def api_tours(tourType):
     }
     
     
-    walking_2 = {
-        "en": {
-            "name": "Walking cardio tour",
-            "type": "Walking",
-            "routeLength": "5.06 km",
-            "duration": "1h 25min",
-            "elevationGain": 272.0,
-            "difficultyLevel": "Heavy",
-            "numberOfLocations": 12,
-            "locations": [
-                {}
-            ]
-        },
-        "sr": {
-            "name": "Pešačka kardio tura",
-            "type": "Pešačka",
-            "routeLength": "5.06 km",
-            "duration": "1h 25min",
-            "elevationGain": 272.0,
-            "difficultyLevel": "Teška",
-            "numberOfLocations": 12,
-            "locations": [
-                {}
-            ]
-        },
-    }
+    # walking_2 = {
+    #     "en": {
+    #         "name": "Walking cardio tour",
+    #         "type": "Walking",
+    #         "routeLength": "5.06 km",
+    #         "duration": "1h 25min",
+    #         "elevationGain": 272.0,
+    #         "difficultyLevel": "Heavy",
+    #         "numberOfLocations": 12,
+    #         "locations": [
+    #             {}
+    #         ]
+    #     },
+    #     "sr": {
+    #         "name": "Pešačka kardio tura",
+    #         "type": "Pešačka",
+    #         "routeLength": "5.06 km",
+    #         "duration": "1h 25min",
+    #         "elevationGain": 272.0,
+    #         "difficultyLevel": "Teška",
+    #         "numberOfLocations": 12,
+    #         "locations": [
+    #             {}
+    #         ]
+    #     },
+    # }
     
     
     if tour_type == 'walking_1':
         tour = walking_1[language]
-    elif tour_type == 'walking_2':
-        tour = walking_2 #! kada se ubaci druga tura aktivirati ostale if blokove
+    # elif tour_type == 'walking_2':
+    #     tour = walking_2 #! kada se ubaci druga tura aktivirati ostale if blokove
     
     return jsonify(tour)
     
