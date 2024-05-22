@@ -19,7 +19,7 @@ class SidebarMenu extends StatelessWidget {
       child: Container(
         padding: EdgeInsets.all(0.0),
         //margin: EdgeInsets.all(10.0),
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
@@ -34,7 +34,7 @@ class SidebarMenu extends StatelessWidget {
           children: <Widget>[
             const DrawerHeader(
               decoration: BoxDecoration(
-                 color: Color(0xFF0094C9),
+                color: Color(0xFF0094C9),
                 image: DecorationImage(
                   image: AssetImage('assets/images/talasi.png'),
                   fit: BoxFit.scaleDown,
