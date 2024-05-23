@@ -11,6 +11,7 @@ CORS(app) #! ovo je dodato da bi moglo da komunicira sa flutter app
 @app.route('/api/tours/<string:tourType>', methods=['GET'])
 def api_tours(tourType):
     tour_type, language = tourType.split('.')
+    server_route = f'https://popis.online/dotBYdot' #! izmeni url u listama pictures: []
     
     walking_1 = {
         "en": {
@@ -45,7 +46,7 @@ def api_tours(tourType):
                     "short_description": 'Villa Teokarević is the work of architect Grigori Ivanović Samojlov, built in 1935, used for receiving clients, later the home of Lazar Teokarević.',
                     "latlng": [42.866989, 21.910972],
                     "distance_radius": 30.5,
-                    "pictures": ['https://popis.online/dotBYdot/static/pictures/3.jpg']
+                    "pictures": ['https://popis.online/dotBYdot/static/pictures/3.png']
                 },
                 {
                     "name": 'Nikola Tesla Park',
@@ -102,7 +103,7 @@ def api_tours(tourType):
                     "short_description": 'The Vučjanka picnic area is an ideal place for a vacation, and during the summer months you can enjoy the swimming pool on the Vučjanka river.',
                     "latlng": [42.8535, 21.91625],
                     "distance_radius": 30.5,
-                    "pictures": ['https://popis.online/dotBYdot/static/pictures/10.jpg']
+                    "pictures": ['https://popis.online/dotBYdot/static/pictures/10.png']
                 },
                 {
                     "name": 'Vučje Hydropower Plant',
@@ -110,7 +111,7 @@ def api_tours(tourType):
                     "short_description": 'The Vučje hydroelectric power plant began operating in 1903 and today produces between 5.2 and 6.5 million kilowatts per year. It was built with the help of 168 shareholders of "Leskovac Electric Company" and was an important source of electricity for Vučje and Leskovac, paving the way for the industrial development of these places.',
                     "latlng": [42.8525706, 21.9160508],
                     "distance_radius": 30.5,
-                    "pictures": ['https://popis.online/dotBYdot/static/pictures/11.jpg']
+                    "pictures": ['https://popis.online/dotBYdot/static/pictures/11.png']
                 },
                 
                 {
@@ -166,7 +167,7 @@ def api_tours(tourType):
                     "short_description": 'Vila Teokarević je delo arhitekte Grigorija Ivanovića Samojlova, izgrađena 1935. godine, korišćena za prijem klijenata, kasnije dom Lazara Teokarevića.',
                     "latlng": [42.866989, 21.910972],
                     "distance_radius": 30.5,
-                    "pictures": ['https://popis.online/dotBYdot/static/pictures/3.jpg']
+                    "pictures": ['https://popis.online/dotBYdot/static/pictures/3.png']
                 },
                 {
                     "name": 'Park Nikole Tesle',
@@ -223,7 +224,7 @@ def api_tours(tourType):
                     "short_description": 'Izletište Vučjanka je idealno mesto za odmor, a tokom letnjih meseci možete uživati u bazenu na reci Vučjanki.',
                     "latlng": [42.8535, 21.91625],
                     "distance_radius": 30.5,
-                    "pictures": ['https://popis.online/dotBYdot/static/pictures/10.jpg']
+                    "pictures": ['https://popis.online/dotBYdot/static/pictures/10.png']
                 },
                 {
                     "name": 'Hidroelektrana Vučje',
@@ -231,7 +232,7 @@ def api_tours(tourType):
                     "short_description": 'Hidroelektrana Vučje je počela sa radom 1903. godine i danas proizvodi između 5.2 i 6.5 miliona kilovata godišnje. Izgrađena je uz pomoć 168 akcionara "Leskovačkog električnog društva" i bila je važan izvor struje za Vučje i Leskovac, otvarajući put za industrijski razvoj ovih mesta.',
                     "latlng": [42.8525706, 21.9160508],
                     "distance_radius": 30.5,
-                    "pictures": ['https://popis.online/dotBYdot/static/pictures/11.jpg']
+                    "pictures": ['https://popis.online/dotBYdot/static/pictures/11.png']
                 },
                 
                 {
