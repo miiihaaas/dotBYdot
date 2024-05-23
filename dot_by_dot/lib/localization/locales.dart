@@ -15,7 +15,7 @@ mixin LocaleData {
   static const String home_vucje_about = 'home_vucje_about';
   static const String home_vucje_about_title = 'home_vucje_about_title';
   static const String home_vucje_about_extended = 'home_vucje_about_extended';
-  static const String home_vucje_about_close = 'home_vucje_about_close';
+  static const String button_close = 'button_close';
   static const String home_vucje_eu_text_1 = 'home_vucje_eu_text_1';
   static const String home_vucje_eu_text_2 = 'home_vucje_eu_text_2';
   static const String tour_info_screen_description_1 =
@@ -58,7 +58,7 @@ Demographics
 There are 2,649 adults living in the Vučje settlement, and the average age of the population is 41.3 years (40.2 for men and 42.3 for women). There are 1049 households in the settlement, and the average number of members per household is 3.11.
 
 This settlement is largely inhabited by Serbs (according to the 2002 census).''',
-    home_vucje_about_close: 'Close',
+    button_close: 'Close',
     home_vucje_eu_text_1: 'This application is funded by the European Union',
     home_vucje_eu_text_2:
         'This application is funded by the European Union. The content is the sole responsibility of the Secondary School "Svetozar Krstić - Toza" from Vučje, SOU "Mitko Pendžukliski" from Kratov and Association "Limitless" from Belgrade, and does not necessarily reflect the views of the European Union',
@@ -98,7 +98,7 @@ Demografija
 U naselju Vučje živi 2649 punoletnih stanovnika, a prosečna starost stanovništva iznosi 41,3 godina (40,2 kod muškaraca i 42,3 kod žena). U naselju ima 1049 domaćinstava, a prosečan broj članova po domaćinstvu je 3,11.
 
 Ovo naselje je velikim delom naseljeno Srbima (prema popisu iz 2002. godine).''',
-    home_vucje_about_close: 'Zatvori',
+    button_close: 'Zatvori',
     home_vucje_eu_text_1: 'Ovu aplikaciju finansira Evropska unija',
     home_vucje_eu_text_2:
         'Ova aplikacija je finansirana od strane Evropske unije. Sadržaj je isključiva odgovornost Srednje škole „Svetozar Krstić – Toza“ iz Vučja, SOU „Mitko Pendžukliski“ iz Kratova i Udruženja "Limitless" iz Beograda, i ne odražava nužno stavove Evropske unije',

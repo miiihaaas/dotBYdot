@@ -122,14 +122,18 @@ class HomeScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                padding: const EdgeInsets.only(top: 40, bottom: 40, left: 20, right: 20),
+                padding: const EdgeInsets.only(
+                    top: 40, bottom: 40, left: 20, right: 20),
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Colors.white, // Dodajte bilo koju dekoraciju ili stil koji želite za novi Container
-                    borderRadius: BorderRadius.circular(20.0), // Primer sa zaobljenim uglovima
+                    color: Colors
+                        .white, // Dodajte bilo koju dekoraciju ili stil koji želite za novi Container
+                    borderRadius: BorderRadius.circular(
+                        20.0), // Primer sa zaobljenim uglovima
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.grey.withOpacity(0.2), // Boja senke sa prozirnošću
+                        color: Colors.grey
+                            .withOpacity(0.2), // Boja senke sa prozirnošću
                         spreadRadius: 5, // Širina senke
                         blurRadius: 10, // Zamućenje senke
                         offset: Offset(0, 0), // Pomeranje senke (x, y)
@@ -149,14 +153,12 @@ class HomeScreen extends StatelessWidget {
                     children: <Widget>[
                       Padding(
                         padding: const EdgeInsets.only(
-                            left: 16.0,
-                            right: 16.0,
-                            top: 0,
-                            bottom: 0), 
+                            left: 16.0, right: 16.0, top: 0, bottom: 0),
                         child: Padding(
                           padding: const EdgeInsets.only(right: 50.0),
                           child: Text(
-                            LocaleData.home_vucje_about_extended.getString(context),
+                            LocaleData.home_vucje_about_extended
+                                .getString(context),
                             textAlign: TextAlign.justify,
                             style: const TextStyle(fontSize: 16),
                           ),
@@ -228,12 +230,14 @@ class HomeScreen extends StatelessWidget {
                     ElevatedButton.icon(
                       onPressed: () => _navigateToWalkingTourInfo(context),
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Color(0xFFFFFFFF), // Pozadinska boja dugmeta
+                        backgroundColor:
+                            Color(0xFFFFFFFF), // Pozadinska boja dugmeta
                         foregroundColor: Color(0xFF0094C9), // Boja teksta
                         shadowColor: Colors.black, // Boja senke
                         elevation: 5, // Visina senke
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30.0), // Zaobljeni uglovi
+                          borderRadius:
+                              BorderRadius.circular(30.0), // Zaobljeni uglovi
                         ),
                       ),
                       icon:
@@ -246,12 +250,14 @@ class HomeScreen extends StatelessWidget {
                     ElevatedButton.icon(
                       onPressed: () => _navigateToCyclingTourInfo(context),
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Color(0xFFFFFFFF), // Pozadinska boja dugmeta
+                        backgroundColor:
+                            Color(0xFFFFFFFF), // Pozadinska boja dugmeta
                         foregroundColor: Color(0xFF0094C9), // Boja teksta
                         shadowColor: Colors.black, // Boja senke
                         elevation: 5, // Visina senke
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30.0), // Zaobljeni uglovi
+                          borderRadius:
+                              BorderRadius.circular(30.0), // Zaobljeni uglovi
                         ),
                       ),
                       icon: const Icon(Icons.directions_bike,
@@ -341,7 +347,7 @@ class HomeScreen extends StatelessWidget {
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context),
-            child: Text(LocaleData.home_vucje_about_close.getString(context)),
+            child: Text(LocaleData.button_close.getString(context)),
           ),
         ],
       ),

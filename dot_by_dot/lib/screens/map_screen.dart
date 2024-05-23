@@ -1,6 +1,8 @@
+import 'package:dot_by_dot/localization/locales.dart';
 import 'package:dot_by_dot/tour_info.dart';
 import 'package:dot_by_dot/sidebar_menu.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_localization/flutter_localization.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:geolocator/geolocator.dart'; // novo za tetiranje razdaljine između trenutne lokacije i lokacije na mapi
 import 'package:location/location.dart' as location_package;
@@ -237,30 +239,122 @@ class _MapScreenState extends State<MapScreen> {
   }
 
   // Funkcija za prikazivanje proširenog teksta (implementirajte po potrebi)
+  // void _showExpandedText(BuildContext context, int index) {
+  //   var location = widget.tourInfo.locations[index];
+  //   // Modal, dno sheet ili neki drugi vidžet za prikazivanje proširenog teksta
+  //   showDialog(
+  //     context: context,
+  //     builder: (context) => AlertDialog(
+  //       title: Text(location.name),
+  //       content: SingleChildScrollView(
+  //         child: Column(
+  //           crossAxisAlignment: CrossAxisAlignment.start,
+  //           children: [
+  //             Text(
+  //               location.description,
+  //               textAlign: TextAlign.justify,
+  //             ),
+  //           ],
+  //         ),
+  //       ),
+  //       actions: [
+  //         TextButton(
+  //           onPressed: () => Navigator.pop(context),
+  //           child: const Text('Zatvori'),
+  //         ),
+  //       ],
+  //     ),
+  //   );
+  // }
   void _showExpandedText(BuildContext context, int index) {
     var location = widget.tourInfo.locations[index];
-    // Modal, dno sheet ili neki drugi vidžet za prikazivanje proširenog teksta
     showDialog(
       context: context,
-      builder: (context) => AlertDialog(
-        title: Text(location.name),
-        content: SingleChildScrollView(
+      builder: (context) => Dialog(
+        backgroundColor: Colors.transparent, // Transparent background
+        child: Container(
+          width: MediaQuery.of(context).size.width * 0.9, // 90% screen width
+          height: MediaQuery.of(context).size.height, // 100% screen height
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Text(
-                location.description,
-                textAlign: TextAlign.justify,
+              Container(
+                decoration: BoxDecoration(
+                  color: Colors.white.withOpacity(0.85), // 30% transparency
+                  borderRadius: BorderRadius.circular(5),
+                ),
+                padding: EdgeInsets.all(12),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    // Slajder slika
+                    Container(
+                      decoration: const BoxDecoration(
+                        gradient: LinearGradient(
+                          begin: Alignment.topCenter,
+                          end: Alignment.bottomCenter,
+                          colors: [
+                            Color(0xFFCCEAF4),
+                            Color(0xFFFFFFFF),
+                          ],
+                        ),
+                      ),
+                      padding: const EdgeInsets.only(
+                        top: 40.0, // Padding za vrh
+                        left: 0.0, // Padding za levo
+                        right: 0.0, // Padding za desno
+                        bottom: 20.0, // Padding za dno
+                      ),
+                      child: SizedBox(
+                        height: 200, // Postavite odgovarajuću visinu za slike
+                        child: PageView(
+                          children: [
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(
+                                  0.0), // Postavite stepen zaobljenosti ivica
+                              child: Image.asset('assets/images/city.jpg',
+                                  fit: BoxFit.cover),
+                            ),
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(
+                                  0.0), // Postavite stepen zaobljenosti ivica
+                              child: Image.asset('assets/images/city_2.jpg',
+                                  fit: BoxFit.cover),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    // Naslov
+                    Text(
+                      location.name,
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(height: 8),
+                    // Opis
+                    SingleChildScrollView(
+                      child: Text(
+                        location.description,
+                        textAlign: TextAlign.justify,
+                      ),
+                    ),
+                    Align(
+                      alignment: Alignment.bottomRight,
+                      child: TextButton(
+                        onPressed: () => Navigator.pop(context),
+                        child: Text('Zatvori'),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
         ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(context),
-            child: const Text('Zatvori'),
-          ),
-        ],
       ),
     );
   }
