@@ -313,7 +313,11 @@ class _MapScreenState extends State<MapScreen> {
                             ClipRRect(
                               borderRadius: BorderRadius.circular(
                                   0.0), // Postavite stepen zaobljenosti ivica
-                              child: Image.asset('assets/images/city.jpg',
+                              // child: Image.asset('assets/images/city.jpg',
+                              //     fit: BoxFit.cover),
+                              // child: Image.network(
+                              //     'https://popis.online/dotBYdot/api/picture',
+                              child: Image.network(location.pictures[0],
                                   fit: BoxFit.cover),
                             ),
                             ClipRRect(
@@ -346,7 +350,7 @@ class _MapScreenState extends State<MapScreen> {
                       alignment: Alignment.bottomRight,
                       child: TextButton(
                         onPressed: () => Navigator.pop(context),
-                        child: Text('Zatvori'),
+                        child: Text(LocaleData.button_close.getString(context)),
                       ),
                     ),
                   ],
