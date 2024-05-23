@@ -51,6 +51,7 @@ class Location {
   final List<dynamic> latlng;
   final double distance_radius;
   bool visited; // Track if user visited this location
+  final List<dynamic> pictures;
 
   Location({
     required this.name,
@@ -59,6 +60,7 @@ class Location {
     required this.latlng,
     required this.distance_radius,
     this.visited = false,
+    required this.pictures,
   });
 
   factory Location.fromJson(Map<String, dynamic> json) {
@@ -69,6 +71,7 @@ class Location {
       latlng: json['latlng'],
       distance_radius: json['distance_radius'],
       visited: json['visited'] ?? false,
+      pictures: json['pictures'],
     );
   }
 }
