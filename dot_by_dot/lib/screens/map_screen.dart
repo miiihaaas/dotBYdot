@@ -290,55 +290,47 @@ class _MapScreenState extends State<MapScreen> {
                   children: [
                     // Slajder slika
                     Container(
-                      decoration: const BoxDecoration(
-                        gradient: LinearGradient(
-                          begin: Alignment.topCenter,
-                          end: Alignment.bottomCenter,
-                          colors: [
-                            Color(0xFFCCEAF4),
-                            Color(0xFFFFFFFF),
-                          ],
+                        decoration: const BoxDecoration(
+                          gradient: LinearGradient(
+                            begin: Alignment.topCenter,
+                            end: Alignment.bottomCenter,
+                            colors: [
+                              Color(0xFFCCEAF4),
+                              Color(0xFFFFFFFF),
+                            ],
+                          ),
                         ),
-                      ),
-                      padding: const EdgeInsets.only(
-                        top: 40.0, // Padding za vrh
-                        left: 0.0, // Padding za levo
-                        right: 0.0, // Padding za desno
-                        bottom: 20.0, // Padding za dno
-                      ),
-                      child: SizedBox(
-                        height: 200, // Postavite odgovarajuću visinu za slike
-                        child: PageView(
-                          children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(
-                                  0.0), // Postavite stepen zaobljenosti ivica
-                              // child: Image.asset('assets/images/city.jpg',
-                              //     fit: BoxFit.cover),
-                              // child: Image.network(
-                              //     'https://popis.online/dotBYdot/api/picture',
-                              child: Image.network(location.pictures[0],
-                                  fit: BoxFit.cover),
-                            ),
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(
-                                  0.0), // Postavite stepen zaobljenosti ivica
-                              child: Image.asset('assets/images/city_2.jpg',
-                                  fit: BoxFit.cover),
-                            ),
-                          ],
+                        padding: const EdgeInsets.only(
+                          top: 40.0, // Padding za vrh
+                          left: 0.0, // Padding za levo
+                          right: 0.0, // Padding za desno
+                          bottom: 20.0, // Padding za dno
                         ),
-                      ),
-                    ),
+                        child: SizedBox(
+                          height: 200, // Postavite odgovarajuću visinu za slike
+                          child: PageView.builder(
+                            itemCount: location.pictures.length,
+                            itemBuilder: (context, index) {
+                              return ClipRRect(
+                                borderRadius: BorderRadius.circular(
+                                    0.0), // Postavite stepen zaobljenosti ivica
+                                child: Image.network(
+                                  location.pictures[index],
+                                  fit: BoxFit.cover,
+                                ),
+                              );
+                            },
+                          ),
+                        )),
                     // Naslov
                     Text(
                       location.name,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    SizedBox(height: 8),
+                    const SizedBox(height: 8),
                     // Opis
                     SingleChildScrollView(
                       child: Text(
