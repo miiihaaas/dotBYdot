@@ -122,6 +122,23 @@ def api_tours(tourType):
                     "distance_radius": 30.5,
                     "pictures": ['https://popis.online/dotBYdot/static/pictures/12.jpg']
                 },
+                #! testne lokacije
+                {
+                    "name": "GMMČK",
+                    "description": "Ovo mesto služi za testiranje rada aplikacije i lokacije. Drugo mesto za koje sa kojeg smo započeli testiranja ovog tipa",
+                    "short_description": "Drugo mesto sa koje smo započeli testiranje",
+                    "latlng": [44.034661, 20.433998],
+                    "distance_radius": 10.5,
+                    "pictures": ['https://popis.online/dotBYdot/static/pictures/12.jpg']
+                },
+                {
+                    "name": "GMHCP",
+                    "description": "Ovo mesto služi za testiranje rada aplikacije i lokacije. Prvo mesto za koje sa kojeg smo započeli testiranja ovog tipa",
+                    "short_description": "Prvo mesto sa koje smo započeli testiranje",
+                    "latlng": [44.023905, 20.456093],
+                    "distance_radius": 10.5,
+                    "pictures": ['https://popis.online/dotBYdot/static/pictures/12.jpg']
+                },
             ],
             "preTourInformation": [
                 "Comfortable sports shoes, clothes according to weather conditions",
@@ -131,7 +148,7 @@ def api_tours(tourType):
                 {
                     "name": "Kafić kod fontane",
                     "description": "Kafić sa prelepim pogledom",
-                    "latlng": [40.12345, 20.12345]
+                    "latlng": [42.8513627, 21.9172207]
                 },
             ],
         },
@@ -243,7 +260,25 @@ def api_tours(tourType):
                     "distance_radius": 30.5,
                     "pictures": ['https://popis.online/dotBYdot/static/pictures/12.jpg']
                 },
+                #! testne lokacije
+                {
+                    "name": "GMMČK",
+                    "description": "Ovo mesto služi za testiranje rada aplikacije i lokacije. Drugo mesto za koje sa kojeg smo započeli testiranja ovog tipa",
+                    "short_description": "Drugo mesto sa koje smo započeli testiranje",
+                    "latlng": [44.034661, 20.433998],
+                    "distance_radius": 10.5,
+                    "pictures": ['https://popis.online/dotBYdot/static/pictures/12.jpg']
+                },
+                {
+                    "name": "GMHCP",
+                    "description": "Ovo mesto služi za testiranje rada aplikacije i lokacije. Prvo mesto za koje sa kojeg smo započeli testiranja ovog tipa",
+                    "short_description": "Prvo mesto sa koje smo započeli testiranje",
+                    "latlng": [44.023905, 20.456093],
+                    "distance_radius": 10.5,
+                    "pictures": ['https://popis.online/dotBYdot/static/pictures/12.jpg']
+                },
             ],
+
             "preTourInformation": [
                 "Udobne sportska obuća, odeća prema vremenskim uslovima",
                 "Poneti vodu za piće.",
@@ -252,7 +287,7 @@ def api_tours(tourType):
                 {
                     "name": "Kafić kod fontane",
                     "description": "Kafić sa prelepim pogledom",
-                    "latlng": [40.12345, 20.12345]
+                    "latlng": [42.8513627, 21.9172207]
                 },
             ],
         },

@@ -1,12 +1,14 @@
+import 'package:dot_by_dot/consts.dart';
 import 'package:dot_by_dot/localization/locales.dart';
 import 'package:dot_by_dot/tour_info.dart';
 import 'package:dot_by_dot/sidebar_menu.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localization/flutter_localization.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:geolocator/geolocator.dart'; // novo za tetiranje razdaljine između trenutne lokacije i lokacije na mapi
+import 'package:geolocator/geolocator.dart';
 import 'package:location/location.dart' as location_package;
 import 'dart:async';
+import 'package:flutter_polyline_points/flutter_polyline_points.dart';
 
 class MapScreen extends StatefulWidget {
   final TourInfo tourInfo;
@@ -20,9 +22,10 @@ class _MapScreenState extends State<MapScreen> {
   double _distanceInMeters = 0;
   bool _showFullBottomNavBar = false;
   String _description = 'Nema lokacije';
-  int? _selectedMarkerIdex;
+  int? _selectedMarkerIndex;
   final location_package.Location _locationController =
       location_package.Location();
+  bool _followUserLocation = true; // Flag to control camera updates
 
   final Completer<GoogleMapController> _mapController =
       Completer<GoogleMapController>();
@@ -30,14 +33,21 @@ class _MapScreenState extends State<MapScreen> {
   static const _pKratovo = LatLng(42.077990, 22.179178);
   LatLng? _currentP;
 
+  Map<PolylineId, Polyline> polylines = {};
+
   @override
   void initState() {
     super.initState();
     getLocationUpdates();
+    // getLocationUpdates().then((_) => {
+    //       getPolylinePoints().then((coordinates) => {
+    //             generatePolylinesFromPoints(coordinates),
+    //           })
+    //     });
   }
 
   List<int> _selectedMarkers = [];
-  // Funkcija za ažuriranje liste odabranih markera
+
   void _updateMarkersList() {
     List<int> newSelectedMarkers = [];
     for (int i = 0; i < widget.tourInfo.locations.length; i++) {
@@ -105,8 +115,8 @@ class _MapScreenState extends State<MapScreen> {
                     target: _pKratovo,
                     zoom: 18,
                   ),
-                  markers: Set<Marker>.from(
-                    List.generate(
+                  markers: {
+                    ...List.generate(
                       widget.tourInfo.locations.length,
                       (index) => Marker(
                         markerId: MarkerId('location$index'),
@@ -120,32 +130,48 @@ class _MapScreenState extends State<MapScreen> {
                           widget.tourInfo.locations[index].latlng[0],
                           widget.tourInfo.locations[index].latlng[1],
                         ),
-                        //? onTap: () {
-                        //?   setState(() {
-                        //?     _selectedMarkerIdex = index;
-                        //?   });
-                        //?   _updateDistance(
-                        //?       LatLng(
-                        //?           widget.tourInfo.locations[index].latlng[0],
-                        //?           widget.tourInfo.locations[index].latlng[1]),
-                        //?       widget.tourInfo.locations[index]);
-                        //? }
-                        // proslediti vrednost widget.tourInfo.locations[index].description u bottomNavigationBar
+                        onTap: () => _onMarkerTapped(LatLng(
+                            widget.tourInfo.locations[index].latlng[0],
+                            widget.tourInfo.locations[index].latlng[1])),
                       ),
-                    ),
-                  )..add(Marker(
+                    ).toSet(),
+                    ...List.generate(
+                      widget.tourInfo.restStops.length,
+                      (index) => Marker(
+                        markerId: MarkerId('restStop$index'),
+                        icon: BitmapDescriptor.defaultMarkerWithHue(
+                          BitmapDescriptor.hueGreen,
+                        ),
+                        infoWindow: InfoWindow(
+                          title: widget.tourInfo.restStops[index].name,
+                          snippet: widget.tourInfo.restStops[index].description,
+                        ),
+                        position: LatLng(
+                          widget.tourInfo.restStops[index].latlng[0],
+                          widget.tourInfo.restStops[index].latlng[1],
+                        ),
+                      ),
+                    ).toSet(),
+                    Marker(
                       markerId: const MarkerId('currentPosition'),
                       icon: BitmapDescriptor.defaultMarkerWithHue(
-                          BitmapDescriptor.hueBlue),
-                      position: _currentP!)),
+                        BitmapDescriptor.hueBlue,
+                      ),
+                      position: _currentP!,
+                    ),
+                  },
+                  polylines: Set<Polyline>.of(polylines.values),
+                  onCameraMove: (position) {
+                    _followUserLocation = false; // Disable camera follow
+                  },
                 ),
           IgnorePointer(
             ignoring: true,
             child: GestureDetector(
               onTap: () {
-                if (_selectedMarkerIdex != null) {
+                if (_selectedMarkerIndex != null) {
                   setState(() {
-                    _selectedMarkerIdex = null;
+                    _selectedMarkerIndex = null;
                     print(
                         'ovo bi trebalo da potvrdi da je deselektovan marker!!');
                   });
@@ -162,21 +188,6 @@ class _MapScreenState extends State<MapScreen> {
             ),
           ),
         ]),
-        // footer na dnu stranice
-        // bottomNavigationBar: BottomAppBar(
-        //     color: Colors.red,
-        //     child: _selectedMarkers.isNotEmpty
-        //         ? Row(
-        //             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        //             children: _selectedMarkers.map((index) {
-        //               return FloatingActionButton.extended(
-        //                 onPressed: () => _showExpandedText(context, index),
-        //                 label: Text(widget.tourInfo.locations[index].name),
-        //                 icon: const Icon(Icons.location_on),
-        //               );
-        //             }).toList(),
-        //           )
-        //         : null));
         bottomNavigationBar: Visibility(
           visible: _selectedMarkers.isNotEmpty,
           child: BottomAppBar(
@@ -194,10 +205,8 @@ class _MapScreenState extends State<MapScreen> {
         ));
   }
 
-  //!
-
-  //!
   Future<void> _cameraToPosition(LatLng pos) async {
+    if (!_followUserLocation) return; // Prevent camera from following
     final GoogleMapController controller = await _mapController.future;
     CameraPosition newCameraPosition = CameraPosition(target: pos, zoom: 18);
     await controller
@@ -209,10 +218,9 @@ class _MapScreenState extends State<MapScreen> {
     location_package.PermissionStatus permissionGranted;
 
     serviceEnabled = await _locationController.serviceEnabled();
-    if (serviceEnabled) {
+    if (!serviceEnabled) {
       serviceEnabled = await _locationController.requestService();
-    } else {
-      return;
+      if (!serviceEnabled) return;
     }
 
     permissionGranted = await _locationController.hasPermission();
@@ -229,43 +237,53 @@ class _MapScreenState extends State<MapScreen> {
         setState(() {
           _currentP =
               LatLng(currentLocation.latitude!, currentLocation.longitude!);
-          _cameraToPosition(_currentP!);
+          if (_followUserLocation) {
+            _cameraToPosition(_currentP!);
+          }
         });
+        _updateMarkersList();
+        print('izvršio se _updateMarkersList');
       }
-      //! ovde dodati _updateDistance
-      _updateMarkersList(); //!
-      print('izvršio se _updateMarkersList');
     });
   }
 
-  // Funkcija za prikazivanje proširenog teksta (implementirajte po potrebi)
-  // void _showExpandedText(BuildContext context, int index) {
-  //   var location = widget.tourInfo.locations[index];
-  //   // Modal, dno sheet ili neki drugi vidžet za prikazivanje proširenog teksta
-  //   showDialog(
-  //     context: context,
-  //     builder: (context) => AlertDialog(
-  //       title: Text(location.name),
-  //       content: SingleChildScrollView(
-  //         child: Column(
-  //           crossAxisAlignment: CrossAxisAlignment.start,
-  //           children: [
-  //             Text(
-  //               location.description,
-  //               textAlign: TextAlign.justify,
-  //             ),
-  //           ],
-  //         ),
-  //       ),
-  //       actions: [
-  //         TextButton(
-  //           onPressed: () => Navigator.pop(context),
-  //           child: const Text('Zatvori'),
-  //         ),
-  //       ],
-  //     ),
-  //   );
-  // }
+  Future<void> _onMarkerTapped(LatLng destination) async {
+    if (_currentP == null) return;
+    List<LatLng> polylineCoordinates = await getPolylinePoints(destination);
+    generatePolylinesFromPoints(polylineCoordinates);
+  }
+
+  Future<List<LatLng>> getPolylinePoints(LatLng destination) async {
+    List<LatLng> polylineCoordinates = [];
+    PolylinePoints polylinePoints = PolylinePoints();
+    PolylineResult result = await polylinePoints.getRouteBetweenCoordinates(
+      GOOGLE_MAPS_API_KEY,
+      PointLatLng(_currentP!.latitude, _currentP!.longitude),
+      PointLatLng(destination.latitude, destination.longitude),
+      travelMode: TravelMode.walking,
+    );
+    if (result.points.isNotEmpty) {
+      result.points.forEach((PointLatLng point) {
+        polylineCoordinates.add(LatLng(point.latitude, point.longitude));
+      });
+    } else {
+      print(result.errorMessage);
+    }
+    return polylineCoordinates;
+  }
+
+  void generatePolylinesFromPoints(List<LatLng> poilylineCoordinates) async {
+    PolylineId id = PolylineId('poly');
+    Polyline polyline = Polyline(
+        polylineId: id,
+        color: Colors.blue,
+        points: poilylineCoordinates,
+        width: 8);
+    setState(() {
+      polylines[id] = polyline;
+    });
+  }
+
   void _showExpandedText(BuildContext context, int index) {
     var location = widget.tourInfo.locations[index];
     showDialog(

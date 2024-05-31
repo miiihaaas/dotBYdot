@@ -24,6 +24,7 @@ class TourInfo {
     required this.preTourInformation,
     required this.restStops,
   });
+
   factory TourInfo.fromJson(Map<String, dynamic> json) {
     return TourInfo(
       name: json['name'],
@@ -79,16 +80,19 @@ class Location {
 class RestStop {
   final String name;
   final String description;
+  final List<dynamic> latlng;
 
   RestStop({
     required this.name,
     required this.description,
+    required this.latlng,
   });
 
   factory RestStop.fromJson(Map<String, dynamic> json) {
     return RestStop(
       name: json['name'],
       description: json['description'],
+      latlng: json['latlng'],
     );
   }
 }
