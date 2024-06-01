@@ -30,7 +30,7 @@ def api_tours(tourType):
                     "short_description": 'The fountain "FISHERMAN AND OCTOPUS" is a work of art by sculptor Slavko Miletić from 1939, placed to decorate the textile industry complex at the time.',
                     "latlng": [42.868972, 21.910444],
                     "distance_radius": 50.5,
-                    "pictures": ['https://popis.online/dotBYdot/static/pictures/1.jpg']
+                    "pictures": [f'{server_route}/static/pictures/1.jpg']
                 },
                 {
                     "name": 'Hostel of the Svetozar Krstić secondary school - Toza',
@@ -38,7 +38,7 @@ def api_tours(tourType):
                     "short_description": 'The hostel of the secondary school Svetozar Krstić - Toza is an outpost of the school from Vučje, a former restaurant, now the first student hostel, renovated with the help of the City of Leskovac and funds from the European Union.',
                     "latlng": [42.867278, 21.911111],
                     "distance_radius": 50.5,
-                    "pictures": ['https://popis.online/dotBYdot/static/pictures/2.jpg']
+                    "pictures": [f'{server_route}/static/pictures/2.jpg']
                 },
                 {
                     "name": 'Villa Teokarević',
@@ -46,7 +46,7 @@ def api_tours(tourType):
                     "short_description": 'Villa Teokarević is the work of architect Grigori Ivanović Samojlov, built in 1935, used for receiving clients, later the home of Lazar Teokarević.',
                     "latlng": [42.866989, 21.910972],
                     "distance_radius": 50.5,
-                    "pictures": ['https://popis.online/dotBYdot/static/pictures/3.png']
+                    "pictures": [f'{server_route}/static/pictures/3.png']
                 },
                 {
                     "name": 'Nikola Tesla Park',
@@ -54,7 +54,7 @@ def api_tours(tourType):
                     "short_description": 'The Nikola Tesla Park is dedicated to the Serbian scientist who in 1903 helped start the hydroelectric power plant in Vucje, which is still functioning today.',
                     "latlng": [42.866833, 21.911139],
                     "distance_radius": 50.5,
-                    "pictures": ['https://popis.online/dotBYdot/static/pictures/4.jpg']
+                    "pictures": [f'{server_route}/static/pictures/4.jpg']
                 },
                 {
                     "name": 'Memorial fountain',
@@ -62,7 +62,7 @@ def api_tours(tourType):
                     "short_description": 'The memorial fountain was built in memory of the fallen fighters of Vucje and its surroundings in the National Liberation War on August 18, 1951, as a tribute to the Serbian heroes who gave their lives in defense of freedom from the Nazis.',
                     "latlng": [42.866472, 21.911417],
                     "distance_radius": 50.5,
-                    "pictures": ['https://popis.online/dotBYdot/static/pictures/5.jpg']
+                    "pictures": [f'{server_route}/static/pictures/5.jpg']
                 },
                 {
                     "name": 'Nikola Skobaljić - (photography)',
@@ -70,7 +70,7 @@ def api_tours(tourType):
                     "short_description": 'Here you can photograph the portrait of the medieval knight Nikola Skobaljić, the ruler of these regions in the 15th century. Legend has it that he was not born, but conceived while his mother was eating a live sable fish. He was known for his bravery and betrayal of his godmother. He built the city that bears his name and built a church dedicated to St. to Jovan.',
                     "latlng": [42.866139, 21.911472],
                     "distance_radius": 50.5,
-                    "pictures": ['https://popis.online/dotBYdot/static/pictures/6.jpg']
+                    "pictures": [f'{server_route}/static/pictures/6.jpg']
                 },
                 {
                     "name": 'Water mills',
@@ -78,7 +78,7 @@ def api_tours(tourType):
                     "short_description": 'The Vučjanka River used to have over 20 watermills, but today only 4 are active. The watermills are used for grinding corn and producing corn flour for human and animal consumption.',
                     "latlng": [42.856887, 21.912933],
                     "distance_radius": 50.5,
-                    "pictures": ['https://popis.online/dotBYdot/static/pictures/7.jpg']
+                    "pictures": [f'{server_route}/static/pictures/7.jpg']
                 },
                 
                 {
@@ -87,7 +87,7 @@ def api_tours(tourType):
                     "short_description": 'Church of St. John the Baptist is dedicated to the birth of this saint and is a treasure among Orthodox churches. It was built on the foundations of a medieval church, and was built between 1932 and 1936 in the Moravian style. During construction, skeletons of Serbian soldiers from the Middle Ages were found, and their remains were buried inside the church.',
                     "latlng": [42.855833, 21.915278],
                     "distance_radius": 50.5,
-                    "pictures": ['https://popis.online/dotBYdot/static/pictures/8.jpg']
+                    "pictures": [f'{server_route}/static/pictures/8.jpg']
                 },
                 {
                     "name": 'Viewpoint (photograph)',
@@ -95,7 +95,7 @@ def api_tours(tourType):
                     "short_description": 'Now is a great time to take photos at the lookout - just be careful not to go too close to the edge!',
                     "latlng": [42.8542888, 21.9160698],
                     "distance_radius": 50.5,
-                    "pictures": ['https://popis.online/dotBYdot/static/pictures/9.jpg']
+                    "pictures": [f'{server_route}/static/pictures/9.jpg']
                 },
                 {
                     "name": 'Excursion Vučjanka',
@@ -103,7 +103,7 @@ def api_tours(tourType):
                     "short_description": 'The Vučjanka picnic area is an ideal place for a vacation, and during the summer months you can enjoy the swimming pool on the Vučjanka river.',
                     "latlng": [42.8535, 21.91625],
                     "distance_radius": 50.5,
-                    "pictures": ['https://popis.online/dotBYdot/static/pictures/10.png']
+                    "pictures": [f'{server_route}/static/pictures/10.png']
                 },
                 {
                     "name": 'Vučje Hydropower Plant',
@@ -111,7 +111,7 @@ def api_tours(tourType):
                     "short_description": 'The Vučje hydroelectric power plant began operating in 1903 and today produces between 5.2 and 6.5 million kilowatts per year. It was built with the help of 168 shareholders of "Leskovac Electric Company" and was an important source of electricity for Vučje and Leskovac, paving the way for the industrial development of these places.',
                     "latlng": [42.8525706, 21.9160508],
                     "distance_radius": 50.5,
-                    "pictures": ['https://popis.online/dotBYdot/static/pictures/11.png']
+                    "pictures": [f'{server_route}/static/pictures/11.png']
                 },
                 
                 {
@@ -120,7 +120,7 @@ def api_tours(tourType):
                     "short_description": 'The waterfall of the river Vučjanka is a beautiful natural phenomenon of this region. Enjoy his view.',
                     "latlng": [42.8513617, 21.9172287],
                     "distance_radius": 50.5,
-                    "pictures": ['https://popis.online/dotBYdot/static/pictures/12.jpg']
+                    "pictures": [f'{server_route}/static/pictures/12.jpg']
                 },
                 #! testne lokacije
                 {
@@ -129,7 +129,7 @@ def api_tours(tourType):
                     "short_description": "Drugo mesto sa koje smo započeli testiranje",
                     "latlng": [44.034661, 20.433998],
                     "distance_radius": 40.5,
-                    "pictures": ['https://popis.online/dotBYdot/static/pictures/12.jpg']
+                    "pictures": [f'{server_route}/static/pictures/12.jpg']
                 },
                 {
                     "name": "GMHCP",
@@ -137,7 +137,7 @@ def api_tours(tourType):
                     "short_description": "Prvo mesto sa koje smo započeli testiranje",
                     "latlng": [44.023905, 20.456093],
                     "distance_radius": 40.5,
-                    "pictures": ['https://popis.online/dotBYdot/static/pictures/12.jpg']
+                    "pictures": [f'{server_route}/static/pictures/12.jpg', f'{server_route}/static/pictures/11.png']
                 },
             ],
             "preTourInformation": [
@@ -168,7 +168,7 @@ def api_tours(tourType):
                     "short_description": 'Fontana "RIBAR I HOBOTNICA" je umetničko delo vajara Slavka Miletića iz 1939. godine, postavljena kako bi ukrasila tadašnji kompleks tekstilne industrije.',
                     "latlng": [42.868972, 21.910444],
                     "distance_radius": 50.5,
-                    "pictures": ['https://popis.online/dotBYdot/static/pictures/1.jpg']
+                    "pictures": [f'{server_route}/static/pictures/1.jpg']
                 },
                 {
                     "name": 'Hostel srednje škole Svetozar Krstić - Toza',
@@ -176,7 +176,7 @@ def api_tours(tourType):
                     "short_description": 'Hostel srednje škole Svetozar Krstić - Toza je isturen objekat škole iz Vučja, nekadašnji restoran sada prvi učenički hostel, renoviran uz pomoć Grada Leskovca i sredstava Evropske unije.',
                     "latlng": [42.867278, 21.911111],
                     "distance_radius": 50.5,
-                    "pictures": ['https://popis.online/dotBYdot/static/pictures/2.jpg']
+                    "pictures": [f'{server_route}/static/pictures/2.jpg']
                 },
                 {
                     "name": 'Vila Teokarević',
@@ -184,7 +184,7 @@ def api_tours(tourType):
                     "short_description": 'Vila Teokarević je delo arhitekte Grigorija Ivanovića Samojlova, izgrađena 1935. godine, korišćena za prijem klijenata, kasnije dom Lazara Teokarevića.',
                     "latlng": [42.866989, 21.910972],
                     "distance_radius": 50.5,
-                    "pictures": ['https://popis.online/dotBYdot/static/pictures/3.png']
+                    "pictures": [f'{server_route}/static/pictures/3.png']
                 },
                 {
                     "name": 'Park Nikole Tesle',
@@ -192,7 +192,7 @@ def api_tours(tourType):
                     "short_description": 'Park Nikole Tesle je posvećen srpskom naučniku koji je 1903. godine pomogao pokretanje hidroelektrane u Vučju, koja i danas funkcioniše.',
                     "latlng": [42.866833, 21.911139],
                     "distance_radius": 50.5,
-                    "pictures": ['https://popis.online/dotBYdot/static/pictures/4.jpg']
+                    "pictures": [f'{server_route}/static/pictures/4.jpg']
                 },
                 {
                     "name": 'Spomen česma',
@@ -200,7 +200,7 @@ def api_tours(tourType):
                     "short_description": 'Spomen česma podignuta je u znak sećanja palim borcima Vučja i okoline u Narodnooslobodilačkom ratu, 18. avgusta 1951. godine, kao omaž srpskim junacima koji su dali živote u odbrani slobode od nacista.',
                     "latlng": [42.866472, 21.911417],
                     "distance_radius": 50.5,
-                    "pictures": ['https://popis.online/dotBYdot/static/pictures/5.jpg']
+                    "pictures": [f'{server_route}/static/pictures/5.jpg']
                 },
                 {
                     "name": 'Nikola Skobaljić - (fotografisanje)',
@@ -208,7 +208,7 @@ def api_tours(tourType):
                     "short_description": 'Ovde možete fotografisati portret srednjovekovnog viteza Nikole Skobaljića, vladara ovih krajeva u 15. veku. Legenda kaže da nije rođen, već je začet dok je njegova majka jela živu ribu skobalja. Bio je poznat po hrabrosti i izdaji svoje kume. Podigao je grad koji nosi njegovo ime i sagradio crkvu posvećenu Sv. Jovanu.',
                     "latlng": [42.866139, 21.911472],
                     "distance_radius": 50.5,
-                    "pictures": ['https://popis.online/dotBYdot/static/pictures/6.jpg']
+                    "pictures": [f'{server_route}/static/pictures/6.jpg']
                 },
                 {
                     "name": 'Vodenice',
@@ -216,7 +216,7 @@ def api_tours(tourType):
                     "short_description": 'Reka Vučjanka nekada je imala preko 20 vodenica, ali danas su aktivne samo 4. Vodenice se koriste za mlevenje kukuruza i proizvodnju kukuruznog brašna za ishranu ljudi i životinja.',
                     "latlng": [42.856887, 21.912933],
                     "distance_radius": 50.5,
-                    "pictures": ['https://popis.online/dotBYdot/static/pictures/7.jpg']
+                    "pictures": [f'{server_route}/static/pictures/7.jpg']
                 },
                 
                 {
@@ -225,7 +225,7 @@ def api_tours(tourType):
                     "short_description": 'Crkva Sv. Jovana Krstitelja je posvećena rođenju ovog svetitelja i predstavlja dragocenost među pravoslavnim bogomoljama. Podignuta je na temeljima srednjovekovne crkve, a izgrađena je u periodu od 1932. do 1936. godine u Moravskom stilu. Za vreme izgradnje pronađeni su skeleti srpskih vojnika iz srednjeg veka, a njihovi ostaci sahranjeni su unutar crkve.',
                     "latlng": [42.855833, 21.915278],
                     "distance_radius": 50.5,
-                    "pictures": ['https://popis.online/dotBYdot/static/pictures/8.jpg']
+                    "pictures": [f'{server_route}/static/pictures/8.jpg']
                 },
                 {
                     "name": 'Vidikovac (fotografisanje)',
@@ -233,7 +233,7 @@ def api_tours(tourType):
                     "short_description": 'Sada je pravo vreme za fotografisanje na vidikovcu - samo pazite da ne idete previše blizu ivice!',
                     "latlng": [42.8542888, 21.9160698],
                     "distance_radius": 50.5,
-                    "pictures": ['https://popis.online/dotBYdot/static/pictures/9.jpg']
+                    "pictures": [f'{server_route}/static/pictures/9.jpg']
                 },
                 {
                     "name": 'Izletište Vučjanka',
@@ -241,7 +241,7 @@ def api_tours(tourType):
                     "short_description": 'Izletište Vučjanka je idealno mesto za odmor, a tokom letnjih meseci možete uživati u bazenu na reci Vučjanki.',
                     "latlng": [42.8535, 21.91625],
                     "distance_radius": 50.5,
-                    "pictures": ['https://popis.online/dotBYdot/static/pictures/10.png']
+                    "pictures": [f'{server_route}/static/pictures/10.png']
                 },
                 {
                     "name": 'Hidroelektrana Vučje',
@@ -249,7 +249,7 @@ def api_tours(tourType):
                     "short_description": 'Hidroelektrana Vučje je počela sa radom 1903. godine i danas proizvodi između 5.2 i 6.5 miliona kilovata godišnje. Izgrađena je uz pomoć 168 akcionara "Leskovačkog električnog društva" i bila je važan izvor struje za Vučje i Leskovac, otvarajući put za industrijski razvoj ovih mesta.',
                     "latlng": [42.8525706, 21.9160508],
                     "distance_radius": 50.5,
-                    "pictures": ['https://popis.online/dotBYdot/static/pictures/11.png']
+                    "pictures": [f'{server_route}/static/pictures/11.png']
                 },
                 
                 {
@@ -258,7 +258,7 @@ def api_tours(tourType):
                     "short_description": 'Vodopad reke Vučjanke predstavlja prelepi prirodni fenomen ovog kraja. Uživajte u njegovom pogledu.',
                     "latlng": [42.8513617, 21.9172287],
                     "distance_radius": 50.5,
-                    "pictures": ['https://popis.online/dotBYdot/static/pictures/12.jpg']
+                    "pictures": [f'{server_route}/static/pictures/12.jpg']
                 },
                 #! testne lokacije
                 {
@@ -267,7 +267,7 @@ def api_tours(tourType):
                     "short_description": "Drugo mesto sa koje smo započeli testiranje",
                     "latlng": [44.034661, 20.433998],
                     "distance_radius": 40.5,
-                    "pictures": ['https://popis.online/dotBYdot/static/pictures/12.jpg']
+                    "pictures": [f'{server_route}/static/pictures/12.jpg']
                 },
                 {
                     "name": "GMHCP",
@@ -275,7 +275,7 @@ def api_tours(tourType):
                     "short_description": "Prvo mesto sa koje smo započeli testiranje",
                     "latlng": [44.023905, 20.456093],
                     "distance_radius": 40.5,
-                    "pictures": ['https://popis.online/dotBYdot/static/pictures/12.jpg']
+                    "pictures": [f'{server_route}/static/pictures/12.jpg', f'{server_route}/static/pictures/11.png']
                 },
             ],
 
