@@ -133,7 +133,7 @@ def api_tours(tourType):
                 },
                 {
                     "name": "GMHCP",
-                    "description": "Ovo mesto služi za testiranje rada aplikacije i lokacije. Prvo mesto za koje sa kojeg smo započeli testiranja ovog tipa",
+                    "description": "Ovo mesto služi za testiranje rada aplikacije i lokacije. Prvo mesto za koje sa kojeg smo započeli testiranja ovog tipa. Na srpskomk jeziku namerno ima puno teksta kako bi se testirao slajder u popup prozoru. Ovo je jako bitno da bi na lošijim telefonom sa manjom rezolucijom bili u mogućnosti da vidimo ceo tekst pomoću skorlovanja gore-dole. Do sad nimo imali tu opciju i korisnici su se žalili na to, u verziji 0.5 smo napravili izmenu koja će da otkoni ovaj problem i učini naše korisnike srećnije jer im se njihovi predlozi usvajaju i tako dobijamo bolju i praktičniju aplikaciju. Inače ovo je mesto sa kojeg se pravi ova aplikacija. Ponestaje mi inspiracije šta da pišem pa ću zato nastaviti da pišem nevezano i nepovezano. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun.",
                     "short_description": "Prvo mesto sa koje smo započeli testiranje",
                     "latlng": [44.023905, 20.456093],
                     "distance_radius": 40.5,
