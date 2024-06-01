@@ -120,7 +120,9 @@ class _MapScreenState extends State<MapScreen> {
                       widget.tourInfo.locations.length,
                       (index) => Marker(
                         markerId: MarkerId('location$index'),
-                        icon: BitmapDescriptor.defaultMarker,
+                        icon: BitmapDescriptor.defaultMarkerWithHue(
+                          BitmapDescriptor.hueAzure,
+                        ),
                         infoWindow: InfoWindow(
                           title: widget.tourInfo.locations[index].name,
                           snippet: widget
@@ -140,7 +142,7 @@ class _MapScreenState extends State<MapScreen> {
                       (index) => Marker(
                         markerId: MarkerId('restStop$index'),
                         icon: BitmapDescriptor.defaultMarkerWithHue(
-                          BitmapDescriptor.hueGreen,
+                          BitmapDescriptor.hueMagenta,
                         ),
                         infoWindow: InfoWindow(
                           title: widget.tourInfo.restStops[index].name,
@@ -150,12 +152,15 @@ class _MapScreenState extends State<MapScreen> {
                           widget.tourInfo.restStops[index].latlng[0],
                           widget.tourInfo.restStops[index].latlng[1],
                         ),
+                        onTap: () => _onMarkerTapped(LatLng(
+                            widget.tourInfo.restStops[index].latlng[0],
+                            widget.tourInfo.restStops[index].latlng[1])),
                       ),
                     ).toSet(),
                     Marker(
                       markerId: const MarkerId('currentPosition'),
                       icon: BitmapDescriptor.defaultMarkerWithHue(
-                        BitmapDescriptor.hueBlue,
+                        BitmapDescriptor.hueViolet,
                       ),
                       position: _currentP!,
                     ),
@@ -191,18 +196,40 @@ class _MapScreenState extends State<MapScreen> {
         bottomNavigationBar: Visibility(
           visible: _selectedMarkers.isNotEmpty,
           child: BottomAppBar(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: _selectedMarkers.map((index) {
-                return FloatingActionButton.extended(
-                  onPressed: () => _showExpandedText(context, index),
-                  label: Text(widget.tourInfo.locations[index].name),
-                  icon: const Icon(Icons.location_on),
-                );
-              }).toList(),
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: _selectedMarkers.map((index) {
+                  return Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                    child: FloatingActionButton.extended(
+                      onPressed: () => _showExpandedText(context, index),
+                      label: Text(widget.tourInfo.locations[index].name),
+                      icon: const Icon(Icons.location_on),
+                    ),
+                  );
+                }).toList(),
+              ),
             ),
           ),
         ));
+
+    // bottomNavigationBar: Visibility(
+    //   visible: _selectedMarkers.isNotEmpty,
+    //   child: BottomAppBar(
+    //     child: Row(
+    //       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    //       children: _selectedMarkers.map((index) {
+    //         return FloatingActionButton.extended(
+    //           onPressed: () => _showExpandedText(context, index),
+    //           label: Text(widget.tourInfo.locations[index].name),
+    //           icon: const Icon(Icons.location_on),
+    //         );
+    //       }).toList(),
+    //     ),
+    //   ),
+    // ));
   }
 
   Future<void> _cameraToPosition(LatLng pos) async {
@@ -247,8 +274,8 @@ class _MapScreenState extends State<MapScreen> {
     });
   }
 
-  Future<void> _onMarkerTapped(LatLng destination) async {
-    if (_currentP == null) return;
+  Future<void> _onMarkerTapped(LatLng? destination) async {
+    if (_currentP == null || destination == null) return;
     List<LatLng> polylineCoordinates = await getPolylinePoints(destination);
     generatePolylinesFromPoints(polylineCoordinates);
   }
@@ -288,23 +315,20 @@ class _MapScreenState extends State<MapScreen> {
     var location = widget.tourInfo.locations[index];
     showDialog(
       context: context,
-      builder: (context) => Dialog(
-        backgroundColor: Colors.transparent, // Transparent background
-        child: Container(
-          width: MediaQuery.of(context).size.width * 0.9, // 90% screen width
-          height: MediaQuery.of(context).size.height, // 100% screen height
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Container(
-                decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(0.85), // 30% transparency
-                  borderRadius: BorderRadius.circular(5),
-                ),
-                padding: EdgeInsets.all(12),
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  crossAxisAlignment: CrossAxisAlignment.start,
+      builder: (BuildContext context) {
+        return Dialog(
+          backgroundColor: Colors.transparent,
+          child: Container(
+            height: MediaQuery.of(context).size.height * 0.85,
+            padding: EdgeInsets.all(16.0),
+            decoration: BoxDecoration(
+              color: Colors.white.withOpacity(0.85),
+              borderRadius: BorderRadius.circular(10.0),
+            ),
+            child: Column(
+              children: [
+                // Header (Slajder slika i Naslov)
+                Column(
                   children: [
                     // Slajder slika
                     Container(
@@ -319,10 +343,10 @@ class _MapScreenState extends State<MapScreen> {
                           ),
                         ),
                         padding: const EdgeInsets.only(
-                          top: 40.0, // Padding za vrh
+                          top: 0.0, // Padding za vrh
                           left: 0.0, // Padding za levo
                           right: 0.0, // Padding za desno
-                          bottom: 20.0, // Padding za dno
+                          bottom: 0.0, // Padding za dno
                         ),
                         child: SizedBox(
                           height: 200, // Postavite odgovarajuću visinu za slike
@@ -340,36 +364,68 @@ class _MapScreenState extends State<MapScreen> {
                             },
                           ),
                         )),
+                    SizedBox(height: 16.0),
                     // Naslov
                     Text(
                       location.name,
-                      style: const TextStyle(
-                        fontSize: 20,
+                      style: TextStyle(
+                        fontSize: 24.0,
                         fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    const SizedBox(height: 8),
-                    // Opis
-                    SingleChildScrollView(
-                      child: Text(
-                        location.description,
-                        textAlign: TextAlign.justify,
-                      ),
-                    ),
-                    Align(
-                      alignment: Alignment.bottomRight,
-                      child: TextButton(
-                        onPressed: () => Navigator.pop(context),
-                        child: Text(LocaleData.button_close.getString(context)),
                       ),
                     ),
                   ],
                 ),
-              ),
-            ],
+                SizedBox(height: 8.0),
+                // Skrolabilan opis
+                Expanded(
+                  child: SingleChildScrollView(
+                    child: Text(
+                      location.description,
+                      style: TextStyle(
+                        fontSize: 16.0,
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(height: 16.0),
+                // Footer (Audio kontrolni dugmići i dugme za zatvaranje)
+                Align(
+                  alignment: Alignment.bottomCenter,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      IconButton(
+                        icon: Icon(Icons.play_arrow),
+                        onPressed: () {
+                          // Logika za puštanje audio zapisa
+                        },
+                      ),
+                      IconButton(
+                        icon: Icon(Icons.pause),
+                        onPressed: () {
+                          // Logika za pauziranje audio zapisa
+                        },
+                      ),
+                      IconButton(
+                        icon: Icon(Icons.stop),
+                        onPressed: () {
+                          // Logika za zaustavljanje audio zapisa
+                        },
+                      ),
+                      ElevatedButton(
+                        onPressed: () {
+                          Navigator.of(context).pop();
+                        },
+                        child: Text(LocaleData.button_close.getString(context)),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
           ),
-        ),
-      ),
+        );
+      },
     );
   }
 }

@@ -158,7 +158,7 @@ class TourInfoScreen extends StatelessWidget {
                                         : Icons.place,
                                     color: location.visited
                                         ? Colors.green
-                                        : Colors.red,
+                                        : Colors.blue,
                                   ),
                                 );
                               },
@@ -184,8 +184,8 @@ class TourInfoScreen extends StatelessWidget {
                                 return ListTile(
                                     title: Text(restStop.name),
                                     subtitle: Text(restStop.description),
-                                    trailing:
-                                        Icon(Icons.place, color: Colors.green));
+                                    trailing: Icon(Icons.place,
+                                        color: Colors.purpleAccent));
                               },
                             ),
                           ],
