@@ -42,7 +42,7 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId "com.example.dot_by_dot"
+        applicationId "com.example.kratovo" // ovde sam izmenio dot_by_dot u kratovo da bi moglo da se instalira kao posebna aplikacija, napravi sličnu izmenu u vučje (dot_by_dot -> vucje)
         // You can update the following values to match your application needs.
         // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-gradle-build-configuration.
         minSdkVersion 21 //flutter.minSdkVersion // pre nego što sam ispravio na 21 bio je tekst flutter.min...
