@@ -11,6 +11,8 @@ mixin LocaleData {
   static const String cycling_1 = 'cycling_1';
   static const String main_title = 'main_title';
   static const String main_more = 'main_more';
+  static const String sidebar_home = 'sidebar_home';
+  static const String sidebar_language = 'sidebar_language';
   static const String home_title = 'home_title';
   static const String home_vucje_about = 'home_vucje_about';
   static const String home_vucje_about_title = 'home_vucje_about_title';
@@ -47,6 +49,8 @@ mixin LocaleData {
         'cycling_1.en', //! u main.dart routes: ima string koji se šalje na API pomoću koga se definiše jezik stringova
     main_title: 'Travel guide',
     main_more: 'More',
+    sidebar_home: 'Home',
+    sidebar_language: 'Language: ',
     home_title: 'Home',
     home_vucje_about:
         "Vučje is a town settlement in the Leskovac district with about 2,865 inhabitants according to the 2011 census. Until 1965, it was the seat of the municipality of Vučje, which consisted of many settlements. It is located about 17 km southwest of Leskovac and is the geographical center of the Porečje area, through which the river Vučjanka flows. It has a health center, police station, football club FC Vučje, primary and secondary schools. The population is predominantly Serbian.",
@@ -94,6 +98,8 @@ This settlement is largely inhabited by Serbs (according to the 2002 census).'''
         'cycling_1.sr', //! u main.dart routes: ima string koji se salje na API pomoću koga se definiše jezik stringova
     main_title: 'Turistički vodič',
     main_more: 'Opširnije',
+    sidebar_home: 'Pocetna',
+    sidebar_language: 'Jezik: ',
     home_title: 'Početna',
     home_vucje_about:
         "Vučje je gradsko naselje u okrugu Leskovca sa oko 2.865 stanovnika prema popisu iz 2011. Do 1965. bilo je sedište opštine Vučje koju su činila mnoga naseljena mesta. Nalazi se oko 17 km jugozapadno od Leskovca i geografski je centar područja Porečje, kroz koje protiče reka Vučjanka. Ima dom zdravlja, policijsku stanicu, fudbalski klub FK Vučje, osnovnu i srednju školu. Stanovništvo je pretežno srpsko.",

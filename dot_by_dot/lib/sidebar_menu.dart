@@ -1,4 +1,6 @@
+import 'package:dot_by_dot/localization/locales.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_localization/flutter_localization.dart';
 
 final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -57,21 +59,21 @@ class SidebarMenu extends StatelessWidget {
             // ),
             ListTile(
               leading: const Icon(Icons.home),
-              title: const Text('POČETNA'),
+              title: Text(LocaleData.sidebar_home.getString(context)),
               onTap: () {
                 Navigator.popUntil(context, ModalRoute.withName('/'));
               },
             ),
-            ListTile(
-              leading: const Icon(Icons.location_on),
-              title: const Text('LISTA LOKALITETA'),
-              onTap: () {
-                Navigator.popAndPushNamed(context, '/listaLokaliteta');
-              },
-            ),
+            // ListTile(
+            //   leading: const Icon(Icons.location_on),
+            //   title: const Text('LISTA LOKALITETA'),
+            //   onTap: () {
+            //     Navigator.popAndPushNamed(context, '/listaLokaliteta');
+            //   },
+            // ),
             ListTile(
               leading: const Icon(Icons.language),
-              title: const Text('IZBOR JEZIKA: '),
+              title: Text(LocaleData.sidebar_language.getString(context)),
               trailing: DropdownButton(
                 value: selectedLanguage,
                 items: const [
