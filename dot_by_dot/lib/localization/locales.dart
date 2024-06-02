@@ -15,6 +15,8 @@ mixin LocaleData {
   static const String home_vucje_about = 'home_vucje_about';
   static const String home_vucje_about_title = 'home_vucje_about_title';
   static const String home_vucje_about_extended = 'home_vucje_about_extended';
+  static const String home_show_more = 'home_show_more';
+  static const String home_show_less = 'home_show_less';
   static const String home_walking_1 = 'home_walking_1';
   static const String home_walking_2 = 'home_walking_2';
   static const String home_cycling_1 = 'home_cycling_1';
@@ -63,6 +65,8 @@ Demographics
 There are 2,649 adults living in the Vučje settlement, and the average age of the population is 41.3 years (40.2 for men and 42.3 for women). There are 1049 households in the settlement, and the average number of members per household is 3.11.
 
 This settlement is largely inhabited by Serbs (according to the 2002 census).''',
+    home_show_more: 'Show more',
+    home_show_less: 'Show less',
     home_walking_1: 'Walking tour',
     home_walking_2: 'Walking cardio tour',
     home_cycling_1: 'Cycling tour',
@@ -108,6 +112,8 @@ Demografija
 U naselju Vučje živi 2649 punoletnih stanovnika, a prosečna starost stanovništva iznosi 41,3 godina (40,2 kod muškaraca i 42,3 kod žena). U naselju ima 1049 domaćinstava, a prosečan broj članova po domaćinstvu je 3,11.
 
 Ovo naselje je velikim delom naseljeno Srbima (prema popisu iz 2002. godine).''',
+    home_show_more: 'Prikaži više',
+    home_show_less: 'Prikaži manje',
     home_walking_1: 'Pešačka tura',
     home_walking_2: 'Pešačka kardio tura',
     home_cycling_1: 'Biciklistička tura',

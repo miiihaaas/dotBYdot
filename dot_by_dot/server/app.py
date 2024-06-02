@@ -369,6 +369,47 @@ def api_tours(tourType):
                     "distance_radius": 50.5,
                     "pictures": [f'{server_route}/static/pictures/20.jpg'],
                 },
+                {
+                    "name": 'Crossroad',
+                    "description": 'Passing point of the route - enjoy nature.',
+                    "short_description": 'Passing point of the route - enjoy nature.',
+                    "latlng": [42.851414, 21.9132466],
+                    "distance_radius": 50.5,
+                    "pictures": [f'{server_route}/static/pictures/21.jpg'],
+                },
+                {
+                    "name": 'View of Vučje',
+                    "description": 'Phenomenal view of Vučje, rest and immortalize the scene before you.',
+                    "short_description": 'Phenomenal view of Vučje, rest and immortalize the scene.',
+                    "latlng": [42.8514885, 21.9125155],
+                    "distance_radius": 50.5,
+                    "pictures": [f'{server_route}/static/pictures/22.png'],
+                },
+                {
+                    "name": 'Crossroad',
+                    "description": 'Passing point of the route - enjoy nature.',
+                    "short_description": 'Passing point of the route - enjoy nature.',
+                    "latlng": [42.8516527, 21.9083007],
+                    "distance_radius": 50.5,
+                    "pictures": [f'{server_route}/static/pictures/23.png'],
+                },
+                {
+                    "name": 'Forest rock',
+                    "description": 'The last rock and the view offered during this route. Thank you for choosing this route, we hope you leave Vučje with beautiful photos and even better impressions.',
+                    "short_description": 'The last rock and the view offered during this route. Thank you for choosing this route.',
+                    "latlng": [42.8525745, 21.9104787],
+                    "distance_radius": 50.5,
+                    "pictures": [f'{server_route}/static/pictures/24.png'],
+                },
+                {
+                    "name": 'Church of St. John the Baptist',
+                    "description": "The church is dedicated to the birth of St. John the Baptist, representing a true jewel of Orthodox shrines in this area. It was built on the foundations of a church erected in the 15th century by the knight, Duke Nikola Skobaljić. The Church of St. John the Baptist is the endowment of the Teokarević family, industrialists from Leskovac. The church was built between 1932 and 1936. The church was designed by architect Grigorije Ivanovich Samojlov, who also designed most of the Teokarević family's buildings. The church is made of stone found at the base of Mount Kukavica, whose slopes surround you. The church was built in the Moravian style with an added bell tower characteristic of churches and monasteries from the Nemanjić era. There is a record that during the construction of the church, a large number of skeletons belonging to Serbian soldiers from the medieval period were found. The skeletons found then surprised the finders, as they were exceptionally large even by today's standards. All the remains of the Serbian soldiers are interred in a tomb within the church yard, and pine trees were planted beside them, which still exist today.",
+                    "short_description": 'The church is dedicated to the birth of St. John the Baptist, representing a true jewel of Orthodox shrines in this area. It was built on the foundations of a church erected in the 15th century by the knight, Duke Nikola Skobaljić.',
+                    "latlng": [42.855732, 21.914078],
+                    "distance_radius": 50.5,
+                    "pictures": [f'{server_route}/static/pictures/8,25.jpg'],
+                },
+
 
             ],
             "preTourInformation": [
@@ -457,7 +498,46 @@ def api_tours(tourType):
                     "distance_radius": 50.5,
                     "pictures": [f'{server_route}/static/pictures/20.jpg'],
                 },
-
+                {
+                    "name": 'Raskršće',
+                    "description": 'Prolazna tačka rute - uživajte u prirodi.',
+                    "short_description": 'Prolazna tačka rute - uživajte u prirodi.',
+                    "latlng": [42.851414, 21.9132466],
+                    "distance_radius": 50.0,
+                    "pictures": [f'{server_route}/static/pictures/21.jpg'],
+                },
+                {
+                    "name": 'Pogled na Vučje',
+                    "description": 'Fenomenalan pogled na Vučje, odmorite i ovekovečite prizor koji je pred vama.',
+                    "short_description": 'Fenomenalan pogled na Vučje, odmorite i ovekovečite prizor.',
+                    "latlng": [42.8514885, 21.9125155],
+                    "distance_radius": 50.0,
+                    "pictures": [f'{server_route}/static/pictures/22.png'],
+                },
+                {
+                    "name": 'Raskršće',
+                    "description": 'Prolazna tačka rute - uživajte u prirodi.',
+                    "short_description": 'Prolazna tačka rute - uživajte u prirodi.',
+                    "latlng": [42.8516527, 21.9083007],
+                    "distance_radius": 50.0,
+                    "pictures": [f'{server_route}/static/pictures/23.png'],
+                },
+                {
+                    "name": 'Šumska stena',
+                    "description": 'Poslednja stena i pogled koji vam se pruža tokom ove rute. Hvala što ste odabrali ovu rutu, nadamo se da sa lepim fotografijama i još lepšim utiscima napuštate Vučje.',
+                    "short_description": 'Poslednja stena i pogled koji vam se pruža tokom ove rute. Hvala što ste odabrali ovu rutu.',
+                    "latlng": [42.8525745, 21.9104787],
+                    "distance_radius": 50.5,
+                    "pictures": [f'{server_route}/static/pictures/24.png'],
+                },
+                {
+                    "name": 'Crkva Sv. Jovana Krstitelja',
+                    "description": 'Crkva je posvećena rođenju svetog Jovana krstitelja, predstavlja pravi dragulj pravoslavnih bogomolja na ovim prostorima. Podignuta je na temeljima crkve koju je u 15. veku podigao vitez, vojvoda Nikola Skobaljić. Crkva sv. Jovana krstitelja je zadužbina porodice Teokarević, industrijalaca iz Leskovca. Crkva je podizana u periodu od 1932. do 1936. godine. Crkvu je projektovao arhitekta Grigorije Ivanovich Samojlov, kao i većinu objekata porodice Teokarević. Crkva je izgrađena kamenom koji se nalazi u podnožju planine Kukavica čiji se obronci nalaze oko vas. Crkva je građena u Moravskom stilu sa pridodatim zvonikom koji je karakterističan za srkve i manastire iz doba Nemanjića. Postoji zapis koji svedoči da je prilikom izgradnje crkve pronađen veliki broj skeleta koji su pripadali srpskim vojnicima iz perioda srednjeg veka. Skeleti koji su tada pronađeni začudili su pronalazače, skeleti su bili izrazoto veliki čak i za današnje prilike. Svi posmrtni ostaci srpskih vojnika su pohranjeni u grobnici unutar crkvene porte i pored njih su posađeni borovi koji i danas postoje.',
+                    "short_description": 'Crkva je posvećena rođenju svetog Jovana krstitelja, predstavlja pravi dragulj pravoslavnih bogomolja na ovim prostorima. Podignuta je na temeljima crkve koju je u 15. veku podigao vitez, vojvoda Nikola Skobaljić.',
+                    "latlng": [42.855732, 21.914078],
+                    "distance_radius": 25.8,
+                    "pictures": [f'{server_route}/static/pictures/8,25.jpg'],
+                },
             ],
             "preTourInformation": [
                 "Udobne sportska obuća, odeća prema vremenskim uslovima",
@@ -483,8 +563,43 @@ def api_tours(tourType):
             "difficultyLevel": "Medium",
             "numberOfLocations": 12,
             "locations": [
-                {}
-            ]
+                {
+                    "name": 'Hostel of the Secondary School Svetozar Krstić - Toza',
+                    "description": 'The hostel you see is an extension of the Secondary School "Svetozar Krstić - Toza" from Vučje. It used to be a restaurant where students only had practice. Today, it is the first student hostel operating within a school enterprise founded by the school. The renovation of the school hostel was supported by the City of Leskovac, while the European Union provided funds for the complete equipping of the hostel through the IPA II Cross-Border Cooperation Program between Serbia and North Macedonia. In Kratovo, North Macedonia, there is also a student hostel within the brother school "Mitko Pendžukliski".',
+                    "short_description": 'The hostel you see is an extension of the Secondary School "Svetozar Krstić - Toza" from Vučje. It used to be a restaurant where students only had practice. Today, it is the first student hostel operating within a school enterprise founded by the school.',
+                    "latlng": [42.867278, 21.911111],
+                    "distance_radius": 50.5,
+                    "pictures": [f'{server_route}/static/pictures/2.jpg'],
+                },
+                {
+                    "name": 'Factory "Porečje"',
+                    "description": 'PREMIUM RAKIJA PRODUCER - The "Porečje" kombinat, founded in 1960, has been known from the start for its high-quality products. The "Porečje" distillery bases its procurement and selection of all fruit types primarily from the territory of Porečje, where rakija production is also located. The "Porečje" distillery continues the well-trodden path of producing premium rakijas with the desire to share its experience in producing the highest quality rakijas with enthusiasts of fine spirits both in Serbia and around the world. Trivunova rakija, as a famous brand, originated in the south of Serbia, at the foot of the Kukavica mountain, with the unique Vučjanka river canyon, which has created the rich plain - POREČJE. This fertile land produces the highest quality fruit that transforms into premium rakijas. Capacity of 5000 liters per day.',
+                    "short_description": 'PREMIUM RAKIJA PRODUCER - The "Porečje" kombinat, founded in 1960, has been known from the start for its high-quality products. The "Porečje" distillery bases its procurement and selection of all fruit types primarily from the territory of Porečje, where rakija production is also located.',
+                    "latlng": [42.87475, 21.907694],
+                    "distance_radius": 50.5,
+                    "pictures": [f'{server_route}/static/pictures/27.png'],
+                },
+                {
+                    "name": 'Church of St. George the Great Martyr',
+                    "description": 'The Church of St. George the Great Martyr in Beli Potok near Leskovac is a temple of the Serbian Orthodox Church. The church was built in 2015 with the help of funds from Slobodan Stojanović from Beli Potok. Construction lasted for two years, and the church was consecrated on May 6, 2014.',
+                    "short_description": 'The Church of St. George the Great Martyr in Beli Potok near Leskovac is a temple of the Serbian Orthodox Church.',
+                    "latlng": [42.885805, 21.914167],
+                    "distance_radius": 50.5,
+                    "pictures": [f'{server_route}/static/pictures/28.jpg'],
+                },
+
+            ],
+            "preTourInformation": [
+                "Udobne sportska obuća, odeća prema vremenskim uslovima",
+                "Poneti vodu za piće.",
+            ],
+            "restStops": [
+                {
+                    "name": "Kafić kod fontane",
+                    "description": "Kafić sa prelepim pogledom",
+                    "latlng": [42.8511627, 21.9179207]
+                },
+            ],
         },
         "sr": {
             "name": "Bicikilistička tura",
@@ -495,8 +610,44 @@ def api_tours(tourType):
             "difficultyLevel": "Srednja",
             "numberOfLocations": 12,
             "locations": [
-                {}
-            ]
+                {
+                    "name": 'Hostel srednje škole Svetozar Krstić - Toza',
+                    "description": 'Hostel koji vidite je istureni objekat Srednje škole „Svetozar Krstić - Toza“ iz Vučja. Nekada je to bio restoran u kojem su učenici imali samo praksu. Danas je to prvi učenički hostel koji posluje u okviru školskog preduzeća čiji je osnivač škola. Renoviranje školskog hostela pomogao je Grad Leskovac, dok je sredstva za kompletno opremanje hostela dala Evropska unija preko IPA II Programa prekogranične saradnje Srbije i Severne Makedonije. U Kratovu, Severnoj Makedoniji se takođe nalazi učenički hostel u okviru bratske škole „Mitko Pendžukliski“.',
+                    "short_description": 'Hostel koji vidite je istureni objekat Srednje škole „Svetozar Krstić - Toza“ iz Vučja. Nekada je to bio restoran u kojem su učenici imali samo praksu. Danas je to prvi učenički hostel koji posluje u okviru školskog preduzeća čiji je osnivač škola.',
+                    "latlng": [42.867278, 21.911111],
+                    "distance_radius": 50.5,
+                    "pictures": [f'{server_route}/static/pictures/2.jpg'],
+                },
+                {
+                    "name": 'Fabrika „Porečje“',
+                    "description": 'VRHUNSKI PROIZVOĐAČ RAKIJA - Kombinat "Porečje" osnovan 1960. godine od samog početka postao je poznat po proizvodima vrhunskog kvaliteta. Destilerija "Porečje" bazira nabavku i odabir svih voćnih vrsta prvenstveno sa teritorije Porečja, gde se i nalazi proizvodnja rakija. Destilerija „Porečje“ nastavlja utabanim putem proizvodnje vrhunskih rakija sa željom da svoje iskustvo u proizvodnji najkvalitetnijih rakija koje treba da upoznaju poštovaoci dobre kapljice kako u Srbiji tako i u čitavom svetu. Trivunova rakija, kao čuveni brend, nastala je na jugu Srbije, u podnožju planine Kukavice, sa jedinstvenim kanjonom reke Vučjanke koja je iznedrila bogatu ravnicu - POREČJE. Ta blagodna zemlja rađa najkvalitetnije voće koje se pretvaraju u vrhunske rakije. Kapaciteti 5000 litara dnevno.',
+                    "short_description": 'VRHUNSKI PROIZVOĐAČ RAKIJA - Kombinat "Porečje" osnovan 1960. godine od samog početka postao je poznat po proizvodima vrhunskog kvaliteta. Destilerija "Porečje" bazira nabavku i odabir svih voćnih vrsta prvenstveno sa teritorije Porečja, gde se i nalazi proizvodnja rakija.',
+                    "latlng": [42.87475, 21.907694],
+                    "distance_radius": 50.5,
+                    "pictures": [f'{server_route}/static/pictures/27.png'],
+                },
+                {
+                    "name": 'Hram Svetog Velikomučenika Georgija',
+                    "description": 'Crkva Svetog velikomučenika Georgija u Belom Potoku kod Leskovca je hram Srpske pravoslavne crkve. Crkva je 2015. godine sagrađena uz pomoć sredstava Slobodana Stojanovića iz Belog Potoka. Gradnja je trajala dve godine, a crkva je osvećena 6. maja 2014. godine.',
+                    "short_description": 'Crkva Svetog velikomučenika Georgija u Belom Potoku kod Leskovca je hram Srpske pravoslavne crkve.',
+                    "latlng": [42.885805, 21.914167],
+                    "distance_radius": 50.5,
+                    "pictures": [f'{server_route}/static/pictures/28.jpg'],
+                },
+
+
+            ],
+            "preTourInformation": [
+                "Udobne sportska obuća, odeća prema vremenskim uslovima",
+                "Poneti vodu za piće.",
+            ],
+            "restStops": [
+                {
+                    "name": "Kafić kod fontane",
+                    "description": "Kafić sa prelepim pogledom",
+                    "latlng": [42.8511627, 21.9179207]
+                },
+            ],
         },
     }
     

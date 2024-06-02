@@ -3,7 +3,48 @@ import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:flutter_localization/flutter_localization.dart';
 
-// import 'tour_info_screen.dart';
+class ExpandableTextWidget extends StatefulWidget {
+  final String initialText;
+  final String expandedText;
+
+  ExpandableTextWidget({required this.initialText, required this.expandedText});
+
+  @override
+  _ExpandableTextWidgetState createState() => _ExpandableTextWidgetState();
+}
+
+class _ExpandableTextWidgetState extends State<ExpandableTextWidget> {
+  bool _isExpanded = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        Text(
+          _isExpanded ? widget.expandedText : widget.initialText,
+          maxLines: _isExpanded ? null : 5,
+          overflow: TextOverflow.visible,
+        ),
+        SizedBox(height: 10),
+        if (widget.expandedText.isNotEmpty)
+          TextButton(
+            onPressed: () {
+              setState(() {
+                _isExpanded = !_isExpanded;
+              });
+            },
+            child: Text(
+              _isExpanded
+                  ? LocaleData.home_show_less.getString(context)
+                  : LocaleData.home_show_more.getString(context),
+              style: TextStyle(color: Colors.blue),
+            ),
+          ),
+      ],
+    );
+  }
+}
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -141,80 +182,14 @@ class HomeScreen extends StatelessWidget {
                     ],
                   ),
                   padding: const EdgeInsets.all(20.0),
-                  child: ExpansionTile(
-                    shape: Border.all(color: Colors.transparent),
-                    title: Text(
-                      LocaleData.home_vucje_about.getString(context),
-                      maxLines: 7,
-                      overflow: TextOverflow.ellipsis,
-                      style: const TextStyle(fontSize: 16),
-                      textAlign: TextAlign.justify,
-                    ),
-                    children: <Widget>[
-                      Padding(
-                        padding: const EdgeInsets.only(
-                            left: 16.0, right: 16.0, top: 0, bottom: 0),
-                        child: Padding(
-                          padding: const EdgeInsets.only(right: 50.0),
-                          child: Text(
-                            LocaleData.home_vucje_about_extended
-                                .getString(context),
-                            textAlign: TextAlign.justify,
-                            style: const TextStyle(fontSize: 16),
-                          ),
-                        ),
-                      ),
-                    ],
+                  child: ExpandableTextWidget(
+                    initialText:
+                        LocaleData.home_vucje_about_extended.getString(context),
+                    expandedText:
+                        LocaleData.home_vucje_about_extended.getString(context),
                   ),
                 ),
               ),
-
-              // Kratak opis
-              //Padding(
-              //   padding: const EdgeInsets.symmetric(horizontal: 20.0),
-              //   child: Text(
-              //     LocaleData.home_vucje_about.getString(context),
-              //     maxLines: 7, // Ograničava broj linija za kratki opis
-              //     overflow: TextOverflow.ellipsis, // Dodaje elipsu (...)
-              //   ),
-              // ),
-
-              //const SizedBox(height: 20), // Dodaje razmak
-
-              // Dugme za proširen tekst (floating action button)
-              // Container(
-              //   width: double.infinity,
-              //   decoration: BoxDecoration(
-              //     gradient: LinearGradient(
-              //       begin: Alignment.topCenter,
-              //       end: Alignment.bottomCenter,
-              //       colors: [
-              //         Color(0xFFFFFFFF),
-              //         Color(0xFFCCEAF4),
-              //       ],
-              //     ),
-              //   ),
-              //   padding: const EdgeInsets.all(20.0),
-              //   child: ElevatedButton.icon(
-              //     onPressed: () => _showExpandedText(context),
-              //     icon: const Icon(Icons.info_rounded),
-              //     label: Text(LocaleData.main_more.getString(context)),
-              //     style: ButtonStyle(
-              //       backgroundColor: MaterialStateProperty.resolveWith<Color>(
-              //         (states) {
-              //           return const Color(0xFFEBF2F5); // Promenite boju dugmeta
-              //         },
-              //       ),
-              //       foregroundColor: MaterialStateProperty.resolveWith<Color>(
-              //         (states) {
-              //           return const Color(0xFF0094C9); // Promenite boju teksta
-              //         },
-              //       ),
-              //     ),
-              //   ),
-              // ),
-
-              // const SizedBox(height: 20), // Dodaje razmak
 
               Container(
                 padding: const EdgeInsets.all(0.0),
@@ -224,7 +199,9 @@ class HomeScreen extends StatelessWidget {
               Container(
                 color: Color(0xFF0094C9),
                 padding: const EdgeInsets.all(20.0),
-                child: Row(
+                width:
+                    double.infinity, // Da Container zauzme celu širinu ekrana
+                child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     ElevatedButton.icon(
@@ -268,7 +245,7 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                     ElevatedButton.icon(
-                      onPressed: () => _navigateToCyclingTourInfo(context),
+                      onPressed: () => _navigateToCycling1(context),
                       style: ElevatedButton.styleFrom(
                         backgroundColor:
                             Color(0xFFFFFFFF), // Pozadinska boja dugmeta
@@ -290,6 +267,7 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
               ),
+
               Container(
                 width: double.infinity,
                 color: const Color(0xFF0076A6),
@@ -387,9 +365,9 @@ class HomeScreen extends StatelessWidget {
     Navigator.pushNamed(context, '/walking_2');
   }
 
-  void _navigateToCyclingTourInfo(BuildContext context) {
+  void _navigateToCycling1(BuildContext context) {
     // Navigacija ka novoj stranici za prikaz informacija o turi
     // Predajte 'tourType' ('walking' ili 'cycling') na sledeću stranicu
-    Navigator.pushNamed(context, '/cyclingTourInfo');
+    Navigator.pushNamed(context, '/cycling_1');
   }
 }
