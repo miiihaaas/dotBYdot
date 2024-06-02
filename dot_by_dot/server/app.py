@@ -8,8 +8,8 @@ app = Flask(__name__)
 CORS(app) #! ovo je dodato da bi moglo da komunicira sa flutter app
 
 
-@app.route('/api/tours/<string:tourType>', methods=['GET'])
-def api_tours(tourType):
+@app.route('/api/vucje/<string:tourType>', methods=['GET'])
+def api_vucje(tourType):
     tour_type, language = tourType.split('.')
     server_route = f'https://popis.online/dotBYdot' #! izmeni url u listama pictures: []
     
@@ -662,7 +662,52 @@ def api_tours(tourType):
     return jsonify(tour)
 
 
-@app.route('/api/picture', methods=['GET'])
-def api_picture():
-    return app.send_static_file('pictures/3.1.jpg')
+@app.route('/api/kratovo/<string:tourType>', methods=['GET'])
+def api_kratovo(tourType):
+    tour_type, language = tourType.split('.')
+    server_route = f'https://popis.online/dotBYdot'
     
+    walking_1 = {
+        "en": {
+            "name": "Walking tour",
+            "type": "Walking tour",
+            "routeLength": "1.5 km",
+            "duration": "1h 15min",
+            "elevationGain": 300.2,
+            "difficultyLevel": "Easy",
+            "numberOfLocations": 5,
+            "Locations": [
+                {
+
+                },
+            ],
+            "preTourInformation": [
+                "Comfortable sports shoes, clothes according to weather conditions",
+                "Bring drinking water.",],
+            "restStops": [],
+        },
+        "mk": {
+            "name": "Шетачка тура",
+            "type": "Шетачка тура",
+            "routeLength": "1.5 km",
+            "duration": "1h 15min",
+            "elevationGain": 300.2,
+            "difficultyLevel": "Лесен",
+            "numberOfLocations": 5,
+            "Locations": [
+                {
+
+                },
+            ],
+            "preTourInformation": [
+                "Комфортни спортски чевли, облека према временските услови",
+                "Донеси пиење вода.",
+            ],
+            "restStops": [],
+        },
+    }
+    
+    if tour_type == 'walking_1':
+        tour = walking_1[language]
+    
+    return jsonify(tour)
