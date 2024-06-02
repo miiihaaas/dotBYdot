@@ -82,12 +82,14 @@ class _MyAppState extends State<MyApp> {
       routes: {
         //! koristim LocaleData da odredim string ture koji se šalje na API
         //! walking_1 (imaće en i sr verziju stringa: walking_1_en, walking_1_sr)
-        '/walkingTourInfo': (context) =>
+        '/walking_1': (context) =>
             // buildTourInfoScreen(context, 'walking'),
             buildTourInfoScreen(
                 context, LocaleData.walking_1.getString(context)),
-        '/cyclingTourInfo': (context) =>
-            buildTourInfoScreen(context, 'cycling'),
+        '/walking_2': (context) => buildTourInfoScreen(
+            context, LocaleData.walking_2.getString(context)),
+        '/cycling_1': (context) => buildTourInfoScreen(
+            context, LocaleData.cycling_1.getString(context)),
       },
     );
   }

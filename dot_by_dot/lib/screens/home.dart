@@ -228,7 +228,7 @@ class HomeScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     ElevatedButton.icon(
-                      onPressed: () => _navigateToWalkingTourInfo(context),
+                      onPressed: () => _navigateToWalking1(context),
                       style: ElevatedButton.styleFrom(
                         backgroundColor:
                             Color(0xFFFFFFFF), // Pozadinska boja dugmeta
@@ -243,7 +243,27 @@ class HomeScreen extends StatelessWidget {
                       icon:
                           Icon(Icons.directions_walk, color: Color(0xFF0094C9)),
                       label: Text(
-                        LocaleData.main_walking_tour.getString(context),
+                        LocaleData.home_walking_1.getString(context),
+                        style: const TextStyle(color: Color(0xFF0094C9)),
+                      ),
+                    ),
+                    ElevatedButton.icon(
+                      onPressed: () => _navigateToWalking2(context),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor:
+                            Color(0xFFFFFFFF), // Pozadinska boja dugmeta
+                        foregroundColor: Color(0xFF0094C9), // Boja teksta
+                        shadowColor: Colors.black, // Boja senke
+                        elevation: 5, // Visina senke
+                        shape: RoundedRectangleBorder(
+                          borderRadius:
+                              BorderRadius.circular(30.0), // Zaobljeni uglovi
+                        ),
+                      ),
+                      icon:
+                          Icon(Icons.directions_walk, color: Color(0xFF0094C9)),
+                      label: Text(
+                        LocaleData.home_walking_2.getString(context),
                         style: const TextStyle(color: Color(0xFF0094C9)),
                       ),
                     ),
@@ -263,7 +283,7 @@ class HomeScreen extends StatelessWidget {
                       icon: const Icon(Icons.directions_bike,
                           color: Color(0xFF0094C9)),
                       label: Text(
-                        LocaleData.main_cycling_tour.getString(context),
+                        LocaleData.home_cycling_1.getString(context),
                         style: const TextStyle(color: Color(0xFF0094C9)),
                       ),
                     ),
@@ -355,10 +375,16 @@ class HomeScreen extends StatelessWidget {
   }
 
   // Funkcija za prelazak na stranicu sa informacijama o turi (implementirajte po potrebi)
-  void _navigateToWalkingTourInfo(BuildContext context) {
+  void _navigateToWalking1(BuildContext context) {
     // Navigacija ka novoj stranici za prikaz informacija o turi
     // Predajte 'tourType' ('walking' ili 'cycling') na sledeću stranicu
-    Navigator.pushNamed(context, '/walkingTourInfo');
+    Navigator.pushNamed(context, '/walking_1');
+  }
+
+  void _navigateToWalking2(BuildContext context) {
+    // Navigacija ka novoj stranici za prikaz informacija o turi
+    // Predajte 'tourType' ('walking' ili 'cycling') na sledeću stranicu
+    Navigator.pushNamed(context, '/walking_2');
   }
 
   void _navigateToCyclingTourInfo(BuildContext context) {

@@ -294,38 +294,219 @@ def api_tours(tourType):
     }
     
     
-    # walking_2 = {
-    #     "en": {
-    #         "name": "Walking cardio tour",
-    #         "type": "Walking",
-    #         "routeLenght": "5.06 km",
-    #         "duration": "1h 25min",
-    #         "elevationGain": 272.0,
-    #         "difficultyLevel": "Heavy",
-    #         "numberOfLocations": 12,
-    #         "locations": [
-    #             {}
-    #         ]
-    #     },
-    #     "sr": {
-    #         "name": "Pešačka kardio tura",
-    #         "type": "Pešačka",
-    #         "routeLenght": "5.06 km",
-    #         "duration": "1h 25min",
-    #         "elevationGain": 272.0,
-    #         "difficultyLevel": "Teška",
-    #         "numberOfLocations": 12,
-    #         "locations": [
-    #             {}
-    #         ]
-    #     },
-    # }
+    walking_2 = {
+        "en": {
+            "name": "Walking cardio tour",
+            "type": "Walking",
+            "routeLenght": "5.06 km",
+            "duration": "1h 25min",
+            "elevationGain": 272.0,
+            "difficultyLevel": "Heavy",
+            "numberOfLocations": 12,
+            "locations": [
+                #! Vučje
+                {
+                    "name": 'Starting point',
+                    "description": 'Carefully observe the starting position extending from the left side of the road. The path is also marked with a mountain marking you can see on the tree, a red circle with a white color in the center. These markings will help you during the route as confirmation that you are on the right track. Also, if for some reason you are unable to use your phone or other smart device, follow these markings to return to the populated area. This hiking route is extremely physically demanding and dangerous in some parts, and is not recommended for beginners and those who, due to health and other problems, cannot overcome steep forest terrains. For the most part, the route goes through forests and forest areas. Stick to the middle of the path, if you encounter animals, among which there may be snakes, do not panic. Either go back or pass slowly by them without looking away. For this route, be sure to bring water and something sweet, also make sure you have appropriate clothing and footwear. Good luck! Enjoy!',
+                    "short_description": 'Carefully observe the starting position on the left side of the road. The path is marked with mountain markings. Follow these markings to return to the populated area. The route is physically demanding and dangerous, and is not recommended for beginners. Bring water and something sweet. Good luck! Enjoy!',
+                    "latlng": [42.853471, 21.916613],
+                    "distance_radius": 50.5,
+                    "pictures": [f'{server_route}/static/pictures/13.jpg'],
+                },
+                {
+                    "name": 'Viewpoint - view of the Hydroelectric Power Plant',
+                    "description": 'Bravo, you have conquered the first peak and this is your first victory on this trail :) Rest a bit, drink some water, and then slowly approach the edge, towards the rocks, to receive your reward. The reward is a beautiful view from the elevation, take a safe photo and continue further.',
+                    "short_description": 'Bravo, you have conquered the first peak on this trail :) Rest, drink some water, and approach the edge of the rocks for a beautiful view. Enjoy taking photos!',
+                    "latlng": [42.851781, 21.917327],
+                    "distance_radius": 50.5,
+                    "pictures": [f'{server_route}/static/pictures/14.png'],
+                },
+                {
+                    "name": 'Viewpoint',
+                    "description": 'Another viewpoint, time for a bit more rest. The continuation of the route will partly go along an asphalt road, be careful not to get hit by a car or get into trouble with cows you might encounter :)',
+                    "short_description": 'Another viewpoint for a rest. The route continues along an asphalt road, watch out for cars and cows :)',
+                    "latlng": [42.850720, 21.918126],
+                    "distance_radius": 50.5,
+                    "pictures": [f'{server_route}/static/pictures/15.jpg'],
+                },
+                {
+                    "name": 'Sokolica Rock',
+                    "description": 'Tanana the famous Sokolica rock, below you is the canyon of the Vučjanka river. If you are lucky and the day is clear, the view extends all the way to Niš. Be careful, the area is not secured, enjoy the view from a safe distance from the edge. Across the way, you can see a path with handrails that you can explore another time or after visiting this route. Ask the locals how best to reach that path and enjoy the view of the canyon from another angle. Rest and enjoy the fresh air and the sound of the canyon.',
+                    "short_description": 'Sokolica Rock with the canyon of the Vučjanka river. The view extends to Niš on clear days. Enjoy from a safe distance from the edge. Across the way is a path with handrails you can explore later. Ask the locals about the path. Rest and enjoy the fresh air and the sound of the canyon.',
+                    "latlng": [42.847656, 21.914257],
+                    "distance_radius": 50.5,
+                    "pictures": [f'{server_route}/static/pictures/16.jpg'],
+                },
+                {
+                    "name": 'Wooden Bridge',
+                    "description": 'No need to panic :) feel free to cross the wooden bridge and enjoy it, wagons and other much heavier vehicles pass over the bridge :) Pay attention while moving so you don\'t miss the next point, the turn will be on your left side.',
+                    "short_description": 'Feel free to cross the wooden bridge. Wagons and heavier vehicles pass over it. Be careful not to miss the next point, the turn is on the left side.',
+                    "latlng": [42.846207, 21.914482],
+                    "distance_radius": 50.5,
+                    "pictures": [f'{server_route}/static/pictures/17.jpg'],
+                },
+                {
+                    "name": 'Guardian Rock',
+                    "description": 'The Guardian Rock is painted with the works of our famous Vučjanac Bratislav Bata Anđelković, who enriched the cultural heritage of Vučje with his works and contributed to awakening the spirit of the past. On the rock, there are depictions of Serbian saints and clergy on both sides.',
+                    "short_description": 'The Guardian Rock with depictions of Serbian saints and clergy, painted by Bratislav Bata Anđelković. It enriched the cultural heritage of Vučje.',
+                    "latlng": [42.849925, 21.913351],
+                    "distance_radius": 50.5,
+                    "pictures": [f'{server_route}/static/pictures/18.jpg'],
+                },
+                {
+                    "name": 'Viewpoint Rock',
+                    "description": 'Another viewpoint and an opportunity for rest and photography.',
+                    "short_description": 'Another viewpoint for rest and photography.',
+                    "latlng": [42.850322, 21.912492],
+                    "distance_radius": 50.5,
+                    "pictures": [f'{server_route}/static/pictures/19.png'],
+                },
+                {
+                    "name": 'Skobaljić Fortress',
+                    "description": 'Skobaljić Fortress is a medieval fortress. It belonged to Duke Nikola Skobaljić. Today, only the remains of the city exist. In 1986, it was declared a cultural monument of the Republic of Serbia. Tradition ties this location to Duke Nikola Skobaljić, a great hero who fought against the Ottoman Turks and was never defeated. He built the city on a hill above Vučje, and the city bears his name. Below the city is his spring. In the valley of the Vučjanka river, he built a church on whose ruins a new church dedicated to Saint John was erected in the 1930s. The site is multi-layered: the oldest traces of the use of this area date back to the Eneolithic — the Copper Age. Also, fragments of pottery found during excavations testify that this fortification, due to its strategically important position and position suitable for defense, was used during several phases of the Bronze Age. The oldest stone fortification dates from pre-Roman times, and the fortification built of stone and bricks with mortar from the early Byzantine period. According to archaeological findings, the fortress was used in the Roman period, and later in the period from the 10th to the 13th century. The youngest fortification, the remains of whose ramparts and towers are still visible, dates from the 15th century. The city consisted of the Upper, Lower City, and a suburb that stretched on the eastern side. It covered an area of about 2 hectares. The most powerful preserved ramparts are located in the west, and a defensive trench is located in the north. The Upper City is square-shaped with about 400 square meters of area and has a powerful cultural layer preserved in it. Two towers are placed diagonally. A smaller tower is located next to the gate leading to the Lower City, and a larger — Donjon Tower is located in the northwest part and its walls are preserved up to the height of the ground floor. Excavations were carried out in the Upper City along the inner side of the southern rampart. In this area, fragments of pottery from the 3rd-1st centuries BC were found in the layer of the destroyed wall built of stone bound with mud. The layer is dated to a republican denarius from 100 BC. These are the remains of a pre-Roman fortification. The younger phase of the fortification dates from the early Byzantine period from the 6th century. Parts of the rampart built of stone and mortar are preserved. This rampart is damaged. The Lower City with the suburb of 1400 square meters extends east of the Upper City and follows the configuration of the terrain. Research was carried out in the northern, lowest part, at the place where it is assumed that there was a gate, which unfortunately was not discovered. On the eastern side, remains of a tower built in a mixed technique of brick and stone were discovered and belongs to the early Byzantine period. Based on the pottery, layers from the 10th-11th and 12th-13th centuries can also be identified, indicating that the fortification had a certain role in events in the 11th century, as well as later during the time of Duke Desa, Stefan Nemanja, and his successors.',
+                    "short_description": 'Skobaljić Fortress is a medieval fortress that belonged to Duke Nikola Skobaljić. Today, the remains of the city are declared a cultural monument of the Republic of Serbia. Tradition ties this location to Duke Nikola Skobaljić, a great hero who fought against the Ottoman Turks. The city consisted of the Upper, Lower City, and a suburb.',
+                    "latlng": [42.850106, 21.911732],
+                    "distance_radius": 50.5,
+                    "pictures": [f'{server_route}/static/pictures/20.jpg'],
+                },
+
+            ],
+            "preTourInformation": [
+                "Udobne sportska obuća, odeća prema vremenskim uslovima",
+                "Poneti vodu za piće.",
+            ],
+            "restStops": [
+                {
+                    "name": "Kafić kod fontane",
+                    "description": "Kafić sa prelepim pogledom",
+                    "latlng": [42.8511627, 21.9179207]
+                },
+            ],
+        },
+        "sr": {
+            "name": "Pešačka kardio tura",
+            "type": "Pešačka",
+            "routeLenght": "5.06 km",
+            "duration": "1h 25min",
+            "elevationGain": 272.0,
+            "difficultyLevel": "Teška",
+            "numberOfLocations": 12,
+            "locations": [
+                #! Vučje
+                {
+                    "name": 'Početna tačka',
+                    "description": 'Pažljivo pogledajte početnu poziciju koja se pruža sa leve strane puta. Staza je takođe obeležena planinskom markacijom koju možete videti na drvetu, crveni krug u čijem je središtu bela boja. Te oznake će vam tokom rute pomoći kao potvrda da ste na pravom putu. Takođe, ako iz nekog slučaja ostanete bez mogućnosti da koristite telefon ili drugi pametni uređaj držite se tih markacija kako bi se vratili u naseljeni deo. Ova pešačka ruta je u pojedinim delovima izuzetno fizički zahtevna i opasna, te se ne preporučuje početnicima i onima koji iz zdravstvenih i drugih problema ne mogu da savladaju strme šumske terene. Većim delom ruta prolazi šumom i šumskim predelima. Držite se sredine staze, ako naiđete na životinje, među kojima mogu biti i zmije, nemojte paničiti. Ili se vratite ili prođite polako pored njih ne sklanjajući pogled. U obilazak ove rute obavezno ponesite vodu i nešto slatko, takođe vodite računa da imate adekvatnu garderobu i obuću. Srećno! Uživajte!',
+                    "short_description": 'Pažljivo pogledajte početnu poziciju sa leve strane puta. Staza je obeležena planinskom markacijom. Držite se tih markacija kako bi se vratili u naseljeni deo. Ruta je fizički zahtevna i opasna, te se ne preporučuje početnicima. U obilazak ponesite vodu i nešto slatko. Srećno! Uživajte!',
+                    "latlng": [42.853471, 21.916613],
+                    "distance_radius": 50.5,
+                    "pictures": [f'{server_route}/static/pictures/13.jpg'],
+                },
+                {
+                    "name": 'Vidikovac - pogled na Hidroelektranu',
+                    "description": 'Bravo, uspeli ste da osvojite prvi vrh i to je u vašem pohodu na ovu stazu prva pobeda :) Malo odmorite, popite vodu, pa se onda sasvim lagano približite ivici, u pravcu stena, kako bi dobili nagradu. Nagrada je predivan pogled koji se pruža sa uzvišenja, uhvatite koju fotografiju bezbedno i nastavite dalje.',
+                    "short_description": 'Bravo, osvojili ste prvi vrh na ovoj stazi :) Odmorite se, popite vodu, i približite se ivici stena za predivan pogled. Uživajte u fotografisanju!',
+                    "latlng": [42.851781, 21.917327],
+                    "distance_radius": 50.5,
+                    "pictures": [f'{server_route}/static/pictures/14.png'],
+                },
+                {
+                    "name": 'Vidikovac',
+                    "description": 'Još jedan vidikovac, vreme je za još malo predaha, nastavak puta će jednim delom ići asfaltiranim putem, obratite pažnju da vas ne udari automobil ili da se ne zamerate kravama na koje je moguće naići :)',
+                    "short_description": 'Još jedan vidikovac za predah. Nastavak puta ide asfaltiranim putem, pazite na automobile i krave :)',
+                    "latlng": [42.850720, 21.918126],
+                    "distance_radius": 50.5,
+                    "pictures": [f'{server_route}/static/pictures/15.jpg'],
+                },
+                {
+                    "name": 'Stena Sokolica',
+                    "description": 'Tanana čuvena stena Sokolica, ispod vas se nalazi kanjon reke Vučjanke. Ako imate sreće i dan je vedar pogled seže sve do Niša. Vodite računa prostor nije obezbeđen, uživajte u pogledu sa bezbedne udaljenosti od ivice. Preko puta se nazire staza ograđena rukohvatima koju možete istražiti nekom drugom prilikom ili nakon obilaska ove rute. Raspitajte se kod meštana kako najbolje da stignete do te staze i uživate u prizoru kanjona iz drugog ugla. Odmorite i uživajte u čistom vazduhu i zvuku kanjona.',
+                    "short_description": 'Stena Sokolica sa kanjonom reke Vučjanke. Pogled seže do Niša u vedrim danima. Uživajte sa bezbedne udaljenosti od ivice. Preko puta je staza ograđena rukohvatima koju možete istražiti kasnije. Raspitajte se kod meštana o stazi. Odmorite i uživajte u čistom vazduhu i zvuku kanjona.',
+                    "latlng": [42.847656, 21.914257],
+                    "distance_radius": 50.5,
+                    "pictures": [f'{server_route}/static/pictures/16.jpg'],
+                },
+                {
+                    "name": 'Drveni most',
+                    "description": 'Nema mesta panici :) slobodno pređite preko drvenog mosta i uživajte, preko mosta prolaze zaprežna kola i druga mnogo teža vozila :) Obratite pažnju tokom kretanja da ne prođete sledeću tačku, skretanje će biti sa vaše leve strane.',
+                    "short_description": 'Slobodno pređite preko drvenog mosta. Preko njega prolaze zaprežna kola i teža vozila. Pazite da ne prođete sledeću tačku, skretanje je sa leve strane.',
+                    "latlng": [42.846207, 21.914482],
+                    "distance_radius": 50.5,
+                    "pictures": [f'{server_route}/static/pictures/17.jpg'],
+                },
+                {
+                    "name": 'Stena Čuvar',
+                    "description": 'Stena čuvar je oslikana delima našeg čuvenog Vučijanca Bratislava Bate Anđelkovića koji je svojim delima obogatio kulturno nasleđe Vučja i doprineo buđenju duha prošlosti. Na steni su sa dve strane prikazi srpskih svetaca i sveštenstva.',
+                    "short_description": 'Stena čuvar sa prikazima srpskih svetaca i sveštenstva, oslikana delima Bratislava Bate Anđelkovića. Obogatila je kulturno nasleđe Vučja.',
+                    "latlng": [42.849925, 21.913351],
+                    "distance_radius": 50.5,
+                    "pictures": [f'{server_route}/static/pictures/18.jpg'],
+                },
+                {
+                    "name": 'Vidikovac u mestena',
+                    "description": 'Još jedan vidikovac i prilika za predah i fotografisanje.',
+                    "short_description": 'Još jedan vidikovac za predah i fotografisanje.',
+                    "latlng": [42.850322, 21.912492],
+                    "distance_radius": 50.5,
+                    "pictures": [f'{server_route}/static/pictures/19.png'],
+                },
+                {
+                    "name": 'Skobaljić grad',
+                    "description": 'Skobaljić grad je srednjovekovna tvrđava. Pripadao je vojvodi Nikoli Skobaljiću. Danas postoje samo ostaci grada. Godine 1986. godine proglašen je za kulturno dobro Republike Srbije. Tradicija vezuje ovaj lokalitet za vojvodu Nikolu Skobaljića, velikog junaka koji je ratovao sa Turcima Osmanlijama i nikada nije bio poražen. On je izgradio grad na visu iznad Vučja i taj grad nosi njegovo ime. Ispod grada se nalazi njegov kladenac. U dolini reke Vučjanke sazidao je crkvu na čijim je ruševinama 30-ih godina 20. veka podignuta nova crkva posvećena Svetom Jovanu. Lokacija je višeslojna: najstariji tragovi korišćenja ovog prostora potiču iz eneolita — bakarnog doba. Takođe, fragmenti keramike pronađeni tokom iskopavanja svedoče da je ovo utvrđenje zbog strateški važnog položaja i položaja pogodnog za odbranu korišćeno i tokom više faza bronzanog doba. Najstarije kameno utvrđenje potiče iz predrimskog doba, a utvrđenje zidano od kamena i opeka sa malterom iz ranovizantijskog doba. Prema arheološkim nalazima, tvrđava je korišćena i u rimskom, a kasnije i u periodu od X do XIII veka. Najmlađe utvrđenje, čiji se ostaci zidova bedema i kula još uvek vide potiče iz 15. veka. Grad se sastojao od Gornjeg, Donjeg grada i podgrađa koje se prostiralo na istočnoj strani. Zahvatao je površinu od oko 2 hektara. Najmoćniji sačuvani bedemi se nalaze na zapadu, a na severu se nalazi odbrambeni rov. Gornji Grad je kvadratnog oblika sa oko 400 kvadrata površine i u njemu je sačuvan moćan kulturni sloj. Dve kule su dijagonalno postavljene. Manja kula se nalazi pored kapije koja vodi u Donji grad, a veća — Donžon kula se nalazi u severozapadnom delu i njeni zidovi su očuvani do visine prizemlja. U Gornjem Gradu su iskopavanja vršena uz unutrašnju stranu južnog bedema. Na ovom prostoru pronađeni su fragmenti grnčarije iz perioda III-1. veka p.n.e. u sloju rušenja zida građenog od kamena povezanog blatom. Sloj je datovan republikanskim denarom iz 100. p.n.e. To su ostaci tvrđave iz predrimskog vremena. Mlađa faza utvrđenja potiče iz ranovizantijskog vremena iz 6. veka. Sačuvani su delovi bedema građeni od kamena i maltera. Ovaj bedem je oštećen. Donji Grad sa podgrađem veličine 1400 kvadrata se prostire istočno od Gornjeg Grada i prati konfiguraciju terena. Istraživanja su vršena na severnom, najnižem delu, na mestu gde se pretpostavlja da je bila kapija, koja nažalost nije otkrivena. Na istočnoj strani otkriveni su ostaci kule koja je zidana u mešovitoj tehnici od opeke i kamena i pripada ranovizantijskom vremenu. Na osnovu grnčarije može se identifikovati i sloj iz X-XI i XII-XIII veka koji govori da je utvrđenje imalo određenu ulogu u događajima u XI veku, kao i docnije u vreme župana Dese, Stefana Nemanje i njegovih naslednika.',
+                    "short_description": 'Skobaljić grad je srednjovekovna tvrđava koja je pripadala vojvodi Nikoli Skobaljiću. Danas su ostaci grada proglašeni za kulturno dobro Republike Srbije. Tradicija vezuje ovaj lokalitet za vojvodu Nikolu Skobaljića, velikog junaka koji je ratovao sa Turcima Osmanlijama. Grad se sastojao od Gornjeg, Donjeg grada i podgrađa.',
+                    "latlng": [42.850106, 21.911732],
+                    "distance_radius": 50.5,
+                    "pictures": [f'{server_route}/static/pictures/20.jpg'],
+                },
+
+            ],
+            "preTourInformation": [
+                "Udobne sportska obuća, odeća prema vremenskim uslovima",
+                "Poneti vodu za piće.",
+            ],
+            "restStops": [
+                {
+                    "name": "Kafić kod fontane",
+                    "description": "Kafić sa prelepim pogledom",
+                    "latlng": [42.8511627, 21.9179207]
+                },
+            ],
+        },
+    }
+    
+    cycling_1 = {
+        "en": {
+            "name": "Cycling tour",
+            "type": "Cycling",
+            "routeLenght": "17.3 km",
+            "duration": "1h 20min",
+            "elevationGain": 126.0,
+            "difficultyLevel": "Medium",
+            "numberOfLocations": 12,
+            "locations": [
+                {}
+            ]
+        },
+        "sr": {
+            "name": "Bicikilistička tura",
+            "type": "Biciklistička",
+            "routeLenght": "17.3 km",
+            "duration": "1h 20min",
+            "elevationGain": 126.0,
+            "difficultyLevel": "Srednja",
+            "numberOfLocations": 12,
+            "locations": [
+                {}
+            ]
+        },
+    }
     
     
     if tour_type == 'walking_1':
         tour = walking_1[language]
-    # elif tour_type == 'walking_2':
-    #     tour = walking_2 #! kada se ubaci druga tura aktivirati ostale if blokove
+    elif tour_type == 'walking_2':
+        tour = walking_2[language]
+    elif tour_type == 'cycling_1':
+        tour = cycling_1[language] #! kada se ubaci druga tura aktivirati ostale if blokove
     
     return jsonify(tour)
 
