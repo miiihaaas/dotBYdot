@@ -2,7 +2,8 @@ import 'package:flutter_localization/flutter_localization.dart';
 
 const List<MapLocale> LOCALES = [
   MapLocale("en", LocaleData.EN),
-  MapLocale("sr", LocaleData.SR)
+  MapLocale("sr", LocaleData.SR),
+  MapLocale("mk", LocaleData.MK),
 ];
 
 mixin LocaleData {
@@ -135,6 +136,54 @@ Ovo naselje je velikim delom naseljeno Srbima (prema popisu iz 2002. godine).'''
     tour_info_screen_tab_2: 'Pre nego što krenete',
     tour_info_screen_tab_3: 'Mesta za predah',
     tour_info_screen_start_tour: 'POKRENI TURU',
+    body: 'Neki nasumični tekst.',
+  };
+  static const Map<String, dynamic> MK = {
+    walking_1:
+        'walking_1.mk', //! u main.dart routes: ima string koji se salje na API pomoću koga se definiše jezik stringova
+    walking_2:
+        'walking_2.mk', //! u main.dart routes: ima string koji se salje na API pomoću koga se definiše jezik stringova
+    cycling_1:
+        'cycling_1.mk', //! u main.dart routes: ima string koji se salje na API pomoću koga se definiše jezik stringova
+    main_title: 'Турски водич',
+    main_more: 'Opširnije',
+    sidebar_home: 'Поопширно',
+    sidebar_language: 'Јазик: ',
+    home_title: 'Почетна',
+    home_vucje_about:
+        "Vučje je gradsko naselje u okrugu Leskovca sa oko 2.865 stanovnika prema popisu iz 2011. Do 1965. bilo je sedište opštine Vučje koju su činila mnoga naseljena mesta. Nalazi se oko 17 km jugozapadno od Leskovca i geografski je centar područja Porečje, kroz koje protiče reka Vučjanka. Ima dom zdravlja, policijsku stanicu, fudbalski klub FK Vučje, osnovnu i srednju školu. Stanovništvo je pretežno srpsko.",
+    home_vucje_about_title: 'Opširnije o mestu Vučje',
+    home_vucje_about_extended:
+        '''Vučje je gradsko naseljeno mesto grada Leskovca u Jablaničkom okrugu. Prema popisu iz 2011. bilo je 2.865 stanovnika.
+
+Do 1965. godine je ovo naselje bilo sedište opštine Vučje, koju su činila naseljena mesta: Barje, Beli Potok, Brza, Bukova Glava, Bunuša (od koje su nastala današnja samostalna naseljena mesta Bunuški Čifluk, Gornja Bunuša i Donja Bunuša), Crcavac, Čukljenik, Drvodelja, Gagince, Gorina, Gornja Jajina, Igrište, Kaluđerce, Kukulovce, Melovo, Miroševce, Nakrivanj, Oruglica, Palikuća, Presečina, Radonjica (tada pod zvaničnim nazivom Radonjice), Ravni Del, Slavujevce, Strojkovce, Šainovac, Todorovce, Veliko Trnjane, Vina, Vučje i Žabljane. Posle ukidanja opštine područje bivše opštine je u celini ušlo u sastav opštine Leskovac.
+
+Geografija
+Nalazi se približno 17 km jugozapadno od grada Leskovca i geografski je centar područja Porečje. Kroz Vučje protiče reka Vučjanka po kojoj je mesto dobilo ime. Na reci Vučjanki, nekoliko kilometara iznad Vučja, nalazi se hidrocentrala iz 1903. godine koja još uvek radi. U blizini Vučja nalazio se srednjovekovni Zelen-grad. Nedaleko od Vučja nalaze se i ostaci Skobaljić grada.
+
+Vučje ima dom zdravlja, policijsku stanicu, fudbalski klub FK Vučje itd. Ima osnovnu školu „Bora Stanković“ i srednju školu „Svetozar Krstić Toza“. Ovo mesto je i kulturno središte kraja, a u njega dolaze mladi iz okolnih sela da se zabavljaju i druže.
+
+Demografija
+U naselju Vučje živi 2649 punoletnih stanovnika, a prosečna starost stanovništva iznosi 41,3 godina (40,2 kod muškaraca i 42,3 kod žena). U naselju ima 1049 domaćinstava, a prosečan broj članova po domaćinstvu je 3,11.
+
+Ovo naselje je velikim delom naseljeno Srbima (prema popisu iz 2002. godine).''',
+    home_show_more: 'Покажи повеќе',
+    home_show_less: 'Прикажи помалку',
+    home_walking_1: 'Pešačka tura',
+    home_walking_2: 'Pešačka kardio tura',
+    home_cycling_1: 'Biciklistička tura',
+    button_close: 'Затвори',
+    home_vucje_eu_text_1: 'Оваа апликација ја финансира Европската унија',
+    home_vucje_eu_text_2:
+        'Оваа апликација е финансирана од страна на Европската унија. Содржината е исклучива одговорност на Средното училиште „Светозар Крстиќ – Тоза“ од Вучја, СОУ „Митко Пенџуклиски“ од Кратово и Здружението "Limitless" од Белград, и не нуди задолжително гледишта на Европската унија.',
+    tour_info_screen_description_1: 'Должина на рутата: %a',
+    tour_info_screen_description_2: 'Трајање: %a',
+    tour_info_screen_description_3: 'Висинска разлика: %a m',
+    tour_info_screen_description_4: 'Тежина: %a',
+    tour_info_screen_tab_1: 'Листа локации',
+    tour_info_screen_tab_2: 'Пред да почнете',
+    tour_info_screen_tab_3: 'Места за одмор',
+    tour_info_screen_start_tour: 'ЗАПОЧНИ ОБИКОЛКА',
     body: 'Neki nasumični tekst.',
   };
 }
