@@ -145,7 +145,7 @@ class HomeScreen extends StatelessWidget {
 
               // Naslov grada
               const Text(
-                'Vučje',
+                'Kratovo',
                 //style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, fontFamily: "RussoOne"),
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
