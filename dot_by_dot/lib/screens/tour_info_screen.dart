@@ -150,6 +150,16 @@ class TourInfoScreen extends StatelessWidget {
                               itemBuilder: (context, index) {
                                 final location = tourInfo.locations[index];
                                 return ListTile(
+                                  leading: ClipRRect(
+                                    borderRadius: BorderRadius.circular(8.0),
+                                    child: Image.network(
+                                      location.pictures[0],
+                                      width: 50,
+                                      height: 50,
+                                      fit: BoxFit
+                                          .cover, // Zadržava odnos stranica
+                                    ),
+                                  ),
                                   title: Text(location.name),
                                   subtitle: Text(location.short_description),
                                   trailing: Icon(

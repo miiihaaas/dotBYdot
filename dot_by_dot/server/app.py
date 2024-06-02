@@ -87,7 +87,7 @@ def api_tours(tourType):
                     "short_description": 'Church of St. John the Baptist is dedicated to the birth of this saint and is a treasure among Orthodox churches. It was built on the foundations of a medieval church, and was built between 1932 and 1936 in the Moravian style. During construction, skeletons of Serbian soldiers from the Middle Ages were found, and their remains were buried inside the church.',
                     "latlng": [42.855833, 21.915278],
                     "distance_radius": 50.5,
-                    "pictures": [f'{server_route}/static/pictures/8.jpg']
+                    "pictures": [f'{server_route}/static/pictures/8,25.jpg']
                 },
                 {
                     "name": 'Viewpoint (photograph)',
@@ -225,7 +225,7 @@ def api_tours(tourType):
                     "short_description": 'Crkva Sv. Jovana Krstitelja je posvećena rođenju ovog svetitelja i predstavlja dragocenost među pravoslavnim bogomoljama. Podignuta je na temeljima srednjovekovne crkve, a izgrađena je u periodu od 1932. do 1936. godine u Moravskom stilu. Za vreme izgradnje pronađeni su skeleti srpskih vojnika iz srednjeg veka, a njihovi ostaci sahranjeni su unutar crkve.',
                     "latlng": [42.855833, 21.915278],
                     "distance_radius": 50.5,
-                    "pictures": [f'{server_route}/static/pictures/8.jpg']
+                    "pictures": [f'{server_route}/static/pictures/8,25.jpg']
                 },
                 {
                     "name": 'Vidikovac (fotografisanje)',
