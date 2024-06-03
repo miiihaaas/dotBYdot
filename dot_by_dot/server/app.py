@@ -676,7 +676,7 @@ def api_kratovo(tourType):
             "elevationGain": 300.2,
             "difficultyLevel": "Easy",
             "numberOfLocations": 5,
-            "Locations": [
+            "locations": [
                 #! testne lokacije
                 {
                     "name": "GMMČK",
@@ -715,7 +715,7 @@ def api_kratovo(tourType):
             "elevationGain": 300.2,
             "difficultyLevel": "Laka",
             "numberOfLocations": 5,
-            "Locations": [
+            "locations": [
                 #! testne lokacije
                 {
                     "name": "GMMČK",
@@ -755,7 +755,7 @@ def api_kratovo(tourType):
             "elevationGain": 300.2,
             "difficultyLevel": "Лесен",
             "numberOfLocations": 5,
-            "Locations": [
+            "locations": [
                 #! testne lokacije
                 {
                     "name": "GMMČK",
