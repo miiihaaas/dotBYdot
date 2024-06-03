@@ -82,6 +82,10 @@ class SidebarMenu extends StatelessWidget {
                     child: Text('Srpski'),
                   ),
                   DropdownMenuItem(
+                    value: 'mk',
+                    child: Text('Македонски'),
+                  ),
+                  DropdownMenuItem(
                     value: 'en',
                     child: Text('English'),
                   )
