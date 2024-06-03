@@ -671,7 +671,7 @@ def api_kratovo(tourType):
         "en": {
             "name": "Walking tour",
             "type": "Walking tour",
-            "routeLength": "1.5 km",
+            "routeLenght": "1.5 km",
             "duration": "1h 15min",
             "elevationGain": 300.2,
             "difficultyLevel": "Easy",
@@ -710,7 +710,7 @@ def api_kratovo(tourType):
         "sr": {
             "name": "Pešačka tura",
             "type": "Pešačka tura",
-            "routeLength": "1.5 km",
+            "routeLenght": "1.5 km",
             "duration": "1h 15min",
             "elevationGain": 300.2,
             "difficultyLevel": "Laka",
@@ -750,7 +750,7 @@ def api_kratovo(tourType):
         "mk": {
             "name": "Шетачка тура",
             "type": "Шетачка тура",
-            "routeLength": "1.5 km",
+            "routeLenght": "1.5 km",
             "duration": "1h 15min",
             "elevationGain": 300.2,
             "difficultyLevel": "Лесен",
