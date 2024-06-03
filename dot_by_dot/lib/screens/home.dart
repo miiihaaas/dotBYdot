@@ -183,10 +183,10 @@ class HomeScreen extends StatelessWidget {
                   ),
                   padding: const EdgeInsets.all(20.0),
                   child: ExpandableTextWidget(
-                    initialText:
-                        LocaleData.home_vucje_about_extended.getString(context),
-                    expandedText:
-                        LocaleData.home_vucje_about_extended.getString(context),
+                    initialText: LocaleData.home_kratovo_about_extended
+                        .getString(context),
+                    expandedText: LocaleData.home_kratovo_about_extended
+                        .getString(context),
                   ),
                 ),
               ),
@@ -336,7 +336,7 @@ class HomeScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                LocaleData.home_vucje_about_extended.getString(context),
+                LocaleData.home_kratovo_about_extended.getString(context),
                 textAlign: TextAlign.justify,
               ),
             ],
