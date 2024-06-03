@@ -16,6 +16,7 @@ Future<Map<String, dynamic>> fetchTourData(String tourType) async {
   final response = await http
       .get(Uri.parse('https://popis.online/dotBYdot/api/vucje/$tourType'));
   if (response.statusCode == 200) {
+    print("response 200: https://popis.online/dotBYdot/api/vucje/$tourType");
     return json.decode(response.body);
   } else {
     throw Exception('Failed to load tour data. Input: $tourType');
