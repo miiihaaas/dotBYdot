@@ -21,7 +21,7 @@ class TourInfoScreen extends StatelessWidget {
               gradient: LinearGradient(
                 colors: [
                   Color(0xFFffffff),
-                  Color(0xFFcceaf4)
+                  Color(0xFFffffff)
                 ], // Promenite boje po potrebi
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
@@ -39,11 +39,11 @@ class TourInfoScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Image.asset('assets/images/prelaz-top-3.png'),
+              //Image.asset('assets/images/prelaz-top-3.png'),
               Container(
                 width: double.infinity,
                 padding: const EdgeInsets.all(20.0),
-                color: Color(0xFF0094C9),
+                color: Color(0xFFfdc70d),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -52,7 +52,7 @@ class TourInfoScreen extends StatelessWidget {
                       style: const TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
-                          color: Color(0xFFffffff)),
+                          color: Color(0xFF333333)),
                     ),
                     const SizedBox(height: 10),
                     Text(
@@ -60,28 +60,28 @@ class TourInfoScreen extends StatelessWidget {
                       context.formatString(
                           LocaleData.tour_info_screen_description_1,
                           [tourInfo.routeLenght]),
-                      style: const TextStyle(color: Color(0xFFffffff)),
+                      style: const TextStyle(color: Color(0xFF333333)),
                     ),
                     Text(
                       // 'Trajanje:
                       context.formatString(
                           LocaleData.tour_info_screen_description_2,
                           [tourInfo.duration]),
-                      style: const TextStyle(color: Color(0xFFffffff)),
+                      style: const TextStyle(color: Color(0xFF333333)),
                     ),
                     Text(
                       // 'Visinska razlika:
                       context.formatString(
                           LocaleData.tour_info_screen_description_3,
                           [tourInfo.elevationGain.toStringAsFixed(0)]),
-                      style: const TextStyle(color: Color(0xFFffffff)),
+                      style: const TextStyle(color: Color(0xFF333333)),
                     ),
                     Text(
                       // 'Nivo težine: ${tourInfo.difficultyLevel}',
                       context.formatString(
                           LocaleData.tour_info_screen_description_4,
                           [tourInfo.difficultyLevel]),
-                      style: const TextStyle(color: Color(0xFFffffff)),
+                      style: const TextStyle(color: Color(0xFF333333)),
                     ),
                     // Text(
                     //   'Broj lokacija: ${tourInfo.numberOfLocations}',
@@ -92,7 +92,7 @@ class TourInfoScreen extends StatelessWidget {
               ),
               Container(
                 padding: const EdgeInsets.all(0.0),
-                child: Image.asset('assets/images/prelaz.png'),
+                child: Image.asset('assets/images/kratovo-zutzelen-prelaz.png'),
               ),
               // Tabs
               DefaultTabController(
@@ -103,7 +103,7 @@ class TourInfoScreen extends StatelessWidget {
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter,
                       colors: [
-                        Color(0xFFCCEAF4),
+                        Color(0xFFd7e7df),
                         Color(0xFFFFFFFF),
                       ],
                     ),
@@ -226,7 +226,7 @@ class TourInfoScreen extends StatelessWidget {
             LocaleData.tour_info_screen_start_tour.getString(context),
             style: TextStyle(color: Colors.white),
           ),
-          backgroundColor: Color(0xFF0094C9),
+          backgroundColor: Color(0xFF056839),
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,

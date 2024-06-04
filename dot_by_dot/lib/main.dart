@@ -62,7 +62,7 @@ class _MyAppState extends State<MyApp> {
                   gradient: LinearGradient(
                     colors: [
                       Color(0xFFffffff),
-                      Color(0xFF00ace9)
+                      Color(0xFFffffff)
                     ], // Promenite boje po potrebi
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,

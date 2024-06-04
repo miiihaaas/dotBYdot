@@ -27,7 +27,7 @@ class SidebarMenu extends StatelessWidget {
             end: Alignment.bottomCenter,
             colors: [
               Color(0xFFFFFFFF),
-              Color(0xFFCCEAF4),
+              Color(0xFFeeeeee),
             ],
           ),
         ),
@@ -36,9 +36,9 @@ class SidebarMenu extends StatelessWidget {
           children: <Widget>[
             const DrawerHeader(
               decoration: BoxDecoration(
-                color: Color(0xFF0094C9),
+                color: Color(0xFFfdc70d),
                 image: DecorationImage(
-                  image: AssetImage('assets/images/talasi.png'),
+                  image: AssetImage('assets/images/kratovo-name-white.png'),
                   fit: BoxFit.scaleDown,
                 ),
               ),

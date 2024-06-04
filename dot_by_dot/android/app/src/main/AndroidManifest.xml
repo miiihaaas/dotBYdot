@@ -4,7 +4,7 @@
     <application
         android:label="Kratovo"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/ic_kratovo">
         <activity
             android:name=".MainActivity"
             android:exported="true"
