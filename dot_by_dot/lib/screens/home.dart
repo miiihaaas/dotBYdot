@@ -72,73 +72,69 @@ class HomeScreen extends StatelessWidget {
               //  padding: const EdgeInsets.all(0.0),
               //  child: Image.asset('assets/images/prelaz-top-3.png'),
               //),
-              Container(
+              //Container(
                 //color: Color(0xFF0094C9), // Postavlja plavu pozadinsku boju
-                decoration: const BoxDecoration(
-                  gradient: LinearGradient(
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                    colors: [
-                      Color(0xFF00ace9),
-                      Color(0xFF0094c9),
-                    ],
-                  ),
+                //decoration: const BoxDecoration(
+                //  gradient: LinearGradient(
+                //    begin: Alignment.topCenter,
+                //    end: Alignment.bottomCenter,
+                //    colors: [
+                //      Color(0xFF00ace9),
+                //      Color(0xFF0094c9),
+                //    ],
+                //  ),
+                //),
+                //padding: const EdgeInsets.all(20.0),
+                FittedBox(
+                  child: Image.asset('assets/images/kratovo-header.png'),
+                  fit: BoxFit.fill,
                 ),
-                padding: const EdgeInsets.all(20.0),
-                child: SizedBox(
-                  height: 200,
-                  child: PageView(
-                    children: [
-                      Image.asset('assets/images/vucje-logo-lat.png'),
-                    ],
-                  ),
-                ),
-              ),
+              //),
 
               Container(
-                padding: const EdgeInsets.all(0.0),
-                child: Image.asset('assets/images/prelaz.png'),
+                padding: const EdgeInsets.only(
+                  top: 0.0, // Padding za vrh
+                  left: 20.0, // Padding za levo
+                  right: 80.0, // Padding za desno
+                  bottom: 20.0, // Padding za dno
+                ),
+                decoration: BoxDecoration(
+                  color: Color(0xFFfdc70c), // dodaj pozadinsku boju #fdc70c
+                ),
+                child: Image.asset('assets/images/kratovo-slogan-en.png'),
               ),
 
               // const SizedBox(height: 20), // Dodaje razmak
 
               // Slika grada
+             Container(
+              color: Color(0xFFfdc70c),
+              padding: const EdgeInsets.only(
+                top: 40.0, // Padding za vrh
+                left: 0.0, // Padding za levo
+                right: 0.0, // Padding za desno
+                bottom: 20.0, // Padding za dno
+              ),
+              child: AspectRatio(
+                aspectRatio: 1 / 1,
+                child: PageView(
+                  children: [
+                    Image.asset(
+                      'assets/images/kratovo-mozaik.jpg',
+                      fit: BoxFit.cover,
+                    ),
+                    Image.asset(
+                      'assets/images/kratovo-city.jpg',
+                      fit: BoxFit.cover,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+
               Container(
-                decoration: const BoxDecoration(
-                  gradient: LinearGradient(
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                    colors: [
-                      Color(0xFFCCEAF4),
-                      Color(0xFFFFFFFF),
-                    ],
-                  ),
-                ),
-                padding: const EdgeInsets.only(
-                  top: 40.0, // Padding za vrh
-                  left: 0.0, // Padding za levo
-                  right: 0.0, // Padding za desno
-                  bottom: 20.0, // Padding za dno
-                ),
-                child: SizedBox(
-                  height: 200, // Postavite odgovarajuću visinu za slike
-                  child: PageView(
-                    children: [
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(
-                            0.0), // Postavite stepen zaobljenosti ivica
-                        child: Image.asset('assets/images/city.jpg',
-                            fit: BoxFit.cover),
-                      ),
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(
-                            0.0), // Postavite stepen zaobljenosti ivica
-                        child: Image.asset('assets/images/city_2.jpg',
-                            fit: BoxFit.cover),
-                      ),
-                    ],
-                  ),
-                ),
+                padding: const EdgeInsets.all(0.0),
+                child: Image.asset('assets/images/kratovo-zut-prelaz.png'),
               ),
 
               const SizedBox(height: 20), // Dodaje razmak
@@ -153,18 +149,15 @@ class HomeScreen extends StatelessWidget {
               //const SizedBox(height: 10), // Dodaje razmak
 
               Container(
-                decoration: const BoxDecoration(
-                  gradient: LinearGradient(
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                    colors: [
-                      Color(0xFFFFFFFF),
-                      Color(0xFFCCEAF4),
-                    ],
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage('assets/images/prelaz-siv-gradient-half.jpg'),
+                    fit: BoxFit.none,
+                    alignment: Alignment.center,
                   ),
                 ),
                 padding: const EdgeInsets.only(
-                    top: 40, bottom: 40, left: 20, right: 20),
+                    top: 40, bottom: 80, left: 20, right: 20),
                 child: Container(
                   decoration: BoxDecoration(
                     color: Colors
@@ -193,75 +186,190 @@ class HomeScreen extends StatelessWidget {
 
               Container(
                 padding: const EdgeInsets.all(0.0),
-                child: Image.asset('assets/images/prelaz-bottom-1.png'),
+                child: Image.asset('assets/images/kratovo-zut-prelaz-flip.png'),
               ),
+
               // Dugmad za ture
-              Container(
-                color: Color(0xFF0094C9),
-                padding: const EdgeInsets.all(20.0),
+             /*  Container(
+                color: Color(0xFFfdc70d),
+                padding: const EdgeInsets.only(
+                    top: 20, bottom: 60, left: 20, right: 20),
                 width:
                     double.infinity, // Da Container zauzme celu širinu ekrana
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    ElevatedButton.icon(
-                      onPressed: () => _navigateToWalking1(context),
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor:
-                            Color(0xFFFFFFFF), // Pozadinska boja dugmeta
-                        foregroundColor: Color(0xFF0094C9), // Boja teksta
-                        shadowColor: Colors.black, // Boja senke
-                        elevation: 5, // Visina senke
-                        shape: RoundedRectangleBorder(
-                          borderRadius:
-                              BorderRadius.circular(30.0), // Zaobljeni uglovi
+                    Stack(
+                      alignment: Alignment.center,
+                      children: [
+                        ElevatedButton(
+                          onPressed: () => _navigateToWalking1(context),
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Color(0xFFFFFFFF),
+                            shadowColor: Colors.black,
+                            elevation: 5,
+                            shape: CircleBorder(side: BorderSide(width: 100)),
+                          ),
+                          child: Image.asset(
+                            'assets/images/walk-tour.png',
+                          ),
                         ),
-                      ),
-                      icon:
-                          Icon(Icons.directions_walk, color: Color(0xFF0094C9)),
-                      label: Text(
-                        LocaleData.home_walking_1.getString(context),
-                        style: const TextStyle(color: Color(0xFF0094C9)),
+                        Positioned(
+                          top: 50, // prilagodite potrebnu visinu
+                          child: Text(
+                            LocaleData.home_walking_1.getString(context),
+                            style: TextStyle(color: Color(0xFF333333)),
+                          ),
+                        ),
+                      ],
+                    ),
+                    Stack(
+                      alignment: Alignment.center,
+                      children: [
+                        ElevatedButton(
+                          onPressed: () => _navigateToWalking2(context),
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Color(0xFFFFFFFF),
+                            shadowColor: Colors.black,
+                            elevation: 5,
+                            shape: CircleBorder(side: BorderSide(width: 100)),
+                          ),
+                          child: Image.asset(
+                            'assets/images/walk-cardio-tour.png',
+                          ),
+                        ),
+                        Positioned(
+                          top: 50, // prilagodite potrebnu visinu
+                          child: Text(
+                            LocaleData.home_walking_2.getString(context),
+                            style: TextStyle(color: Color(0xFF333333)),
+                          ),
+                        ),
+                      ],
+                    ),
+                    Stack(
+                      alignment: Alignment.center,
+                      children: [
+                        ElevatedButton(
+                          onPressed: () => _navigateToCycling1(context),
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Color(0xFFFFFFFF),
+                            shadowColor: Colors.black,
+                            elevation: 5,
+                            shape: CircleBorder(side: BorderSide(width: 100)),
+                          ),
+                          child: Image.asset(
+                            'assets/images/bike-tour.png',
+                          ),
+                        ),
+                        Positioned(
+                          top: 50, // prilagodite potrebnu visinu
+                          child: Text(
+                            LocaleData.home_cycling_1.getString(context),
+                            style: TextStyle(color: Color(0xFF333333)),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ), */
+
+              Container(
+                color: Color(0xFFfdc70d),
+                padding: const EdgeInsets.only(
+                    top: 20, bottom: 60, left: 20, right: 20),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children:[
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          ElevatedButton(
+                            onPressed: () => _navigateToWalking1(context),
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Color(0xFFFFFFFF),
+                              padding: EdgeInsets.all(0.0),
+                              shadowColor: Colors.black,
+                              elevation: 5,
+                              shape: CircleBorder(side: BorderSide(width: 100)),
+                            ),
+                            child: Image.asset(
+                              'assets/images/walk-tour.png',
+                            ),
+                          ),
+                          SizedBox(height: 10), // Razmak između dugmeta i teksta
+                          Text(
+                            LocaleData.home_walking_1.getString(context),
+                            style: TextStyle(
+                              color: Color(0xFF056839),
+                              fontSize: 16.0, 
+                              fontWeight: FontWeight.bold,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ],
                       ),
                     ),
-                    ElevatedButton.icon(
-                      onPressed: () => _navigateToWalking2(context),
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor:
-                            Color(0xFFFFFFFF), // Pozadinska boja dugmeta
-                        foregroundColor: Color(0xFF0094C9), // Boja teksta
-                        shadowColor: Colors.black, // Boja senke
-                        elevation: 5, // Visina senke
-                        shape: RoundedRectangleBorder(
-                          borderRadius:
-                              BorderRadius.circular(30.0), // Zaobljeni uglovi
+                    Expanded(
+                      child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        ElevatedButton(
+                        onPressed: () => _navigateToWalking2(context),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Color(0xFFFFFFFF),
+                          padding: EdgeInsets.all(0.0),
+                          shadowColor: Colors.black,
+                          elevation: 5,
+                          shape: CircleBorder(side: BorderSide(width: 100)),
                         ),
-                      ),
-                      icon:
-                          Icon(Icons.directions_walk, color: Color(0xFF0094C9)),
-                      label: Text(
-                        LocaleData.home_walking_2.getString(context),
-                        style: const TextStyle(color: Color(0xFF0094C9)),
+                        child: Image.asset(
+                          'assets/images/walk-cardio-tour.png',
+                        ),
+                        ),
+                        SizedBox(height: 10), // Razmak između dugmeta i teksta
+                        Text(
+                          LocaleData.home_walking_2.getString(context),
+                          style: TextStyle(
+                            color: Color(0xFF056839),
+                            fontSize: 16.0, 
+                            fontWeight: FontWeight.bold,
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
+                      ],
                       ),
                     ),
-                    ElevatedButton.icon(
-                      onPressed: () => _navigateToCycling1(context),
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor:
-                            Color(0xFFFFFFFF), // Pozadinska boja dugmeta
-                        foregroundColor: Color(0xFF0094C9), // Boja teksta
-                        shadowColor: Colors.black, // Boja senke
-                        elevation: 5, // Visina senke
-                        shape: RoundedRectangleBorder(
-                          borderRadius:
-                              BorderRadius.circular(30.0), // Zaobljeni uglovi
+                    Expanded(
+                      child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        ElevatedButton(
+                        onPressed: () => _navigateToCycling1(context),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Color(0xFFFFFFFF),
+                          padding: EdgeInsets.all(0.0),
+                          shadowColor: Colors.black,
+                          elevation: 5,
+                          shape: CircleBorder(side: BorderSide(width: 100)),
                         ),
-                      ),
-                      icon: const Icon(Icons.directions_bike,
-                          color: Color(0xFF0094C9)),
-                      label: Text(
-                        LocaleData.home_cycling_1.getString(context),
-                        style: const TextStyle(color: Color(0xFF0094C9)),
+                        child: Image.asset(
+                          'assets/images/bike-tour.png',
+                        ),
+                        ),
+                        SizedBox(height: 10), // Razmak između dugmeta i teksta
+                        Text(
+                          LocaleData.home_cycling_1.getString(context),
+                          style: TextStyle(
+                            color: Color(0xFF056839),
+                            fontSize: 16.0, 
+                            fontWeight: FontWeight.bold,
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
+                      ],
                       ),
                     ),
                   ],
@@ -270,7 +378,7 @@ class HomeScreen extends StatelessWidget {
 
               Container(
                 width: double.infinity,
-                color: const Color(0xFF0076A6),
+                color: const Color(0xFFfdb00b),
                 padding: const EdgeInsets.all(20.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment
@@ -292,7 +400,7 @@ class HomeScreen extends StatelessWidget {
                           // 'Ovu aplikaciju finansira Evropska unija',
                           LocaleData.home_vucje_eu_text_1.getString(context),
                           style: const TextStyle(
-                              fontSize: 14, color: Colors.white),
+                              fontSize: 14, color: Colors.black87),
                           textAlign: TextAlign.left,
                         ),
                       ),
@@ -302,7 +410,7 @@ class HomeScreen extends StatelessWidget {
               ),
               Container(
                 width: double.infinity,
-                color: const Color(0xFF00465F),
+                color: const Color(0xFF056839),
                 padding: const EdgeInsets.all(20.0),
                 child: Text(
                   // 'Ova aplikacija je finansirana od strane Evropske unije. Sadržaj je isključiva odgovornost Srednje škole „Svetozar Krstić – Toza“ iz Vučja, SOU „Mitko Pendžukliski“ iz Kratova i Udruženja "Limitless" iz Beograda, i ne odražava nužno stavove Evropske unije',
