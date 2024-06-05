@@ -123,22 +123,22 @@ def api_vucje(tourType):
                     "pictures": [f'{server_route}/static/pictures/12.jpg']
                 },
                 #! testne lokacije
-                {
-                    "name": "GMMČK",
-                    "description": "Ovo mesto služi za testiranje rada aplikacije i lokacije. Drugo mesto za koje sa kojeg smo započeli testiranja ovog tipa",
-                    "short_description": "Drugo mesto sa koje smo započeli testiranje",
-                    "latlng": [44.034661, 20.433998],
-                    "distance_radius": 40.5,
-                    "pictures": [f'{server_route}/static/pictures/12.jpg']
-                },
-                {
-                    "name": "GMHCP",
-                    "description": "Ovo mesto služi za testiranje rada aplikacije i lokacije. Prvo mesto za koje sa kojeg smo započeli testiranja ovog tipa. Na srpskomk jeziku namerno ima puno teksta kako bi se testirao slajder u popup prozoru. Ovo je jako bitno da bi na lošijim telefonom sa manjom rezolucijom bili u mogućnosti da vidimo ceo tekst pomoću skorlovanja gore-dole. Do sad nimo imali tu opciju i korisnici su se žalili na to, u verziji 0.5 smo napravili izmenu koja će da otkoni ovaj problem i učini naše korisnike srećnije jer im se njihovi predlozi usvajaju i tako dobijamo bolju i praktičniju aplikaciju. Inače ovo je mesto sa kojeg se pravi ova aplikacija. Ponestaje mi inspiracije šta da pišem pa ću zato nastaviti da pišem nevezano i nepovezano. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun.",
-                    "short_description": "Prvo mesto sa koje smo započeli testiranje",
-                    "latlng": [44.023905, 20.456093],
-                    "distance_radius": 40.5,
-                    "pictures": [f'{server_route}/static/pictures/12.jpg', f'{server_route}/static/pictures/11.png']
-                },
+                # {
+                #     "name": "GMMČK",
+                #     "description": "Ovo mesto služi za testiranje rada aplikacije i lokacije. Drugo mesto za koje sa kojeg smo započeli testiranja ovog tipa",
+                #     "short_description": "Drugo mesto sa koje smo započeli testiranje",
+                #     "latlng": [44.034661, 20.433998],
+                #     "distance_radius": 40.5,
+                #     "pictures": [f'{server_route}/static/pictures/12.jpg']
+                # },
+                # {
+                #     "name": "GMHCP",
+                #     "description": "Ovo mesto služi za testiranje rada aplikacije i lokacije. Prvo mesto za koje sa kojeg smo započeli testiranja ovog tipa. Na srpskomk jeziku namerno ima puno teksta kako bi se testirao slajder u popup prozoru. Ovo je jako bitno da bi na lošijim telefonom sa manjom rezolucijom bili u mogućnosti da vidimo ceo tekst pomoću skorlovanja gore-dole. Do sad nimo imali tu opciju i korisnici su se žalili na to, u verziji 0.5 smo napravili izmenu koja će da otkoni ovaj problem i učini naše korisnike srećnije jer im se njihovi predlozi usvajaju i tako dobijamo bolju i praktičniju aplikaciju. Inače ovo je mesto sa kojeg se pravi ova aplikacija. Ponestaje mi inspiracije šta da pišem pa ću zato nastaviti da pišem nevezano i nepovezano. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun.",
+                #     "short_description": "Prvo mesto sa koje smo započeli testiranje",
+                #     "latlng": [44.023905, 20.456093],
+                #     "distance_radius": 40.5,
+                #     "pictures": [f'{server_route}/static/pictures/12.jpg', f'{server_route}/static/pictures/11.png']
+                # },
             ],
             "preTourInformation": [
                 "Comfortable sports shoes, clothes according to weather conditions",
@@ -149,6 +149,11 @@ def api_vucje(tourType):
                     "name": "Kafić kod fontane",
                     "description": "Kafić sa prelepim pogledom",
                     "latlng": [42.8511627, 21.9179207]
+                },
+                {
+                    "name": "Bistro",
+                    "description": "Bistro, a resting station",
+                    "latlng": [42.86656, 21.91188]
                 },
             ],
         },
@@ -261,22 +266,22 @@ def api_vucje(tourType):
                     "pictures": [f'{server_route}/static/pictures/12.jpg']
                 },
                 #! testne lokacije
-                {
-                    "name": "GMMČK",
-                    "description": "Ovo mesto služi za testiranje rada aplikacije i lokacije. Drugo mesto za koje sa kojeg smo započeli testiranja ovog tipa",
-                    "short_description": "Drugo mesto sa koje smo započeli testiranje",
-                    "latlng": [44.034661, 20.433998],
-                    "distance_radius": 40.5,
-                    "pictures": [f'{server_route}/static/pictures/12.jpg']
-                },
-                {
-                    "name": "GMHCP",
-                    "description": "Ovo mesto služi za testiranje rada aplikacije i lokacije. Prvo mesto za koje sa kojeg smo započeli testiranja ovog tipa",
-                    "short_description": "Prvo mesto sa koje smo započeli testiranje",
-                    "latlng": [44.023905, 20.456093],
-                    "distance_radius": 40.5,
-                    "pictures": [f'{server_route}/static/pictures/12.jpg', f'{server_route}/static/pictures/11.png']
-                },
+                # {
+                #     "name": "GMMČK",
+                #     "description": "Ovo mesto služi za testiranje rada aplikacije i lokacije. Drugo mesto za koje sa kojeg smo započeli testiranja ovog tipa",
+                #     "short_description": "Drugo mesto sa koje smo započeli testiranje",
+                #     "latlng": [44.034661, 20.433998],
+                #     "distance_radius": 40.5,
+                #     "pictures": [f'{server_route}/static/pictures/12.jpg']
+                # },
+                # {
+                #     "name": "GMHCP",
+                #     "description": "Ovo mesto služi za testiranje rada aplikacije i lokacije. Prvo mesto za koje sa kojeg smo započeli testiranja ovog tipa",
+                #     "short_description": "Prvo mesto sa koje smo započeli testiranje",
+                #     "latlng": [44.023905, 20.456093],
+                #     "distance_radius": 40.5,
+                #     "pictures": [f'{server_route}/static/pictures/12.jpg', f'{server_route}/static/pictures/11.png']
+                # },
             ],
 
             "preTourInformation": [
@@ -288,6 +293,11 @@ def api_vucje(tourType):
                     "name": "Kafić kod fontane",
                     "description": "Kafić sa prelepim pogledom",
                     "latlng": [42.8511627, 21.9179207]
+                },
+                {
+                    "name": "Bistro",
+                    "description": "Bistro, stanica za odmor",
+                    "latlng": [42.86656, 21.91188]
                 },
             ],
         },
@@ -422,6 +432,11 @@ def api_vucje(tourType):
                     "description": "Kafić sa prelepim pogledom",
                     "latlng": [42.8511627, 21.9179207]
                 },
+                {
+                    "name": "Bistro",
+                    "description": "Bistro, a resting station",
+                    "latlng": [42.86656, 21.91188]
+                },
             ],
         },
         "sr": {
@@ -549,6 +564,11 @@ def api_vucje(tourType):
                     "description": "Kafić sa prelepim pogledom",
                     "latlng": [42.8511627, 21.9179207]
                 },
+                {
+                    "name": "Bistro",
+                    "description": "Bistro, stanica za odmor",
+                    "latlng": [42.86656, 21.91188]
+                },
             ],
         },
     }
@@ -599,6 +619,11 @@ def api_vucje(tourType):
                     "description": "Kafić sa prelepim pogledom",
                     "latlng": [42.8511627, 21.9179207]
                 },
+                {
+                    "name": "Bistro",
+                    "description": "Bistro, a resting station",
+                    "latlng": [42.86656, 21.91188]
+                },
             ],
         },
         "sr": {
@@ -647,6 +672,11 @@ def api_vucje(tourType):
                     "description": "Kafić sa prelepim pogledom",
                     "latlng": [42.8511627, 21.9179207]
                 },
+                {
+                    "name": "Bistro",
+                    "description": "Bistro, a resting station",
+                    "latlng": [42.86656, 21.91188]
+                },
             ],
         },
     }
@@ -677,23 +707,32 @@ def api_kratovo(tourType):
             "difficultyLevel": "Easy",
             "numberOfLocations": 5,
             "locations": [
-                #! testne lokacije
+                #! Kratovo
                 {
-                    "name": "GMMČK",
-                    "description": "Ovo mesto služi za testiranje rada aplikacije i lokacije. Drugo mesto za koje sa kojeg smo započeli testiranja ovog tipa",
-                    "short_description": "Drugo mesto sa koje smo započeli testiranje",
-                    "latlng": [44.034661, 20.433998],
+                    "name": "Рудно окно",
+                    "description": "Целата историја на Кратово се поврзува со рударството, што се докажува со повеќе од 40 рудни окна и складишта за преработена руда – згура. Уште од пред римскиот период Кратово се споменува како богат рударски центар. Во време на Римскиот период Кратово бил рударско средиште во Североисточниот дел, а се експлоатирало олово, цинк, злато, сребро бакар и други руди. Од рудните производи се изработувале и монети. Така, подоцна од Византискиот период пронајдени се монети, меѓу кои и златни на византиските императори Анастасие (491-519г), Јустин I (518 – 527), Јустинијан (527 – 565). Во подоцнежниот период со Кратово управувале повеќе заслужни феудалци коишто управувале со рудниците во Целата Кратовска област. Најголем процут има доживеано во XIV век и тоа поради рудните богатства и тоа злато и оттука градот напредува. Деспот Јован Оливер (1336 – 1355) – важна историска личност од средновековието. Освен што ги искористувал рудниците имал свој дворец тука и е ктитор на Лесновскиот манастир. Еден од попознатите е Јован Оливер (1336 – 1355) – очув на цар Душан - како деспот интензивно ги користел кратовските рудни богатства, преку старите но и отворајќи нови рудни окна. Се обезбедувале големи приход. За ова помогнале и познатите германски рудари Саси кои биле доселени тука со цел поголем развој на рударството. Покрај рудните окна имало и Топилница за руда и Леарница (ковачница) за пари. Развиена била и трговијата, а со неа раководеле Дубровчаните.",
+                    "short_description": "Кратово, средиште на рударството векови назад, прославено по своите рудници и богатства, од кои се изработувале и монети, со важни историски личности како деспот Јован Оливер.",
+                    "latlng": [42.077990, 22.179178],
                     "distance_radius": 40.5,
                     "pictures": [f'{server_route}/static/pictures/12.jpg']
                 },
-                {
-                    "name": "GMHCP",
-                    "description": "Ovo mesto služi za testiranje rada aplikacije i lokacije. Prvo mesto za koje sa kojeg smo započeli testiranja ovog tipa. Na srpskomk jeziku namerno ima puno teksta kako bi se testirao slajder u popup prozoru. Ovo je jako bitno da bi na lošijim telefonom sa manjom rezolucijom bili u mogućnosti da vidimo ceo tekst pomoću skorlovanja gore-dole. Do sad nimo imali tu opciju i korisnici su se žalili na to, u verziji 0.5 smo napravili izmenu koja će da otkoni ovaj problem i učini naše korisnike srećnije jer im se njihovi predlozi usvajaju i tako dobijamo bolju i praktičniju aplikaciju. Inače ovo je mesto sa kojeg se pravi ova aplikacija. Ponestaje mi inspiracije šta da pišem pa ću zato nastaviti da pišem nevezano i nepovezano. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun.",
-                    "short_description": "Prvo mesto sa koje smo započeli testiranje",
-                    "latlng": [44.023905, 20.456093],
-                    "distance_radius": 40.5,
-                    "pictures": [f'{server_route}/static/pictures/12.jpg', f'{server_route}/static/pictures/11.png']
-                },
+                #! testne lokacije
+                # {
+                #     "name": "GMMČK",
+                #     "description": "Ovo mesto služi za testiranje rada aplikacije i lokacije. Drugo mesto za koje sa kojeg smo započeli testiranja ovog tipa",
+                #     "short_description": "Drugo mesto sa koje smo započeli testiranje",
+                #     "latlng": [44.034661, 20.433998],
+                #     "distance_radius": 40.5,
+                #     "pictures": [f'{server_route}/static/pictures/12.jpg']
+                # },
+                # {
+                #     "name": "GMHCP",
+                #     "description": "Ovo mesto služi za testiranje rada aplikacije i lokacije. Prvo mesto za koje sa kojeg smo započeli testiranja ovog tipa. Na srpskomk jeziku namerno ima puno teksta kako bi se testirao slajder u popup prozoru. Ovo je jako bitno da bi na lošijim telefonom sa manjom rezolucijom bili u mogućnosti da vidimo ceo tekst pomoću skorlovanja gore-dole. Do sad nimo imali tu opciju i korisnici su se žalili na to, u verziji 0.5 smo napravili izmenu koja će da otkoni ovaj problem i učini naše korisnike srećnije jer im se njihovi predlozi usvajaju i tako dobijamo bolju i praktičniju aplikaciju. Inače ovo je mesto sa kojeg se pravi ova aplikacija. Ponestaje mi inspiracije šta da pišem pa ću zato nastaviti da pišem nevezano i nepovezano. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun.",
+                #     "short_description": "Prvo mesto sa koje smo započeli testiranje",
+                #     "latlng": [44.023905, 20.456093],
+                #     "distance_radius": 40.5,
+                #     "pictures": [f'{server_route}/static/pictures/12.jpg', f'{server_route}/static/pictures/11.png']
+                # },
             ],
             "preTourInformation": [
                 "Comfortable sports shoes, clothes according to weather conditions",
@@ -716,23 +755,32 @@ def api_kratovo(tourType):
             "difficultyLevel": "Laka",
             "numberOfLocations": 5,
             "locations": [
-                #! testne lokacije
+                #! Kratovo
                 {
-                    "name": "GMMČK",
-                    "description": "Ovo mesto služi za testiranje rada aplikacije i lokacije. Drugo mesto za koje sa kojeg smo započeli testiranja ovog tipa",
-                    "short_description": "Drugo mesto sa koje smo započeli testiranje",
-                    "latlng": [44.034661, 20.433998],
+                    "name": "Рудно окно",
+                    "description": "Целата историја на Кратово се поврзува со рударството, што се докажува со повеќе од 40 рудни окна и складишта за преработена руда – згура. Уште од пред римскиот период Кратово се споменува како богат рударски центар. Во време на Римскиот период Кратово бил рударско средиште во Североисточниот дел, а се експлоатирало олово, цинк, злато, сребро бакар и други руди. Од рудните производи се изработувале и монети. Така, подоцна од Византискиот период пронајдени се монети, меѓу кои и златни на византиските императори Анастасие (491-519г), Јустин I (518 – 527), Јустинијан (527 – 565). Во подоцнежниот период со Кратово управувале повеќе заслужни феудалци коишто управувале со рудниците во Целата Кратовска област. Најголем процут има доживеано во XIV век и тоа поради рудните богатства и тоа злато и оттука градот напредува. Деспот Јован Оливер (1336 – 1355) – важна историска личност од средновековието. Освен што ги искористувал рудниците имал свој дворец тука и е ктитор на Лесновскиот манастир. Еден од попознатите е Јован Оливер (1336 – 1355) – очув на цар Душан - како деспот интензивно ги користел кратовските рудни богатства, преку старите но и отворајќи нови рудни окна. Се обезбедувале големи приход. За ова помогнале и познатите германски рудари Саси кои биле доселени тука со цел поголем развој на рударството. Покрај рудните окна имало и Топилница за руда и Леарница (ковачница) за пари. Развиена била и трговијата, а со неа раководеле Дубровчаните.",
+                    "short_description": "Кратово, средиште на рударството векови назад, прославено по своите рудници и богатства, од кои се изработувале и монети, со важни историски личности како деспот Јован Оливер.",
+                    "latlng": [42.077990, 22.179178],
                     "distance_radius": 40.5,
                     "pictures": [f'{server_route}/static/pictures/12.jpg']
                 },
-                {
-                    "name": "GMHCP",
-                    "description": "Ovo mesto služi za testiranje rada aplikacije i lokacije. Prvo mesto za koje sa kojeg smo započeli testiranja ovog tipa. Na srpskomk jeziku namerno ima puno teksta kako bi se testirao slajder u popup prozoru. Ovo je jako bitno da bi na lošijim telefonom sa manjom rezolucijom bili u mogućnosti da vidimo ceo tekst pomoću skorlovanja gore-dole. Do sad nimo imali tu opciju i korisnici su se žalili na to, u verziji 0.5 smo napravili izmenu koja će da otkoni ovaj problem i učini naše korisnike srećnije jer im se njihovi predlozi usvajaju i tako dobijamo bolju i praktičniju aplikaciju. Inače ovo je mesto sa kojeg se pravi ova aplikacija. Ponestaje mi inspiracije šta da pišem pa ću zato nastaviti da pišem nevezano i nepovezano. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun.",
-                    "short_description": "Prvo mesto sa koje smo započeli testiranje",
-                    "latlng": [44.023905, 20.456093],
-                    "distance_radius": 40.5,
-                    "pictures": [f'{server_route}/static/pictures/12.jpg', f'{server_route}/static/pictures/11.png']
-                },
+                #! testne lokacije
+                # {
+                #     "name": "GMMČK",
+                #     "description": "Ovo mesto služi za testiranje rada aplikacije i lokacije. Drugo mesto za koje sa kojeg smo započeli testiranja ovog tipa",
+                #     "short_description": "Drugo mesto sa koje smo započeli testiranje",
+                #     "latlng": [44.034661, 20.433998],
+                #     "distance_radius": 40.5,
+                #     "pictures": [f'{server_route}/static/pictures/12.jpg']
+                # },
+                # {
+                #     "name": "GMHCP",
+                #     "description": "Ovo mesto služi za testiranje rada aplikacije i lokacije. Prvo mesto za koje sa kojeg smo započeli testiranja ovog tipa. Na srpskomk jeziku namerno ima puno teksta kako bi se testirao slajder u popup prozoru. Ovo je jako bitno da bi na lošijim telefonom sa manjom rezolucijom bili u mogućnosti da vidimo ceo tekst pomoću skorlovanja gore-dole. Do sad nimo imali tu opciju i korisnici su se žalili na to, u verziji 0.5 smo napravili izmenu koja će da otkoni ovaj problem i učini naše korisnike srećnije jer im se njihovi predlozi usvajaju i tako dobijamo bolju i praktičniju aplikaciju. Inače ovo je mesto sa kojeg se pravi ova aplikacija. Ponestaje mi inspiracije šta da pišem pa ću zato nastaviti da pišem nevezano i nepovezano. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun.",
+                #     "short_description": "Prvo mesto sa koje smo započeli testiranje",
+                #     "latlng": [44.023905, 20.456093],
+                #     "distance_radius": 40.5,
+                #     "pictures": [f'{server_route}/static/pictures/12.jpg', f'{server_route}/static/pictures/11.png']
+                # },
             ],
             "preTourInformation": [
                 "Udobne sportska obuća, odeća prema vremenskim uslovima",
@@ -756,23 +804,32 @@ def api_kratovo(tourType):
             "difficultyLevel": "Лесен",
             "numberOfLocations": 5,
             "locations": [
-                #! testne lokacije
+                #! Kratovo
                 {
-                    "name": "GMMČK",
-                    "description": "Ovo mesto služi za testiranje rada aplikacije i lokacije. Drugo mesto za koje sa kojeg smo započeli testiranja ovog tipa",
-                    "short_description": "Drugo mesto sa koje smo započeli testiranje",
-                    "latlng": [44.034661, 20.433998],
+                    "name": "Рудно окно",
+                    "description": "Целата историја на Кратово се поврзува со рударството, што се докажува со повеќе од 40 рудни окна и складишта за преработена руда – згура. Уште од пред римскиот период Кратово се споменува како богат рударски центар. Во време на Римскиот период Кратово бил рударско средиште во Североисточниот дел, а се експлоатирало олово, цинк, злато, сребро бакар и други руди. Од рудните производи се изработувале и монети. Така, подоцна од Византискиот период пронајдени се монети, меѓу кои и златни на византиските императори Анастасие (491-519г), Јустин I (518 – 527), Јустинијан (527 – 565). Во подоцнежниот период со Кратово управувале повеќе заслужни феудалци коишто управувале со рудниците во Целата Кратовска област. Најголем процут има доживеано во XIV век и тоа поради рудните богатства и тоа злато и оттука градот напредува. Деспот Јован Оливер (1336 – 1355) – важна историска личност од средновековието. Освен што ги искористувал рудниците имал свој дворец тука и е ктитор на Лесновскиот манастир. Еден од попознатите е Јован Оливер (1336 – 1355) – очув на цар Душан - како деспот интензивно ги користел кратовските рудни богатства, преку старите но и отворајќи нови рудни окна. Се обезбедувале големи приход. За ова помогнале и познатите германски рудари Саси кои биле доселени тука со цел поголем развој на рударството. Покрај рудните окна имало и Топилница за руда и Леарница (ковачница) за пари. Развиена била и трговијата, а со неа раководеле Дубровчаните.",
+                    "short_description": "Кратово, средиште на рударството векови назад, прославено по своите рудници и богатства, од кои се изработувале и монети, со важни историски личности како деспот Јован Оливер.",
+                    "latlng": [42.077990, 22.179178],
                     "distance_radius": 40.5,
                     "pictures": [f'{server_route}/static/pictures/12.jpg']
                 },
-                {
-                    "name": "GMHCP",
-                    "description": "Ovo mesto služi za testiranje rada aplikacije i lokacije. Prvo mesto za koje sa kojeg smo započeli testiranja ovog tipa. Na srpskomk jeziku namerno ima puno teksta kako bi se testirao slajder u popup prozoru. Ovo je jako bitno da bi na lošijim telefonom sa manjom rezolucijom bili u mogućnosti da vidimo ceo tekst pomoću skorlovanja gore-dole. Do sad nimo imali tu opciju i korisnici su se žalili na to, u verziji 0.5 smo napravili izmenu koja će da otkoni ovaj problem i učini naše korisnike srećnije jer im se njihovi predlozi usvajaju i tako dobijamo bolju i praktičniju aplikaciju. Inače ovo je mesto sa kojeg se pravi ova aplikacija. Ponestaje mi inspiracije šta da pišem pa ću zato nastaviti da pišem nevezano i nepovezano. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun.",
-                    "short_description": "Prvo mesto sa koje smo započeli testiranje",
-                    "latlng": [44.023905, 20.456093],
-                    "distance_radius": 40.5,
-                    "pictures": [f'{server_route}/static/pictures/12.jpg', f'{server_route}/static/pictures/11.png']
-                },
+                #! testne lokacije
+                # {
+                #     "name": "GMMČK",
+                #     "description": "Ovo mesto služi za testiranje rada aplikacije i lokacije. Drugo mesto za koje sa kojeg smo započeli testiranja ovog tipa",
+                #     "short_description": "Drugo mesto sa koje smo započeli testiranje",
+                #     "latlng": [44.034661, 20.433998],
+                #     "distance_radius": 40.5,
+                #     "pictures": [f'{server_route}/static/pictures/12.jpg']
+                # },
+                # {
+                #     "name": "GMHCP",
+                #     "description": "Ovo mesto služi za testiranje rada aplikacije i lokacije. Prvo mesto za koje sa kojeg smo započeli testiranja ovog tipa. Na srpskomk jeziku namerno ima puno teksta kako bi se testirao slajder u popup prozoru. Ovo je jako bitno da bi na lošijim telefonom sa manjom rezolucijom bili u mogućnosti da vidimo ceo tekst pomoću skorlovanja gore-dole. Do sad nimo imali tu opciju i korisnici su se žalili na to, u verziji 0.5 smo napravili izmenu koja će da otkoni ovaj problem i učini naše korisnike srećnije jer im se njihovi predlozi usvajaju i tako dobijamo bolju i praktičniju aplikaciju. Inače ovo je mesto sa kojeg se pravi ova aplikacija. Ponestaje mi inspiracije šta da pišem pa ću zato nastaviti da pišem nevezano i nepovezano. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun. Vuk čupa grane, zimi meda juri vrane. letnje gume travu kose, paunovi zvono nose. ima zime nema srama, sve do tvrđave rama. dasni klik je iznad levog zakonitog pravi meloun.",
+                #     "short_description": "Prvo mesto sa koje smo započeli testiranje",
+                #     "latlng": [44.023905, 20.456093],
+                #     "distance_radius": 40.5,
+                #     "pictures": [f'{server_route}/static/pictures/12.jpg', f'{server_route}/static/pictures/11.png']
+                # },
             ],
             "preTourInformation": [
                 "Комфортни спортски чевли, облека према временските услови",
