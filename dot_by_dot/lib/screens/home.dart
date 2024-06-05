@@ -28,17 +28,24 @@ class _ExpandableTextWidgetState extends State<ExpandableTextWidget> {
         ),
         SizedBox(height: 10),
         if (widget.expandedText.isNotEmpty)
-          TextButton(
-            onPressed: () {
-              setState(() {
-                _isExpanded = !_isExpanded;
-              });
-            },
-            child: Text(
-              _isExpanded
-                  ? LocaleData.home_show_less.getString(context)
-                  : LocaleData.home_show_more.getString(context),
-              style: TextStyle(color: Colors.blue),
+          Center(
+            child: Container(
+              decoration: BoxDecoration(
+                color: const Color(0xFF056839),
+                borderRadius: BorderRadius.circular(100), // Zaobljeni uglovi
+              ),
+              padding: EdgeInsets.fromLTRB(0, 0, 0, 0), // Padding unutar dugmeta - 8 px za lijevo i desno, 4 px za vrh i dno
+              child: IconButton(
+                onPressed: () {
+                  setState(() {
+                    _isExpanded = !_isExpanded;
+                  });
+                },
+                icon: Icon(
+                  _isExpanded ? Icons.arrow_upward : Icons.arrow_downward,
+                  color: Colors.white, // Boja ikonice
+                ),
+              ),
             ),
           ),
       ],
@@ -153,7 +160,7 @@ class HomeScreen extends StatelessWidget {
                   image: DecorationImage(
                     image: AssetImage('assets/images/prelaz-siv-gradient-half.jpg'),
                     fit: BoxFit.none,
-                    alignment: Alignment.center,
+                    alignment: Alignment.topCenter,
                   ),
                 ),
                 padding: const EdgeInsets.only(
@@ -174,7 +181,7 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-                  padding: const EdgeInsets.all(20.0),
+                  padding: EdgeInsets.fromLTRB(20, 20, 20, 5),
                   child: ExpandableTextWidget(
                     initialText: LocaleData.home_kratovo_about_extended
                         .getString(context),
